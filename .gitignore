@@ -153,3 +153,4 @@ cython_debug/
 
 # repository
 /data
+/mtt/chat/certificate
