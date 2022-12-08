@@ -119,11 +119,12 @@ async def main():
         xsrf_cookies=True,
         debug=options.debug,
     )
-    ssl_ctx = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-    ssl_ctx.load_cert_chain(os.path.join(data_dir, "eventchat.crt"),
-                            os.path.join(data_dir, "eventchat.key"))
-    http_server = tornado.httpserver.HTTPServer(app, protocol="https", ssl_options=ssl_ctx)
-    http_server.listen(options.port)
+    # ssl_ctx = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+    # ssl_ctx.load_cert_chain(os.path.join(data_dir, "eventchat.crt"),
+    #                         os.path.join(data_dir, "eventchat.key"))
+    # http_server = tornado.httpserver.HTTPServer(app, protocol="https", ssl_options=ssl_ctx)
+    app.listen(options.port)
+    # http_server.listen(options.port)
     await asyncio.Event().wait()
 
 
