@@ -60,8 +60,8 @@ global_message_buffer = MessageBuffer()
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
+        print(self.get_body_argument["assignmentId"])
         self.render("index.html", messages=global_message_buffer.cache)
-
 
 class MessageNewHandler(tornado.web.RequestHandler):
     """Post a new message to the chat room."""
