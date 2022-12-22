@@ -159,7 +159,7 @@
       ws.onclose = function() {
         ws.close();
         alert("disconnected from server, reconnecting");
-        ws = new WebSocket("ws://www.eventchat.tk/event/update");
+        ws = new WebSocket("ws://www.eventchat.tk:8888/event/update");
       };
 
       // event listener for new session
