@@ -1,4 +1,4 @@
-var ws = new WebSocket("wss://www.eventchat.tk:8888/event/update");
+var ws = new WebSocket("wss://www.eventchat.tk/event/update");
 // register self as client
 ws.onopen = function() {
 message = {
@@ -42,7 +42,7 @@ if (response.type == "session") {
 ws.onclose = function() {
 ws.close();
 alert("disconnected from server, reconnecting");
-ws = new WebSocket("wss://www.eventchat.tk:8888/event/update");
+ws = new WebSocket("wss://www.eventchat.tk/event/update");
 };
 
 // event listener for new session
