@@ -34,8 +34,10 @@ $(document).ready(function() {
 function newMessage(form) {
     var message = form.formToDict();
     var disabled = form.find("input[type=submit]");
+    var roomId = document.getElementById("roomId").val();
+    message.roomId = roomId;
     disabled.disable();
-    $.postJSON("/a/message/new", message, function(response) {
+    $.postJSON(`/message/new/id/${roomId}`, message, function(response) {
         updater.showMessage(response);
         if (message.id) {
             form.parent().remove();
@@ -91,8 +93,12 @@ var updater = {
 
     poll: function() {
         var args = {"_xsrf": getCookie("_xsrf")};
+        var roomId = $("#roomId").val();
+        var workerId = $("#workerId").val();
+        args.roomId = roomId;
+        args.workerId = workerId;
         if (updater.cursor) args.cursor = updater.cursor;
-        $.ajax({url: "/a/message/updates", type: "POST", dataType: "text",
+        $.ajax({url: `/message/update/id/${roomId}`, type: "POST", dataType: "text",
                 data: $.param(args), success: updater.onSuccess,
                 error: updater.onError});
     },
@@ -130,6 +136,8 @@ var updater = {
         var node = $(message.html);
         node.hide();
         $("#inbox").append(node);
-        node.slideDown();
+        // node.slideDown();
+        node.show();
+        $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
     }
 };

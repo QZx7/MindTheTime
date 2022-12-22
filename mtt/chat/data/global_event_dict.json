@@ -1,0 +1,28 @@
+{
+    "0": {
+        "gap": [
+            {
+                "time": "3 hours",
+                "duration_key": "hour"
+            },
+            {
+                "time": "2 days",
+                "duration_key": "day"
+            },
+            {
+                "time": "3 weeks",
+                "duration_key": "week"
+            }
+        ],
+        "events": [
+            {
+                "00000": ["fkdlsjfkls", "jfdslkfjsld", "fjdslf"],
+                "00001": ["riowepiroe", "iroepwqr", "rioewq"]
+            },
+            {
+                "00000": ["fkdlsjfkls", "jfdslkfjsld", "fjdslf"],
+                "00001": ["riowepiroe", "iroepwqr", "rioewq"]
+            }
+        ]
+    }
+}

@@ -1,1 +1,5 @@
-<div class="message" id="m{{ message["id"] }}">{% module linkify(message["body"]) %}</div>
+<div class="list-group-item" id="m{{ message["id"] }}">
+    <p class="text-wrap">
+        {% module linkify(message["speaker"]) %} : {% module linkify(message["body"]) %}
+    </p>
+</div>

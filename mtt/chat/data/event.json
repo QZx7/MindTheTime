@@ -1,0 +1,53 @@
+{
+    "hour": [
+        "You build a garden wall.",
+        "You paint a room.",
+        "You lay down a tile floor.",
+        "You assemble furniture.",
+        "You install a ceiling fan.",
+        "You install a kitchen backsplash.",
+        "You repair a broken window.",
+        "You install a new light fixture.",
+        "You hang some artworks.",
+        "You re-caulk a bathtub."
+    ],
+    "day": [
+        "You complete a short online course.",
+        "You write a new chapter of your book.",
+        "You read a classic novel.",
+        "You go on a campling trip with your friends.",
+        "You visit a nearby city.",
+        "You do some volunteer works in the community.",
+        "You take a short course on your new project."
+    ],
+    "weekend": [
+        "You go on a hike for a nature work.",
+        "You visit a museum.",
+        "You go a picinic in the park.",
+        "You have a game night with friends.",
+        "You attend a tennis event.",
+        "You go to a spa.",
+        "You go to a flea market.",
+        "You go kayaking."
+    ],
+    "week": [
+        "You create a new website.",
+        "You grow your garden.",
+        "You renovate your kitchen."
+    ],
+    "month": [
+        "You learn how to speak Spanish.",
+        "You start a new business.",
+        "You take an online course.",
+        "You get married.",
+        "You write several chapters of your thesis.",
+        "You move to a new home near to your workplace."
+    ],
+    "year": [
+        "You move to a new city for work.",
+        "You have a baby.",
+        "You buy a new house.",
+        "You gain weight.",
+        "You go back to school for better education."
+    ]
+}

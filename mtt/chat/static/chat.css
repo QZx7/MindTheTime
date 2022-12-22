@@ -14,7 +14,7 @@
  * under the License.
  */
 
- body {
+ /* body {
     background: white;
     margin: 10px;
   }
@@ -54,3 +54,22 @@
     float: right;
     z-index: 99;
   }
+
+  .circle {
+    background: #b9b9b9;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  span.timerspan {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 150px;
+  } */
