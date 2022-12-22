@@ -1,4 +1,4 @@
-var ws = new WebSocket("wss://www.eventchat.tk/event/");
+var ws = new WebSocket("wss://eventchat.tk:443/event/");
 // register self as client
 ws.onopen = function() {
 message = {
@@ -42,7 +42,7 @@ if (response.type == "session") {
 ws.onclose = function() {
 ws.close();
 alert("disconnected from server, reconnecting");
-ws = new WebSocket("wss://www.eventchat.tk/event/");
+ws = new WebSocket("wss://eventchat.tk:443/event/");
 };
 
 // event listener for new session
