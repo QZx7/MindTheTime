@@ -37,6 +37,13 @@ if (response.type == "session") {
     Events: ${response.events}`
     );
 }
+
+// if the server send a report response
+if (response.type == "report") {
+    alert(response.text);
+    $("#report_message").val("");
+}
+
 };
 // when closes
 ws.onclose = function() {
@@ -47,21 +54,32 @@ ws = new WebSocket("wss://eventchat.tk:443/event");
 
 // event listener for new session
 $("#new_session").on("click", function() {
-message = {
-    "type": "session",
-    "worker_id": $("#workerId").val(),
-    "room_id": $("#roomId").val(),
-}
-ws.send(JSON.stringify(message));
+    message = {
+        "type": "session",
+        "worker_id": $("#workerId").val(),
+        "room_id": $("#roomId").val(),
+    }
+    ws.send(JSON.stringify(message));
 });
 
 //event listener for new message
 $("#new_message").on("click", function() {
-message = {
-    "type": "message",
-    "worker_id": $("#workerId").val(),
-    "room_id": $("#roomId").val(),
-    "message": $("#message").val(),
-}
-ws.send(JSON.stringify(message));
-})
+    message = {
+        "type": "message",
+        "worker_id": $("#workerId").val(),
+        "room_id": $("#roomId").val(),
+        "message": $("#message").val(),
+    }
+    ws.send(JSON.stringify(message));
+});
+
+//event listener for report
+$("#report").on("click", function() {
+    message = {
+        "type": "report",
+        "worker_id": $("#workerId").val(),
+        "room_id": $("#roomId").val(),
+        "report": $("#report_message").val(),
+    }
+    ws.send(JSON.stringify(message));
+});

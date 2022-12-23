@@ -295,6 +295,13 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                     "text": message_data['message'],
                 }
                 c.write_message(json.dumps(response))
+        
+        if message_data['type'] == "report":
+            response = {
+                "type": "report",
+                "text": "Thanks for your report. We will process your report ASAP!",
+            }
+            self.write_message(json.dumps(response))
 
     def on_close(self):
         room = self.room_id
