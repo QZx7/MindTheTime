@@ -297,12 +297,6 @@ class RoomHandler(tornado.web.RequestHandler):
         # create message history dictionary for this room
         if room_id not in global_message_dict:
             global_message_dict[room_id] = []
-        # global_message_dict[room_id] = []
-        # if room_id not in global_message_buffer_dict:
-        #     global_message_buffer_dict[room_id] = MessageBuffer(room_id)
-        # messages = {
-        #     "messages": global_message_dict[room_id]
-        # }
         self.render("room.html", room_client_info=room_client_info)
 
 clients : Dict[int, List[tornado.websocket.WebSocketHandler]] = {}
@@ -394,118 +388,6 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 }
                 c.write_message(json.dumps(response))
         print(clients)
-
-# class MessageNewHandler(tornado.web.RequestHandler):
-#     """Post a new message to the chat room."""
-
-#     def post(self, room_id):
-#         room_id = self.request.uri.split('/')[-1].split('?')[0]
-#         room_id = int(room_id)
-#         worker_id = self.get_argument("workerId")
-#         print(global_message_buffer_dict[room_id])
-#         message = {"id": str(uuid.uuid4()), "body": self.get_argument("body"), "speaker": worker_id}
-#         # render_string() returns a byte string, which is not supported
-#         # in json, so we must convert it to a character string.
-#         message["html"] = tornado.escape.to_unicode(
-#             self.render_string("message.html", message=message)
-#         )
-#         if self.get_argument("next", None):
-#             print(self.get_argument("next"))
-#             self.redirect(self.get_argument("next"))
-#         else:
-#             self.write(message)
-#         global_message_buffer_dict[room_id].add_message(message)
-#         # global_message_buffer.add_message(message)
-
-
-# class MessageUpdatesHandler(tornado.web.RequestHandler):
-#     """Long-polling request for new messages.
-#     Waits until new messages are available before returning anything.
-#     """
-
-#     async def post(self, room_id):
-#         cursor = self.get_argument("cursor", None)
-#         room_id = self.get_argument("roomId", None)
-#         room_id = int(room_id)
-#         messages = global_message_buffer_dict[room_id].get_messages_since(cursor)
-#         # messages = global_message_buffer.get_messages_since(cursor)
-#         while not messages:
-#             # Save the Future returned here so we can cancel it in
-#             # on_connection_close.
-#             self.wait_future = global_message_buffer_dict[room_id].cond.wait()
-#             try:
-#                 await self.wait_future
-#             except asyncio.CancelledError:
-#                 return
-#             messages = global_message_buffer_dict[room_id].get_messages_since(cursor)
-#         if self.request.connection.stream.closed():
-#             return
-#         print(messages)
-#         self.write(dict(messages=messages))
-
-#     def on_connection_close(self):
-#         self.wait_future.cancel()
-
-# class EventUpdateHandler(tornado.web.RequestHandler):
-#     def post(self):
-#         room_id = self.get_argument("roomId", None)
-#         worker_id = self.get_argument("workerId", None)
-#         room_id = int(room_id)
-#         gap, duration_key = get_random_gap(event_dict)
-#         global_event_dict[room_id]["gap"].append(
-#             {
-#                 "gap": gap,
-#                 "duration_key": duration_key
-#             }
-#         )
-#         global_event_dict[room_id]["events"].append(
-#             {
-#                 global_room_pool[room_id]["speaker_1"]: get_random_events(event_dict, duration_key, 3),
-#                 global_room_pool[room_id]["speaker_2"]: get_random_events(event_dict, duration_key, 3)
-#             }
-#         )
-#         redirect_url = f"/room/id/{room_id}?workerId={worker_id}"
-#         self.redirect(redirect_url)
-        
-
-# class NewMessageHandler(tornado.web.RequestHandler):
-#     def post(self, worker_id):
-#         worker_id = self.get_body_argument("workerId")
-#         room_id = self.request.uri.split('/')[-1]
-#         room_id = int(room_id)
-#         message = self.get_body_argument("message")
-#         global_message_dict[room_id].append(
-#             {
-#                 "speaker": worker_id,
-#                 "text": message
-#             }
-#         )
-#         self.write(
-#             {
-#                 "messages": global_message_dict[room_id]
-#             }
-#         )
-
-# class UpdateMessageHandler(tornado.web.RequestHandler):
-#     def post(self, worker_id):
-#         # worker_id = self.get_body_argument("workerId")
-#         counter = self.get_argument("currentCount")
-#         room_id = self.request.uri.split('/')[-1]
-#         counter = int(counter)
-#         room_id = int(room_id)
-#         # message = self.get_body_argument("message")
-#         # global_message_dict[room_id].append(
-#         #     {
-#         #         "speaker": worker_id,
-#         #         "text": message
-#         #     }
-#         # )
-#         messages = get_messages_since(room_id, counter)
-#         self.write(
-#             {
-#                 "messages": messages
-#             }
-#         )
 
 async def main():
     parse_command_line()
