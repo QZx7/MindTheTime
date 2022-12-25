@@ -1,4 +1,7 @@
-var ws = new WebSocket("wss://eventchat.tk:443/event");
+// var socket_host = "wss://eventchat.tk:443/event"
+var socket_host = "ws://localhost:8888/event"
+
+var ws = new WebSocket(socket_host);
 // register self as client
 ws.onopen = function() {
 message = {
@@ -49,7 +52,7 @@ if (response.type == "report") {
 ws.onclose = function() {
 ws.close();
 alert("disconnected from server, reconnecting");
-ws = new WebSocket("wss://eventchat.tk:443/event");
+ws = new WebSocket(socket_host);
 };
 
 // event listener for new session

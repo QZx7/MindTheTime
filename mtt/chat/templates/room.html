@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Tornado Chat Demo</title>
+    <title>Event Chat</title>
     <link rel="stylesheet" href="{{ static_url("chat.css") }}" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
@@ -79,8 +79,8 @@
                 </tr>
                 <tr>
                   <div id="events">
-                    {{room_client_info['gap_info']}}
-                    {{room_client_info['events_info']}}
+                    Gap: {{room_client_info['gap_info']}} <br>
+                    Events: {{room_client_info['events_info']}}
                   </div>
                 </tr>
                 <tr>

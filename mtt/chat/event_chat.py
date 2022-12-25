@@ -7,17 +7,19 @@ import os.path
 import uuid
 import json
 import random
+import datetime
 
 from tornado.options import define, options, parse_command_line
 from tornado import ioloop
 from concurrent.futures import ThreadPoolExecutor
-from typing import Text, Dict, List, Any
+from typing import Text, Dict, List, Any, Optional
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=True, help="run in debug mode")
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "data")
 LOG_PATH = os.path.join(os.path.dirname(__file__), "log")
+CURRENT_TIME = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
 
 class MessageBuffer(object):
     def __init__(self, id):
@@ -92,7 +94,8 @@ global_user_pool = {}
 matching_queue = []
 global_room_id = 0
 global_room_pool = {}
-global_message_buffer_dict: Dict[int, MessageBuffer] = {}
+# global_message_buffer_dict: Dict[int, MessageBuffer] = {}
+global_message_dict: Dict[int, List[Dict[Text, Text]]] = {}
 
 # Event
 event_dict = read_event("event.json")
@@ -119,7 +122,7 @@ def match(workerId: Text):
                 "speaker_2": global_room_pool[room_id]['speaker_2']
             }
             return room_info
-        
+
         # if this user is not matched with anyone else, match this user with the
         # first person in the queue.
         if len(matching_queue) >= 2:
@@ -127,10 +130,18 @@ def match(workerId: Text):
             # global settings
             speaker_1 = workerId
             matching_queue.remove(workerId)
-            speaker_2 = matching_queue.pop(0)
+            speaker_2 = matching_queue.pop(0) 
+
+            # create save file for this room
+            save_location = os.path.join(LOG_PATH, CURRENT_TIME + f"-{global_room_id}.log")
+            f = open(save_location, 'a')
+            f.write(f"Room Id: {global_room_id} \n")
+            f.close()
+
             global_room_pool[global_room_id] = {
                 "speaker_1": speaker_1,
-                "speaker_2": speaker_2
+                "speaker_2": speaker_2,
+                "save_location": save_location
             }
 
             # worker settings
@@ -146,11 +157,53 @@ def match(workerId: Text):
             room_info = {
                 "room_id": global_room_id,
                 "speaker_1": speaker_1,
-                "speaker_2": speaker_2
+                "speaker_2": speaker_2,
+                "save_location": save_location
             }
             global_room_id += 1
             return room_info
 
+
+def log_request(room_id: int, workId: Text, log_type: Text = "chat", event_status: Optional[Text]='initial', chat_text: Optional[Text]=''):
+    """Log the coming request from a client.
+
+    Args:
+        room_id (int): The room id of current client.
+        workId (Text): The worker id of current client.
+        event_status (Optional[Text]): If logging events, set this to 'initial' or <session number>. Defaults to "initial"
+        chat_text (Optional[Text]): If logging chat, set this to the message. Defaults to empty string.
+        log_type (Text, optional): Choose to log "events" or "chat". Defaults to "chat".
+    """
+    save_file = open(global_room_pool[room_id]["save_location"], 'a')
+    log_message = {}
+    # logging the initial events
+    if log_type == "events":
+        if event_status == "initial":
+            log_message = {
+                "type": "event",
+                "event_type": "initial",
+                "speaker": workId,
+                "room_id": room_id,
+                "gap": "None",
+                "events": global_event_dict[room_id]["events"][0][workId],
+            }
+        else:
+            log_message = {
+                "type": "event",
+                "event_type": "subsequent",
+                "speaker": workId,
+                "room_id": room_id,
+                "gap": global_event_dict[room_id]["gap"][-1],
+                "events": global_event_dict[room_id]["events"][-1][workId],
+            }
+    elif log_type == "chat":
+        log_message = {
+            "type": "chat",
+            "room_id": room_id,
+            "speaker": workId,
+            "text": chat_text
+        }
+    save_file.write(json.dumps(log_message) + "\n")
 
 class MainHandler(tornado.web.RequestHandler):
     """Render the index page
@@ -160,7 +213,12 @@ class MainHandler(tornado.web.RequestHandler):
     """
     def get(self):
         # matching = False
-        workerId = self.get_argument("workerId")
+        try:
+            workerId = self.get_argument("workerId")
+        except tornado.web.MissingArgumentError:
+            self.render("invalid_argument.html")
+        # Once connected, assign worker_status and add worker to 
+        # worker pool.
         worker_status = {
             "is_matching": False,
             "matched": False,
@@ -198,6 +256,9 @@ class RoomHandler(tornado.web.RequestHandler):
     def get(self, room_id):
         workerId = self.get_argument("workerId")
         room_id = int(room_id)
+
+        # For each new room, if the current connection
+        # is the first user, generate the initial gap and events.
         if room_id not in global_event_dict:
             gap, duration_key = get_random_gap(event_dict)
             room_event_info = {
@@ -213,12 +274,16 @@ class RoomHandler(tornado.web.RequestHandler):
                     }
                 ]
             }
-            # events_info = get_random_events(event_dict)
             global_event_dict[room_id] = room_event_info
+
+        # If the current client is matched with some other clinets in a room
+        # but hasn't get events yet.
         elif workerId not in global_event_dict[room_id]["events"][0]:
+            # generate some initial events with the same duration key.
             duration_key = global_event_dict[room_id]["gap"][0]["duration_key"]
             global_event_dict[room_id]["events"][0][workerId] = get_random_events(event_dict, duration_key, 3)
-        # global_user_pool.append(self.request.uri.split("workerId=")[1])
+
+        # Return the events of this client to the itself.
         room_client_info = {
             "room_id": room_id,
             "speaker_1": global_room_pool[room_id]["speaker_1"],
@@ -227,16 +292,18 @@ class RoomHandler(tornado.web.RequestHandler):
             "gap_info": global_event_dict[room_id]["gap"][-1]["gap"],
             "events_info": global_event_dict[room_id]["events"][-1][workerId]
         }
+        log_request(room_id, workerId, event_status='initial', log_type='events')
 
-        # create history dictionary for this room
+        # create message history dictionary for this room
+        if room_id not in global_message_dict:
+            global_message_dict[room_id] = []
         # global_message_dict[room_id] = []
-        if room_id not in global_message_buffer_dict:
-            global_message_buffer_dict[room_id] = MessageBuffer(room_id)
+        # if room_id not in global_message_buffer_dict:
+        #     global_message_buffer_dict[room_id] = MessageBuffer(room_id)
         # messages = {
         #     "messages": global_message_dict[room_id]
         # }
         self.render("room.html", room_client_info=room_client_info)
-        # self.render("room.html", messages=global_message_buffer.cache)
 
 clients : Dict[int, List[tornado.websocket.WebSocketHandler]] = {}
 
@@ -254,8 +321,10 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
         print(f"websocket message: {message}")
         message_data = json.loads(message)
 
+        # Process the initial message and register the current connection as a client.
         if message_data['type'] == "initialize":
             self.worker_id = message_data['worker_id']
+            self.room_id = message_data['room_id']
             self.room_id = int(self.room_id)
 
             if self.room_id not in clients:
@@ -264,7 +333,9 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 clients[self.room_id].append(self)
             print(clients)
 
+        # Process the new session message
         if message_data['type'] == "session":
+            # generate a new gap and duration key
             gap, duration_key = get_random_gap(event_dict)
             global_event_dict[self.room_id]["gap"].append({
                 "gap": gap,
@@ -276,9 +347,9 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 global_room_pool[self.room_id]["speaker_1"]: speaker_1_events,
                 global_room_pool[self.room_id]["speaker_2"] : speaker_2_events
             })
-
             for c in clients[self.room_id]:
                 print(f"sending to {c.worker_id}")
+                log_request(self.room_id, c.worker_id, event_status=str(len(global_event_dict[self.room_id]["events"])), log_type="events")
                 response = {
                     "type": "session",
                     "session": 0,
@@ -287,7 +358,13 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 }
                 c.write_message(json.dumps(response))
 
+        # Process the new message
         if message_data['type'] == "message":
+            global_message_dict[self.room_id].append({
+                "speaker": self.worker_id,
+                "text": message_data['message']
+            })
+            log_request(self.room_id, self.worker_id, chat_text=message_data['message'], log_type="chat")
             for c in clients[self.room_id]:
                 response = {
                     "type": "message",
@@ -305,7 +382,9 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
 
     def on_close(self):
         room = self.room_id
+        worker = self.worker_id
         clients[self.room_id].remove(self)
+        global_user_pool.pop(worker, None)
         if clients[room]:
             for c in clients[room]:
                 print("writing to...")

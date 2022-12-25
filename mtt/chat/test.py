@@ -1,3 +1,5 @@
 import re
+import datetime
 
-print(bool(re.match('(^[0-9]+$)', '0')))
+CURRENT_TIME = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
+print(CURRENT_TIME)
