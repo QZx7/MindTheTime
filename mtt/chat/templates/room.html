@@ -45,33 +45,6 @@
               </div>
             </div>
 
-            <!-- <div class="row" id="input">
-              <form action="/message/new/id/{{room_client_info['room_id']}}?workerId={{room_client_info['worker_id']}}" method="post" id="messageform">
-                <table>
-                  <tr>
-                    <td><label>Your ID: {{room_client_info['worker_id']}}</label></td>
-                  </tr>
-                  <tr>
-                    <div id="events">
-                      {{room_client_info['gap_info']}}
-                      {{room_client_info['events_info']}}
-                    </div>
-                  </tr>
-                  <tr>
-                    <td><textarea name="body" id="message" style="width: 400px;"></textarea></td>
-                    <td style="padding-left: 20px;">
-                      <input class="btn btn-primary" type="submit" value="{{ _("Post") }}">
-                      <input type="hidden" name="next" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}">
-                      {% module xsrf_form_html() %}
-                    </td>
-                    <td style="padding-left: 20px;">
-                      <input type="button" class="btn btn-primary" value="New Session" id="new_session"/>
-                      <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}"/>
-                    </td>
-                  </tr>
-                </table>
-              </form>
-            </div> -->
             <div class="row" id="input">
               <table>
                 <tr>
@@ -92,12 +65,35 @@
                   </td>
                   <td style="padding-left: 20px;">
                     <input type="button" class="btn btn-primary" value="New Session" id="new_session"/>
-                    <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}"/>
+                    <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}" data-toggle="modal" data-target="#time_machine"/>
                   </td>
                 </tr>
               </table>
             </div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="time_machine" tabindex="-1" role="dialog" aria-labelledby="timeMachine">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <!-- modal header -->
+                  <div class="modal-header">
+                    Riding on the Time Machine!
+                  </div>
+
+                  <!-- modal body -->
+                  <div class="modal-body">
+
+                  </div>
+
+                  <!-- modal footer -->
+                  <div class="modal-footer">
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
 
           </div>
         </div>
