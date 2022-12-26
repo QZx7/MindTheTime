@@ -70,26 +70,26 @@ def get_random_gap(event_dict: Dict[Text, List[Text]]):
     # hours
     if duration == 0:
         duration_key = "hour"
-        gap = f"{random.randint(1, 20)} hours"
+        gap = f"{random.randint(2, 20)} hours"
     # days
     elif duration == 1:
         duration_key = "day"
-        gap = f"{random.randint(1, 5)} days"
+        gap = f"{random.randint(2, 5)} days"
     # weekend
     elif duration == 2:
         duration_key = "weekend"
-        gap = "weekend"
+        gap = "A weekend"
     # weeks
     elif duration == 3:
         duration_key = "week"
-        gap = f"{random.randint(1, 3)} weeks"
+        gap = f"{random.randint(2, 3)} weeks"
     # months
     elif duration == 4:
         duration_key = "month"
-        gap = f"{random.randint(1, 5)} months"
+        gap = f"{random.randint(2, 5)} months"
     elif duration == 5:
         duration_key = "year"
-        gap = "year"
+        gap = "A year"
     # events = random.choices(event_dict[duration_key], k=3)
     return gap, duration_key
 
@@ -122,6 +122,11 @@ def get_initial_event(event_dict: Dict[Text, List[Text]]) -> List[Text]:
         List[Text]: A list of initial events.
     """
     events = random.choice(event_dict["initial"])
+    return events
+
+
+def get_news_event(event_dict: Dict[Text, List[Text]], event_number: int) -> List[Text]:
+    events = random.choices(event_dict["news"], k=event_number)
     return events
 
 # Global arguments to manage the server and rooms
@@ -229,7 +234,7 @@ def log_request(
     log_message = {}
     # logging the initial events
     if log_type == "events":
-        if event_status == "initial":
+        if event_status == "initial" or event_status == "news":
             log_message = {
                 "type": "event",
                 "event_type": "initial",
@@ -322,7 +327,7 @@ class RoomHandler(tornado.web.RequestHandler):
             gap, duration_key = get_random_gap(event_dict)
             room_event_info = {
                 "gap": [{"gap": gap, "duration_key": duration_key}],
-                "events": [{workerId: get_random_events(event_dict, duration_key, 3)}],
+                "events": [{workerId: get_initial_event(initial_dict)}],
             }
             global_event_dict[room_id] = room_event_info
 
@@ -331,9 +336,7 @@ class RoomHandler(tornado.web.RequestHandler):
         elif workerId not in global_event_dict[room_id]["events"][0]:
             # generate some initial events with the same duration key.
             duration_key = global_event_dict[room_id]["gap"][0]["duration_key"]
-            global_event_dict[room_id]["events"][0][workerId] = get_random_events(
-                event_dict, duration_key, 3
-            )
+            global_event_dict[room_id]["events"][0][workerId] = get_initial_event(initial_dict)
 
         # Return the events of this client to the itself.
         room_client_info = {
@@ -389,6 +392,8 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
             )
             speaker_1_events = get_random_events(event_dict, duration_key, 3)
             speaker_2_events = get_random_events(event_dict, duration_key, 3)
+            speaker_1_events.extend(get_news_event(news_dict, 3))
+            speaker_2_events.extend(get_news_event(news_dict, 3))
             global_event_dict[self.room_id]["events"].append(
                 {
                     global_room_pool[self.room_id]["speaker_1"]: speaker_1_events,

@@ -35,10 +35,11 @@ if (response.type == "partner_disconnect") {
 
 // if the server send a session resposne
 if (response.type == "session") {
-    $("#events").html(
-    `Gap: ${response.gap} <br>
-    Events: ${response.events}`
-    );
+    events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> Events: <br>`
+    for (let i = 0; i < response.events.length; i++) {
+        events_html += response.events[i] + "<br>"
+    }
+    $("#events").html(events_html);
 }
 
 // if the server send a report response
