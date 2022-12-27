@@ -17,17 +17,19 @@
     
       <div class="row mt-4">
         <div class="col-4">
-            <p>
-                Here goes the instruciton.
-            </p>
-            <label for="report">
-                Any offensive, abusive, toxic, harmful behaviors during the conversation is not allowed.
-                If your matched partner spoke something offensive,
-                you can click this button to report. The more details you could provide,
-                the quicker we could handle your report.
-            </label>
-            <textarea id="report_message" name="report message" placeholder="Describe the offensive behaviors here..."></textarea>
-            <input type="button" name="report" id="report" value="Send your report"/>
+            
+            <button class="btn btn-secondary" value="Show Instructions" id="show_instruct" data-bs-toggle="modal" data-bs-target="#instruction">Show Instructions</button>
+            
+            <div class="mt-5">
+              <label for="report">
+                  Any offensive, abusive, toxic, harmful behaviors during the conversation is not allowed.
+                  If your matched partner spoke something offensive,
+                  you can click this button to report. The more details you could provide,
+                  the quicker we could handle your report.
+              </label>
+              <textarea id="report_message" name="report message" placeholder="Describe the offensive behaviors here..."></textarea>
+              <input type="button" name="report" id="report" value="Send your report"/>
+            </div>
         </div>
       
         <div class="col-8 align-self-end">
@@ -71,7 +73,7 @@
               </table>
             </div>
 
-            <!-- Modal -->
+            <!-- Modal Time Machine -->
             <div class="modal fade" id="time_machine" tabindex="-1" role="dialog">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -98,6 +100,226 @@
               </div>
             </div>
             <!-- Modal -->
+
+            <!-- Modal Instruction -->
+            <div class="modal fade" id="instruction" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    Instruction
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="row mt-5 text-left">
+                      <h2>Overview of your task:</h2>
+                      <p>In this task, you are going to have a <strong>multi-session conversation</strong>
+                      with another randomly matched participant.
+                      </p>
+                      <p>
+                          A multi-session conversation is a conversation that contains multiple sessions. Imagine when
+                          you talk with your friends through text APP, your friends may reply to you after a time gap (i.e., 5 hours).
+                      </p>
+                      <p>
+                          Your task is to have such a conversation with multiple sessions and keep this conversation as
+                          natural as possible. You can have as many sessions as you want with respect to the situation of the
+                          ongoing conversation.
+                      </p>
+                      <p>
+                          To be noticed, you are encouraged to have conversation as how you would do in reality (e.g., greetings,
+                          word choices, etc.)
+                      </p>
+      
+                      <h2 class="mt-5">Task details:</h2>
+                      <h4>1. Match-up</h4>
+                      <p>
+                          This task will require two participants. As a result, you might need to wait for some time before the
+                          system match you up with your task partner. If the match-up is taking a long time, we recommend you to
+                          come over for another time for this task.
+                      </p>
+                      <h4>2. Chat room layout</h4>
+                      <p>
+                          Once you are matched with your task partner, you will be redirected into the a chat room together with
+                          your task partner. The conversation will happen in this chat room.
+                      </p>
+                      <p>
+                          The following picture shows the layout of the chat room.
+                          <hr>
+                          <img src="{{ static_url("img/chatroom.png") }}" class="img-fluid"/>
+                          <hr>
+                      </p>
+                      <h4>3. Events</h4>
+                      <p>
+                          In each new session of the conversation, you will be provided some events that have happened to you during
+                          the time gap since the previous session.
+                      </p>
+                      <p>
+                          For instance, some events of a time gap of "5 hours" could be: <br>
+                          During this 5 hours,
+                          <ul>
+                              <li>You repair a broken window.</li>
+                              <li>You go for a walk in the nature.</li>
+                              <li>You attend a meeting.</li>
+                          </ul>
+                      </p>
+                      <p>
+                          These events are prepared for you as references to have a new session. <br>
+                           However, you do <strong>NOT</strong> have to use these events. If you think these events are not appropriate
+                           in your conversation, please talk whatever that you think is better in your conversation. You are supposed
+                           to keep the conversation as natural as possible.
+                      </p>
+                      <h4>4. Report offensive behaviors</h4>
+                      <p>
+                          Any formats of being offensive, toxic, abusive and harmful actions are not allowed in this task.
+                          If your task partner shows such offensive behaviors, you are able to report to us by describing
+                          such behaviors during the chat. You can leave the chat anytime when you feel uncomfortable about the 
+                          conversation and we will handle your report ASAP.
+                      </p>
+                      
+                      <h2 class="mt-5">Task steps:</h2>
+                      <h4>Step 1: Match</h4>
+                      <p>
+                          When you are ready for the task, hit the <strong>Start Matching</strong> button at the bottom of this page.
+                      </p>
+                      <h4>Step 2: Confirm your initial events</h4>
+                      <p>
+                          After redirected to the chat room, you will need to confirm your initial event, shown in the events area.
+                          You could use this inital event as your current status. Of course, you are also encouraged to use whatever
+                          is in your mind for the conversation.
+                      </p>
+                      <h4>Step 3: Have the conversation</h4>
+                      <p>
+                          You can input your text in the <strong>Input Area</strong> and hit the <strong>Post</strong> button to send
+                          your messages. To be noticed, your messages can not be deleted once sent.
+                      </p>
+                      <h4>Step 4: Start a new session</h4>
+                      <p>
+                          Once you think it is enough for current session, you can start a new session by hitting the <strong>New Session</strong>
+                          button. Both you and your partner can start a new session at any time.
+                      </p>
+                      <h4>Step 5: Confirm the new events</h4>
+                      <p>
+                          Once a new session is initialzed by one of the speakers (you or your task partner), you are able to find
+                          the time gap and new events in your <strong>Event Area</strong>. You will then have the new session.
+                      </p>
+                      
+                      <p>
+                          Repeat step 3 to 5 until the end of the conversation.
+                      </p>
+      
+                      <h2 class="mt-5">Example conversation</h2>
+                      <div class="row">
+                          <div class="col">
+                              <hr>
+                              Initial events: <br>
+                              A: You are writing your doctoral thesis. <br>
+                              B: You are learning a new language. <br>
+                              <hr>
+                              <strong>Session 1</strong> <br>
+                              A: Hi, how are you doing? <br>
+                              B: Yeah, I'm doing great, how about you? <br>
+                              A: I'm also doing great. Just recently I got busy for thesis writing. <br>
+                              B: Wow, I didn't notice that you're graduating. <br>
+                              A: Yeah, it's been quite a long time since I enrolled. <br>
+                              B: Congratulations! Are you planning to find a job? <br>
+                              A: Oh, no. Actually it takes quite a long time to get the thesis done. So, I probably
+                              will need to spend another 6 months to finish the writing. <br>
+                              B: That's quite a long time. Good luck with that. <br>
+                              A: Thanks, I'll try my best. How about you? What's up to you recently? <br>
+                              B: Learning Spanish. Difficult. <br>
+                              A: Haha, I know. Learning a new language can be quite tired, especially the grammar things. <br>
+                              B: Yeah, I still could get those things clearly. <br>
+                              A: Take your time, I don't think that's something can be done in a short time. <br>
+                              <hr>
+                              Time gap: 3 hours <br>
+                              New events: <br>
+                              A: You have lunch in a restaurant. <br>
+                                 You take a nap. <br>
+                                 You attend a meeting. <br>
+                              
+                              B: You go to a cafe. <br>
+                              You have a haircut. <br>
+                              You read some books and magazines. <br>
+                              <hr>
+                              <strong>Session 2</strong> <br>
+                              A: I had a terrible lunch. <br>
+                              B: Well, that could happen, was the food bad? <br>
+                              A: It was so bad. The burger tasted terrible. <br>
+                              B: Well, better pray for a good dinner, then. <br>
+                              A: I hope so. <br>
+                              <hr>
+                              Time gap: 5 days <br>
+                              New events: <br>
+                              A: You write a new chapter of your book. <br>
+                              You attend a music festival. <br>
+                              You visit a theme park. <br>
+                              B: You go on a camping trip. <br>
+                              You take an art class. <br>
+                              You go to an art gallery. <br>
+                          </div>
+      
+                          <div class="col">
+                              
+                              <hr>
+                              <strong>Session 3</strong> <br>
+                              B: Hey, it's been quite a while, how are you doing? <br>
+                              A: I'm doing great. How about you? <br>
+                              B: I'm also doing great. I had a long holiday and went on a camping trip. That helped
+                              me relax quite a bit. <br>
+                              A: Glad to hear that. I also want to have a trip, but jsut getting so busy recently. <br>
+                              A: But I was able to attend a music festival last week, it was wonderful. <br>
+                              B: Wow, that sounds interesting. Where was that festival? <br>
+                              A: Oh, yeah, it was somewhere near to my university and that's why I'm able to attend that festival. <br>
+                              B: Great, you definitely should take a rest. How is your thesis going? <br>
+                              A: Oh, yeah, I've just finished a new chatper, but it seems that I will need more modifications later. <br>
+                              B: That's great progress. Good luck on that. <br>
+                              A: Thanks. So, did you have fun during the trip? Where did you go? <br>
+                              B: Yeah, I went to a national park together with my friends. It was quite fun. The night view was so good. <br>
+                              A: I hope I could also get a chance for a trip soon... <br>
+                              B: You will. <br>
+                              <hr>
+                              Time gap: 3 months
+                              New events:
+                              A: You write several chapters of your thesis.<br>
+                              You take a long vacation. <br>
+                              You move to a new apartment. <br>
+                              B: You move to a new home near to your workplace. <br>
+                              You have a wedding anniversary. <br>
+                              You take an online course. <br>
+                              <hr>
+                              <strong>Session 4</strong> <br>
+                              A: Hey, how are you doing? It's been quite a long time. <br>
+                              B: I'm doing great. How about you? It's really quite a long time. <br>
+                              A: Glad to hear from you. I'm aslo doing great. How are things with you? <br>
+                              B: Yeah, quite a lot of changes though. I moved to a new home. <br>
+                              A: Wow, another city? <br>
+                              B: No, the same city, but just near to my workplace. My previous place was not so convenient. <br>
+                              A: Nice to hear that. Do you like your new house? <br>
+                              B: Yeah, it's quite nice, much bigger than the old one. <br>
+                              A: Glad to hear that. <br>
+                              B: How have you been doing? Any progress on your graduation? <br>
+                              A: Yeah, I've finished more chapters of the thesis, and my supervisor is happy about that. So, I 
+                              think I'm in a quite good situation right now. <br>
+                              B: That's huge progress, Congratulations! <br>
+                              A: Thanks for that. I just want to take a long vacation now to have a rest. <br>
+                              B: I know, hope you could be free from that very soon. <br>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <hr>
+                      </div>
+                  </div>
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
