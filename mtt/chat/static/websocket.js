@@ -95,4 +95,4 @@ setInterval(function () {
         "text": "ping"
     }
     ws.send(JSON.stringify(message));
-}, 1000 * 10);
+}, 1000 * 15);
