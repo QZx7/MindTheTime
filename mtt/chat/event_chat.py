@@ -443,6 +443,14 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 "text": "Thanks for your report. We will process your report ASAP!",
             }
             self.write_message(json.dumps(response))
+        
+        # Ping pong to keep alive
+        if message_data["type"] == "ping":
+            response = {
+                "type": "ping",
+                "text": "pong"
+            }
+            self.write_message(json.dumps(response))
 
     def on_close(self):
         room = self.room_id

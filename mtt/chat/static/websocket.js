@@ -87,3 +87,12 @@ $("#report").on("click", function() {
     }
     ws.send(JSON.stringify(message));
 });
+
+//keep websocket alive
+setInterval(function () {
+    message = {
+        "type": "ping",
+        "text": "ping"
+    }
+    ws.send(JSON.stringify(message));
+});
