@@ -368,8 +368,10 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
         print("WebSocket opened")
 
     def on_message(self, message):
-        print(f"websocket message: {message}")
+        
         message_data = json.loads(message)
+        if message_data["type"] != "ping":
+            print(f"websocket message: {message}")
 
         # Process the initial message and register the current connection as a client.
         if message_data["type"] == "initialize":
