@@ -24,70 +24,28 @@
                 </p>
             </div>
             <div class="row mt-5 text-left">
-                <h2>Overview of your task:</h2>
-                <p>In this task, you are going to have a <strong>multi-session conversation</strong>
-                with another randomly matched participant.
+                <h2 class="mt-5">Task Description</h2>
+                <p>
+                    In this task, you will have a <strong>multi-session</strong> conversation with another randomly matched participant.
+                    Your will need to imagine that a certain period of time gap has passed since the previous session and have a new session
+                    with respect to the time gap between sessions. 
                 </p>
                 <p>
-                    A multi-session conversation is a conversation that contains multiple sessions. Imagine when
-                    you talk with your friends through text APP, your friends may reply to you after a time gap (i.e., 5 hours).
+                    Before each new session, you will be provided the <strong>time gap</strong> and some <strong>events</strong> that could happen during this gap as references. <br>
+                    For instance,
                 </p>
-                <p>
-                    Your task is to have such a conversation with multiple sessions and keep this conversation as
-                    natural as possible. You can have as many sessions as you want with respect to the situation of the
-                    ongoing conversation.
-                </p>
-                <p>
-                    To be noticed, you are encouraged to have conversation as how you would do in reality (e.g., greetings,
-                    word choices, etc.)
+                <p class="fst-italic fw-bold">
+                    5 hours have passed. During this time, the following events happened. <br>
+                    You repair a broken window. <br>
+                    You go for a walk in the nature. <br>
+                    You attend a meeting. <br>
                 </p>
 
-                <h2 class="mt-5">Task details:</h2>
-                <h4>1. Match-up</h4>
                 <p>
-                    This task will require two participants. As a result, you might need to wait for some time before the
-                    system match you up with your task partner. If the match-up is taking a long time, we recommend you to
-                    come over for another time for this task.
+                    You can choose to either talk about these events or your own events in your new sessions, <strong> with respect to
+                    the time gap </strong>.
                 </p>
-                <h4>2. Chat room layout</h4>
-                <p>
-                    Once you are matched with your task partner, you will be redirected into the a chat room together with
-                    your task partner. The conversation will happen in this chat room.
-                </p>
-                <p>
-                    The following picture shows the layout of the chat room.
-                    <hr>
-                    <img src="{{ static_url("img/chatroom.png") }}" class="img-fluid"/>
-                    <hr>
-                </p>
-                <h4>3. Events</h4>
-                <p>
-                    In each new session of the conversation, you will be provided some events that have happened to you during
-                    the time gap since the previous session.
-                </p>
-                <p>
-                    For instance, some events of a time gap of "5 hours" could be: <br>
-                    During this 5 hours,
-                    <ul>
-                        <li>You repair a broken window.</li>
-                        <li>You go for a walk in the nature.</li>
-                        <li>You attend a meeting.</li>
-                    </ul>
-                </p>
-                <p>
-                    These events are prepared for you as references to have a new session. <br>
-                     However, you do <strong>NOT</strong> have to use these events. If you think these events are not appropriate
-                     in your conversation, please talk whatever that you think is better in your conversation. You are supposed
-                     to keep the conversation as natural as possible.
-                </p>
-                <h4>4. Report offensive behaviors</h4>
-                <p>
-                    Any formats of being offensive, toxic, abusive and harmful actions are not allowed in this task.
-                    If your task partner shows such offensive behaviors, you are able to report to us by describing
-                    such behaviors during the chat. You can leave the chat anytime when you feel uncomfortable about the 
-                    conversation and we will handle your report ASAP.
-                </p>
-                
+
                 <h2 class="mt-5">Task steps:</h2>
                 <h4>Step 1: Match</h4>
                 <p>
@@ -231,7 +189,14 @@
             <input type="hidden" id="workerId" value="{{message['worker_id']}}"/>
         </div>
 
-        <div class="row mt-5 text-center" id="match_notification"></div>
+        <div class="row mt-5 text-center" id="match_notification">
+        </div>
+
+        <div class="row mt-5 text-center" id="clock" style="font-size: x-large;">
+            <div>
+                Matching Time <span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+        </div>
 
         <script type="text/javascript">
             function showNotificaiton() {
@@ -254,7 +219,17 @@
                         alert('error');
                     }
                 });
+
+                var sec = -1;
+                setInterval(function () {
+                    $("#seconds").html(pad(++sec % 60));
+                    $("#minutes").html(pad(parseInt(sec / 60, 10) % 60));
+                }, 1000);
             });
+
+            function pad(val) {
+                return val > 9 ? val : "0" + val;
+            }
         </script>
     </body>
 
