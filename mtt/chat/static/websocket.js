@@ -1,5 +1,5 @@
-var socket_host = "wss://eventchat.tk:443/event"
-// var socket_host = "ws://localhost:8888/event"
+// var socket_host = "wss://eventchat.tk:443/event"
+var socket_host = "ws://localhost:8888/event"
 
 var ws = new WebSocket(socket_host);
 // register self as client
@@ -16,14 +16,26 @@ ws.onmessage = function (evt) {
 var response = JSON.parse(evt.data);
 // if the server send a message resposne
 if (response.type == "message") {
-    $("#inbox").append(
-    `<div class="list-group-item">
-        <p class="text-wrap">
-        ${response.speaker} : ${response.text}
-        </p>
-    </div>`
-    );
-    $("#message").val("").select();
+    if (response.speaker == $("#workerId").val()) {
+        $("#inbox").append(
+            `<div class="list-group-item list-group-item-success">
+                <p class="text-wrap">
+                ${response.speaker} : ${response.text}
+                </p>
+            </div>`
+        );
+    }
+    else {
+        $("#inbox").append(
+            `<div class="list-group-item list-group-item-primary">
+                <p class="text-wrap">
+                ${response.speaker} : ${response.text}
+                </p>
+            </div>`
+        );
+    }
+    
+    $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
 }
 
 // if the server send a disconnection resposne
@@ -40,6 +52,18 @@ if (response.type == "session") {
         events_html += response.events[i] + "<br>"
     }
     $("#events").html(events_html);
+    $("#inbox").append(
+        `<div class="list-group-item list-group-item-dark">
+                <p class="text-wrap">
+                (The above conversation heppened ${response.gap} ago)
+                </p>
+        </div>`
+    );
+    $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
+
+    if (!$("#time_machine").is(':visible')) {
+        $("#time_machine").modal('toggle');
+    }
 }
 
 // if the server send a report response
@@ -75,6 +99,7 @@ $("#new_message").on("click", function() {
         "message": $("#message").val(),
     }
     ws.send(JSON.stringify(message));
+    $("#message").val("").select();
 });
 
 //event listener for report
