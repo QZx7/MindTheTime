@@ -206,60 +206,7 @@
             <p>copyright©2023</p>
         </div>
 
-        <script type="text/javascript">
-            function showNotificaiton() {
-                document.getElementById("match_notification").innerHTML = `<p class="fs-5" style="color: black;">This could take a few minutes...</p>
-                <p class="fs-5" style="color: black;"> please read through the instruction again while waiting.</p>`;
-                document.getElementById("start_match").disabled = true;
-            }
-            $("#start_match").on("click", function(e){
-                e.preventDefault();
-                $.ajax({
-                    type: "POST",
-                    url: "/match",
-                    data: {
-                        workerId : $("#workerId").val(),
-                    },
-                    timeout: 0,
-                    success: function(result) {
-
-                        window.location.href = `/room/id/${result['room_id']}?workerId=${$("#workerId").val()}
-                        &assignmentId=${getUrlParameter('assignmentId')}
-                        &hitId=${getUrlParameter('hitId')}
-                        &turkSubmitTo=${getUrlParameter('turkSubmitTo')}`
-                    },
-                    error: function(result) {
-                        alert('error');
-                    }
-                });
-
-                var sec = -1;
-                setInterval(function () {
-                    $("#seconds").html(pad(++sec % 60));
-                    $("#minutes").html(pad(parseInt(sec / 60, 10) % 60));
-                }, 1000);
-            });
-
-            function pad(val) {
-                return val > 9 ? val : "0" + val;
-            }
-
-            function getUrlParameter(sParam) {
-                var sPageURL = window.location.search.substring(1),
-                    sURLVariables = sPageURL.split('&'),
-                    sParameterName,
-                    i;
-
-                for (i = 0; i < sURLVariables.length; i++) {
-                    sParameterName = sURLVariables[i].split('=');
-
-                    if (sParameterName[0] === sParam) {
-                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-                    }
-                }
-                return false;
-            };
-        </script>
+        <script src="{{ static_url("matching.js") }}" type="text/javascript"></script>
     </body>
 
     

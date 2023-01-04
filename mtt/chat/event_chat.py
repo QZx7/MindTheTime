@@ -288,27 +288,66 @@ class MainHandler(tornado.web.RequestHandler):
         self.render("index.html", message=worker_status)
 
 
-class MatchHandler(tornado.web.RequestHandler):
-    """Handle the matching.
+class MatchHandler(tornado.websocket.WebSocketHandler):
 
-    Args:
-        tornado (_type_): A RequestHandler class
-    """
-
-    async def post(self):
+    async def on_message(self, message):
         global matching_queue
-        workerId = self.get_argument("workerId")
-        print(f"Worker: {workerId} started matching.")
-        if not global_user_pool[workerId]["matched"]:
-            global_user_pool[workerId]["is_matching"] = True
-            if workerId not in matching_queue:
-                matching_queue.append(workerId)
-        # Matched. if there are more than two users, open a new room.
-        room_info = await ioloop.IOLoop.current().run_in_executor(
-            executor, match, workerId
-        )
-        print(f"matched, room_info: {room_info}")
-        self.write(room_info)
+        message_data = json.loads(message)
+
+        # someone joined
+        if message_data["type"] == "joined":
+            print("Joined")
+
+        # someone started matching
+        elif message_data["type"] == "matching":
+            workerId = message_data["worker_id"]
+            print(f"Worker: {workerId} started matching.")
+            print(f"matching queue: {matching_queue}")
+            if not global_user_pool[workerId]["matched"]:
+                global_user_pool[workerId]["is_matching"] = True
+                if workerId not in matching_queue:
+                    matching_queue.append(workerId)
+            # Matched. if there are more than two users, open a new room.
+            room_info = await ioloop.IOLoop.current().run_in_executor(
+                executor, match, workerId
+            )
+            response = {
+                "type": "matching",
+                "room_info": room_info
+            }
+            # self.write_message()
+            print(f"matched, room_info: {room_info}")
+            self.write_message(json.dumps(response))
+
+        # ping pong
+        elif message_data["type"] == "ping":
+            response = {
+                "type": "ping",
+                "text": "pong"
+            }
+            self.write_message(json.dumps(response))
+
+# class MatchHandler(tornado.web.RequestHandler):
+#     """Handle the matching.
+
+#     Args:
+#         tornado (_type_): A RequestHandler class
+#     """
+
+#     async def post(self):
+#         global matching_queue
+#         workerId = self.get_argument("workerId")
+#         print(f"Worker: {workerId} started matching.")
+#         if not global_user_pool[workerId]["matched"]:
+#             global_user_pool[workerId]["is_matching"] = True
+#             if workerId not in matching_queue:
+#                 matching_queue.append(workerId)
+#         # Matched. if there are more than two users, open a new room.
+#         room_info = await ioloop.IOLoop.current().run_in_executor(
+#             executor, match, workerId
+#         )
+#         print(f"matched, room_info: {room_info}")
+#         self.write(room_info)
 
 
 class RoomHandler(tornado.web.RequestHandler):

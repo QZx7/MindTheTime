@@ -1,42 +1,43 @@
-var socket_host = "wss://eventchat.tk:443/event"
-// var socket_host = "ws://localhost:8888/event"
+// var socket_host = "wss://eventchat.tk:443/event"
+var socket_host = "ws://localhost:8888/event"
 
 var ws = new WebSocket(socket_host);
 var session_utterance = 0;
 // register self as client
 ws.onopen = function() {
-message = {
-    "type": "initialize",
-    "worker_id": $("#workerId").val(),
-    "room_id": $("#roomId").val(),
-}
-ws.send(JSON.stringify(message));
+    message = {
+        "type": "initialize",
+        "worker_id": $("#workerId").val(),
+        "room_id": $("#roomId").val(),
+    }
+    ws.send(JSON.stringify(message));
 };
+
 // process messages from server
 ws.onmessage = function (evt) {
-var response = JSON.parse(evt.data);
-// if the server send a message resposne
-if (response.type == "message") {
-    if (response.speaker == $("#workerId").val()) {
-        $("#inbox").append(
-            `<div class="list-group-item list-group-item-success">
-                <p class="text-wrap">
-                ${response.speaker} : ${response.text}
-                </p>
-            </div>`
-        );
-    }
-    else {
-        $("#inbox").append(
-            `<div class="list-group-item list-group-item-primary">
-                <p class="text-wrap">
-                ${response.speaker} : ${response.text}
-                </p>
-            </div>`
-        );
-    }
-    
-    $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
+    var response = JSON.parse(evt.data);
+    // if the server send a message resposne
+    if (response.type == "message") {
+        if (response.speaker == $("#workerId").val()) {
+            $("#inbox").append(
+                `<div class="list-group-item list-group-item-success">
+                    <p class="text-wrap">
+                    ${response.speaker} : ${response.text}
+                    </p>
+                </div>`
+            );
+        }
+        else {
+            $("#inbox").append(
+                `<div class="list-group-item list-group-item-primary">
+                    <p class="text-wrap">
+                    ${response.speaker} : ${response.text}
+                    </p>
+                </div>`
+            );
+        }
+        
+        $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
 }
 
 // if the server send a disconnection resposne
@@ -87,9 +88,9 @@ if (response.type == "report") {
 };
 // when closes
 ws.onclose = function() {
-ws.close();
-alert("disconnected from server, reconnecting");
-ws = new WebSocket(socket_host);
+    ws.close();
+    alert("disconnected from server, reconnecting");
+    ws = new WebSocket(socket_host);
 };
 
 // event listener for new session
