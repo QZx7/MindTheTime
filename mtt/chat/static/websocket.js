@@ -135,6 +135,9 @@ $('#submitCheck').change(function () {
     if ($('#submitCheck').is(":checked")) {
         $('#hit_submit').prop("disabled", false)
     }
+    else {
+        $('#hit_submit').prop("disabled", true)
+    }
 })
 
 //keep websocket alive
