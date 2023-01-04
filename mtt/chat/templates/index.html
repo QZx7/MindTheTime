@@ -220,7 +220,7 @@
                     data: {
                         workerId : $("#workerId").val(),
                     },
-                    timeout: 6000 * 20,
+                    timeout: 0,
                     success: function(result) {
 
                         window.location.href = `/room/id/${result['room_id']}?workerId=${$("#workerId").val()}
