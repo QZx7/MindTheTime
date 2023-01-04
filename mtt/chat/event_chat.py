@@ -271,6 +271,7 @@ class MainHandler(tornado.web.RequestHandler):
 
     def get(self):
         # matching = False
+        workerId = ''
         try:
             workerId = self.get_argument("workerId")
         except tornado.web.MissingArgumentError:
