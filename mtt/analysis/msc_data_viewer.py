@@ -36,12 +36,13 @@ def load_data(data_path: Text):
     for line in data_file.readlines():
         line_data = json.loads(line.strip())
         if line_data["type"] == "event":
-            print("============ events ================")
+            print("************ events ************")
             if line_data["event_type"] == "initial":
                 print("Gap: " + line_data["gap"])
             else:
                 print("Gap: " + line_data["gap"]["gap"])
             print(line_data["speaker"] + ": " + str(line_data["events"]))
+            print("************ chat ************")
         elif line_data["type"] == "chat":
             print(line_data["speaker"] + ": " + line_data["text"].strip())
 
