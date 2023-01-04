@@ -20,10 +20,7 @@ ws.onopen = function(evt) {
 ws.onmessage = function(evt) {
     var response = JSON.parse(evt.data);
     if (response.type == "matching") {
-        window.location.href = `/room/id/${response.room_info.room_id}?workerId=${getUrlParameter('workerId')}
-        &assignmentId=${getUrlParameter('assignmentId')}
-        &hitId=${getUrlParameter('hitId')}
-        &turkSubmitTo=${getUrlParameter('turkSubmitTo')}`;
+        window.location.href = `/room/id/${response.room_info.room_id}?workerId=${getUrlParameter('workerId')}&assignmentId=${getUrlParameter('assignmentId')}&hitId=${getUrlParameter('hitId')}&turkSubmitTo=${getUrlParameter('turkSubmitTo')}`;
     }
 };
 
