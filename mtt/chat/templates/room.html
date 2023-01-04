@@ -301,12 +301,12 @@
 
       <div id="mturk">
         <form name='mturk_form' method='post' id='mturk_form' action='https://workersandbox.mturk.com/mturk/externalSubmit'>
-          <p><input type="hidden" id="assignmentId" value="" name="assignmentId"/></p>
+          <input type="hidden" id="assignmentId" value="" name="assignmentId"/>
           <div>
             <input type="checkbox" id="submitCheck" name="submitCheck"/>
-            <input type="text" id="feedback" name="feedback" placeholder="Feedback... (your thoughts on the task)"/>
             <label for="submitCheck">I have finished the HIT and I'm ready to submit.</label>
           </div>
+          <p><input type="text" id="feedback" name="feedback" placeholder="Feedback... (your thoughts on the task)"/></p>
           <p><input class="btn btn-primary" type="submit" id="hit_submit" disabled="true" value="Finish the HIT and Go Back to AMT"/> </p>
         </form>
       </div>
