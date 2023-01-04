@@ -383,6 +383,12 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 clients[self.room_id] = [self]
             else:
                 clients[self.room_id].append(self)
+                for c in clients[self.room_id]:
+                    print(f"sending to {c.worker_id}")
+                    response = {
+                        "type": "reconnection",
+                    }
+                    c.write_message(json.dumps(response))
             print(clients)
 
         # Process the new session message

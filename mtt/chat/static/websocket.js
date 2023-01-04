@@ -2,6 +2,7 @@
 var socket_host = "ws://localhost:8888/event"
 
 var ws = new WebSocket(socket_host);
+var session_utterance = 0;
 // register self as client
 ws.onopen = function() {
 message = {
@@ -43,6 +44,17 @@ if (response.type == "partner_disconnect") {
     alert(response.text);
     $("#new_message").prop("disabled", true);
     $("#new_session").prop("disabled", true);
+}
+
+// if the partner reconnected
+if (response.type == "reconnection") {
+    if ( $("#new_message").is(":disabled")) {
+        alert("Reconnected!");
+        $("#new_message").prop("disabled", false);
+        if (session_utterance >= 2) {
+            $('#new_session').prop("disabled", false);
+        }
+    }
 }
 
 // if the server send a session resposne
@@ -88,6 +100,7 @@ $("#new_session").on("click", function() {
         "room_id": $("#roomId").val(),
     }
     ws.send(JSON.stringify(message));
+    session_utterance = 0;
 });
 
 //event listener for new message
@@ -100,6 +113,10 @@ $("#new_message").on("click", function() {
     }
     ws.send(JSON.stringify(message));
     $("#message").val("").select();
+    session_utterance += 1;
+    if (session_utterance >= 2) {
+        $('#new_session').prop("disabled", false);
+    }
 });
 
 //event listener for report
@@ -112,6 +129,11 @@ $("#report").on("click", function() {
     }
     ws.send(JSON.stringify(message));
 });
+
+// event listener for submit check
+if ($('#submitCheck').is(":checked")) {
+    $('#hit_submit').prop("disabled", false)
+}
 
 //keep websocket alive
 setInterval(function () {

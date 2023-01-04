@@ -66,11 +66,14 @@
                     {% module xsrf_form_html() %}
                   </td>
                   <td style="padding-left: 20px;">
-                    <input type="button" class="btn btn-primary" value="New Session" id="new_session" data-bs-toggle="modal" data-bs-target="#time_machine"/>
+                    <input type="button" class="btn btn-primary" value="New Session" id="new_session" data-bs-toggle="modal" data-bs-target="#time_machine" disabled="true"/>
                     <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}"/>
                   </td>
                 </tr>
               </table>
+            </div>
+            <div class="row">
+              <p>At least 2 utterances are required for each session.</p>
             </div>
 
             <!-- Modal Time Machine -->
@@ -303,7 +306,7 @@
             <input type="checkbox" id="submitCheck" name="submitCheck"/>
             <label for="submitCheck">I have finished the HIT and I'm ready to submit.</label>
           </div>
-          <p><input type="submit" id="hit_submit" value="Finish the HIT and Go Back to AMT"/> </p>
+          <p><input class="btn btn-primary" type="submit" id="hit_submit" disabled="true" value="Finish the HIT and Go Back to AMT"/> </p>
         </form>
       </div>
       <script language='Javascript'>turkSetAssignmentID();</script>
