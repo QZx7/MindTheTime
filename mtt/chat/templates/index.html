@@ -223,7 +223,8 @@
                         workerId : $("#workerId").val(),
                     },
                     success: function(result) {
-                        window.location.href = `/room/id/${result['room_id']}?workerId=${$("#workerId").val()}`
+
+                        window.location.href = `/room/id/${result['room_id']}?workerId=${$("#workerId").val()}&assignmentId=${getUrlParameter('assignmentId')}`
                     },
                     error: function(result) {
                         alert('error');
@@ -240,6 +241,22 @@
             function pad(val) {
                 return val > 9 ? val : "0" + val;
             }
+
+            function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                    }
+                }
+                return false;
+            };
         </script>
     </body>
 
