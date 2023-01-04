@@ -3,8 +3,9 @@ var socket_host = "wss://eventchat.tk:443/match";
 var ws = new WebSocket(socket_host);
 
 function showNotificaiton() {
-    document.getElementById("match_notification").innerHTML = `<p class="fs-5" style="color: black;">This could take a few minutes...</p>
-    <p class="fs-5" style="color: black;"> please read through the instruction again while waiting.</p>`;
+    document.getElementById("match_notification").innerHTML = `<p class="fs-5" style="color: black;">
+    This could take a few minutes...</p><p class="fs-5" style="color: black;"> please read through the 
+    instruction again while waiting.</p>`;
     document.getElementById("start_match").disabled = true;
 }
 
