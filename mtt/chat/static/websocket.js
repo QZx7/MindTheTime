@@ -1,5 +1,5 @@
-// var socket_host = "wss://eventchat.tk:443/event"
-var socket_host = "ws://localhost:8888/event"
+var socket_host = "wss://eventchat.tk:443/event"
+// var socket_host = "ws://localhost:8888/event"
 
 var ws = new WebSocket(socket_host);
 var session_utterance = 0;
