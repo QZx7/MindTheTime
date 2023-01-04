@@ -1,18 +1,20 @@
 import json
 from typing import Text, List
 
+
 def load_data(data_path: Text) -> List:
     data_list = []
-    data_file = open(data_path, 'r', encoding='utf-8')
+    data_file = open(data_path, "r", encoding="utf-8")
     for line in data_file.readlines():
         data_list.append(json.loads(line.strip()))
-    
+
     return data_list
+
 
 def view_data(data_list: List):
     for item in data_list:
         print("*************************************************************")
-        
+
         print("*************************************************************")
         for previous_dialog in item["previous_dialogs"]:
             print("===============================")
@@ -32,7 +34,7 @@ def view_data(data_list: List):
 
 
 def load_data(data_path: Text):
-    data_file = open(data_path, 'r', encoding='utf-8')
+    data_file = open(data_path, "r", encoding="utf-8")
     for line in data_file.readlines():
         line_data = json.loads(line.strip())
         if line_data["type"] == "event":
@@ -45,6 +47,7 @@ def load_data(data_path: Text):
             print("************ chat ************")
         elif line_data["type"] == "chat":
             print(line_data["speaker"] + ": " + line_data["text"].strip())
+
 
 if __name__ == "__main__":
     # data_path = "./data/msc/valid.txt"

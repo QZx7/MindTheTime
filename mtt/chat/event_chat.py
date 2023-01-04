@@ -129,6 +129,7 @@ def get_news_event(event_dict: Dict[Text, List[Text]], event_number: int) -> Lis
     events = random.choices(event_dict["news"], k=event_number)
     return events
 
+
 # Global arguments to manage the server and rooms
 executor = ThreadPoolExecutor(4)
 global_user_pool = {}
@@ -271,7 +272,7 @@ class MainHandler(tornado.web.RequestHandler):
 
     def get(self):
         # matching = False
-        workerId = ''
+        workerId = ""
         try:
             workerId = self.get_argument("workerId")
         except tornado.web.MissingArgumentError:
@@ -289,6 +290,11 @@ class MainHandler(tornado.web.RequestHandler):
 
 
 class MatchHandler(tornado.websocket.WebSocketHandler):
+    """Handle the matching
+
+    Args:
+        tornado (_type_): _description_
+    """
 
     async def on_message(self, message):
         global matching_queue
@@ -311,43 +317,15 @@ class MatchHandler(tornado.websocket.WebSocketHandler):
             room_info = await ioloop.IOLoop.current().run_in_executor(
                 executor, match, workerId
             )
-            response = {
-                "type": "matching",
-                "room_info": room_info
-            }
+            response = {"type": "matching", "room_info": room_info}
             # self.write_message()
             print(f"matched, room_info: {room_info}")
             self.write_message(json.dumps(response))
 
         # ping pong
         elif message_data["type"] == "ping":
-            response = {
-                "type": "ping",
-                "text": "pong"
-            }
+            response = {"type": "ping", "text": "pong"}
             self.write_message(json.dumps(response))
-
-# class MatchHandler(tornado.web.RequestHandler):
-#     """Handle the matching.
-
-#     Args:
-#         tornado (_type_): A RequestHandler class
-#     """
-
-#     async def post(self):
-#         global matching_queue
-#         workerId = self.get_argument("workerId")
-#         print(f"Worker: {workerId} started matching.")
-#         if not global_user_pool[workerId]["matched"]:
-#             global_user_pool[workerId]["is_matching"] = True
-#             if workerId not in matching_queue:
-#                 matching_queue.append(workerId)
-#         # Matched. if there are more than two users, open a new room.
-#         room_info = await ioloop.IOLoop.current().run_in_executor(
-#             executor, match, workerId
-#         )
-#         print(f"matched, room_info: {room_info}")
-#         self.write(room_info)
 
 
 class RoomHandler(tornado.web.RequestHandler):
@@ -376,7 +354,9 @@ class RoomHandler(tornado.web.RequestHandler):
         elif workerId not in global_event_dict[room_id]["events"][0]:
             # generate some initial events with the same duration key.
             duration_key = global_event_dict[room_id]["gap"][0]["duration_key"]
-            global_event_dict[room_id]["events"][0][workerId] = get_initial_event(initial_dict)
+            global_event_dict[room_id]["events"][0][workerId] = get_initial_event(
+                initial_dict
+            )
 
         # Return the events of this client to the itself.
         room_client_info = {
@@ -408,7 +388,7 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
         print("WebSocket opened")
 
     def on_message(self, message):
-        
+
         message_data = json.loads(message)
         if message_data["type"] != "ping":
             print(f"websocket message: {message}")
@@ -491,13 +471,10 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 "text": "Thanks for your report. We will process your report ASAP!",
             }
             self.write_message(json.dumps(response))
-        
+
         # Ping pong to keep alive
         if message_data["type"] == "ping":
-            response = {
-                "type": "ping",
-                "text": "pong"
-            }
+            response = {"type": "ping", "text": "pong"}
             self.write_message(json.dumps(response))
 
     def on_close(self):

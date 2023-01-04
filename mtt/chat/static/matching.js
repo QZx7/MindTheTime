@@ -20,10 +20,7 @@ ws.onopen = function(evt) {
 ws.onmessage = function(evt) {
     var response = JSON.parse(evt.data);
     if (response.type == "matching") {
-        window.location.href = `/room/id/${response.room_info.room_id}?workerId=${getUrlParameter('workerId')}\
-        &assignmentId=${getUrlParameter('assignmentId')}\
-        &hitId=${getUrlParameter('hitId')}\
-        &turkSubmitTo=${getUrlParameter('turkSubmitTo')}`;
+        window.location.href = `/room/id/${response.room_info.room_id}?workerId=${getUrlParameter('workerId')}&assignmentId=${getUrlParameter('assignmentId')}&hitId=${getUrlParameter('hitId')}&turkSubmitTo=${getUrlParameter('turkSubmitTo')}`;
     }
 };
 
@@ -40,7 +37,7 @@ $("#start_match").on("click", function(e) {
     ws.send(JSON.stringify(message));
 
     var sec = -1;
-    setInterval(function () {
+    setInterval(function() {
         $("#seconds").html(pad(++sec % 60));
         $("#minutes").html(pad(parseInt(sec / 60, 10) % 60));
     }, 1000);
@@ -67,7 +64,7 @@ function getUrlParameter(sParam) {
 };
 
 //keep websocket alive
-setInterval(function () {
+setInterval(function() {
     message = {
         "type": "ping",
         "text": "ping"
