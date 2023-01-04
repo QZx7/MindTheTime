@@ -45,6 +45,8 @@ if (response.type == "partner_disconnect") {
     alert(response.text);
     $("#new_message").prop("disabled", true);
     $("#new_session").prop("disabled", true);
+    $("#submit_notification").html(`Thank you for your participating. Your partner might have exited the chat room. To get paid, 
+    you need to click the <strong>Finish the HIT and Go Back to AMT</strong> button to submit your HIT.`)
 }
 
 // if the partner reconnected
