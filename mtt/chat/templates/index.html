@@ -224,7 +224,10 @@
                     },
                     success: function(result) {
 
-                        window.location.href = `/room/id/${result['room_id']}?workerId=${$("#workerId").val()}&assignmentId=${getUrlParameter('assignmentId')}`
+                        window.location.href = `/room/id/${result['room_id']}?workerId=${$("#workerId").val()}
+                        &assignmentId=${getUrlParameter('assignmentId')}
+                        &hitId=${getUrlParameter('hitId')}
+                        &turkSubmitTo=${getUrlParameter('turkSubmitTo')}`
                     },
                     error: function(result) {
                         alert('error');
