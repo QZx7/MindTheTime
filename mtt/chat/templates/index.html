@@ -222,6 +222,7 @@
                     data: {
                         workerId : $("#workerId").val(),
                     },
+                    timeout: 1000 * 20,
                     success: function(result) {
 
                         window.location.href = `/room/id/${result['room_id']}?workerId=${$("#workerId").val()}
