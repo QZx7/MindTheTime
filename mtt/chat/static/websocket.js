@@ -131,9 +131,11 @@ $("#report").on("click", function() {
 });
 
 // event listener for submit check
-if ($('#submitCheck').is(":checked")) {
-    $('#hit_submit').prop("disabled", false)
-}
+$('#submitCheck').change(function () {
+    if ($('#submitCheck').is(":checked")) {
+        $('#hit_submit').prop("disabled", false)
+    }
+})
 
 //keep websocket alive
 setInterval(function () {
