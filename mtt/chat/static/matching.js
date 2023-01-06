@@ -5,7 +5,7 @@ var ws = new WebSocket(socket_host);
 function showNotificaiton() {
     document.getElementById("match_notification").innerHTML = `<p class="fs-5" style="color: black;">
     This could take a few minutes...</p><p class="fs-5" style="color: black;"> please read through the 
-    instruction again while waiting.</p>`;
+    instruction again while waiting. If the matching is taking too long, feel free to come back at another time.</p>`;
     document.getElementById("start_match").disabled = true;
 }
 
