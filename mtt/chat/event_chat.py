@@ -108,7 +108,7 @@ def get_random_events(
         List[Text]: A list of selected events.
     """
     if duration_key in event_dict:
-        events = random.choices(event_dict[duration_key], k=events_number)
+        events = random.sample(event_dict[duration_key], k=events_number)
         return events
 
 
@@ -126,7 +126,7 @@ def get_initial_event(event_dict: Dict[Text, List[Text]]) -> List[Text]:
 
 
 def get_news_event(event_dict: Dict[Text, List[Text]], event_number: int) -> List[Text]:
-    events = random.choices(event_dict["news"], k=event_number)
+    events = random.sample(event_dict["news"], k=event_number)
     return events
 
 

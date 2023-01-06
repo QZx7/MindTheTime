@@ -62,11 +62,11 @@ if (response.type == "reconnection") {
 
 // if the server send a session resposne
 if (response.type == "session") {
-    events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> Events: <br> Life Events: <br>`
-    for (let i = 0; i < response.events.length - 2; i++) {
+    events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Life Events: </strong> <br>`
+    for (let i = 0; i < response.events.length - 3; i++) {
         events_html += response.events[i] + "<br>"
     }
-    events_html += "World Events: <br>"
+    events_html += "<strong>World Events: </strong><br>"
     for (let j = 3; j < response.events.length; j++) {
         events_html += response.events[j] + "<br>"
     }
