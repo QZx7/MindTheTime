@@ -11,34 +11,12 @@
     <div class="container">
       <div class="row shadow mt-4">
         <div class="badge d-inline-flex justify-content-center" style="background-color: rgb(213, 248, 145);">
-            <p class="fs-3" style="color: black;">Room {{room_client_info['room_id']}} matched: Worker {{room_client_info['speaker_1']}} and Worker {{room_client_info['speaker_2']}}</p> 
+            <p class="fs-3" style="color: black;">Matched: Worker {{room_client_info['speaker_1']}} and Worker {{room_client_info['speaker_2']}}</p> 
         </div>
       </div>
     
       <div class="row mt-4">
-        <div class="col-4">
-            
-            <button class="btn btn-secondary" value="Show Instructions" id="show_instruct" data-bs-toggle="modal" data-bs-target="#instruction">Show Instructions</button>
-            
-            <div class="mt-5">
-              <label for="report">
-                  Any offensive, abusive, toxic, harmful behaviors during the conversation is not allowed.
-                  If your matched partner spoke something offensive,
-                  you can click this button to report. The more details you could provide,
-                  the quicker we could handle your report.
-              </label>
-              <textarea id="report_message" name="report message" placeholder="Describe the offensive behaviors here..."></textarea>
-              <input type="button" name="report" id="report" value="Send your report"/>
-            </div>
-
-            <div class="mt-5">
-              <p id="submit_notification">
-
-              </p>
-            </div>
-        </div>
-      
-        <div class="col-8 align-self-end">
+        <div class="align-self-end">
           <div class="row" id="body">
             <div id="room_info">
               <input type="hidden" id="workerId" value="{{room_client_info['worker_id']}}"/>
@@ -60,12 +38,11 @@
                 </tr>
                 <tr>
                   <div id="events">
-                    Assume that you are actively working on a long-term activity. <br>
                     Initial Event: {{room_client_info["events_info"]}}
                   </div>
                 </tr>
                 <tr>
-                  <td><textarea name="body" id="message" style="width: 400px;"></textarea></td>
+                  <td><textarea name="body" id="message" style="width: 40vw;" placeholder="Your message ..."></textarea></td>
                   <td style="padding-left: 20px;">
                     <input class="btn btn-primary" type="button" value="Post" id="new_message">
                     <input type="hidden" name="next" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}">
@@ -79,7 +56,7 @@
               </table>
             </div>
             <div class="row">
-              <p>At least 2 utterances are required for each session.</p>
+              <p>At least 20 utterances are required for each session.</p>
             </div>
 
             <!-- Modal Time Machine -->
@@ -304,6 +281,38 @@
         </div>
       </div>
 
+      <div class="row">
+        <p id="submit_notification" style="color: red;">
+
+        </p>
+      </div>
+
+      <div>
+        <hr style="height:30px">
+      </div>
+
+      <div class="row">
+        
+        <p>
+          You can check the insturctions here: <br>
+          <button class="btn btn-secondary" value="Show Instructions" id="show_instruct" data-bs-toggle="modal" data-bs-target="#instruction">Show Instructions</button>
+        </p>
+        
+        <div>
+          <label for="report">
+            You can report any offensive, abusive, toxic and harmful behaviors here. We will handle that as soon as possible.
+          </label>
+          <div>
+            <textarea id="report_message" name="report message" placeholder="Describe the offensive behaviors here..." style="width: 40vw;"></textarea>
+          </div>
+          <input class="btn btn-secondary" type="button" name="report" id="report" value="Send your report"/>
+        </div>
+      </div>
+
+      <div>
+        <hr style="height:30px">
+      </div>
+
       <div id="mturk">
         <form name='mturk_form' method='post' id='mturk_form' action='https://workersandbox.mturk.com/mturk/externalSubmit'>
           <input type="hidden" id="assignmentId" value="" name="assignmentId"/>
@@ -312,7 +321,7 @@
             <label for="submitCheck">I have finished the HIT and I'm ready to submit.</label>
           </div>
           <p><input type="text" id="feedback" name="feedback" placeholder="Feedback... (your thoughts on the task)"/></p>
-          <p><input class="btn btn-primary" type="submit" id="hit_submit" disabled="true" value="Finish the HIT and Go Back to AMT"/> </p>
+          <p><input class="btn btn-primary" type="submit" id="hit_submit" disabled="true" value="Submit the HIT and Go Back To AMT"/> </p>
         </form>
       </div>
       <script language='Javascript'>turkSetAssignmentID();</script>

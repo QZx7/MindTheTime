@@ -49,9 +49,17 @@ def load_data(data_path: Text):
             print(line_data["speaker"] + ": " + line_data["text"].strip())
 
 
+def continuous_event_viewer(data_path: Text):
+    data_file = open(data_path, "r", encoding='utf-8')
+    continuous_data = json.load(data_file)
+    for key, value in continuous_data.items():
+        print(f"{key}: {len(value)}")
+
 if __name__ == "__main__":
     # data_path = "./data/msc/valid.txt"
     # data_list = load_data(data_path)
     # view_data(data_list)
-    data_path = "./mtt/chat/log/chat.log"
-    load_data(data_path)
+    # data_path = "./mtt/chat/log/chat.log"
+    data_path = r"./mtt/chat/data/continuous_event.json"
+    # load_data(data_path)
+    continuous_event_viewer(data_path)

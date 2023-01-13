@@ -1,5 +1,5 @@
-var socket_host = "wss://eventchat.tk:443/event"
-// var socket_host = "ws://localhost:8888/event"
+//var socket_host = "wss://eventchat.tk:443/event"
+var socket_host = "ws://localhost:8888/event"
 
 var ws = new WebSocket(socket_host);
 var session_utterance = 0;
@@ -45,8 +45,8 @@ if (response.type == "partner_disconnect") {
     alert(response.text);
     $("#new_message").prop("disabled", true);
     $("#new_session").prop("disabled", true);
-    $("#submit_notification").html(`Thank you for your participating. Your partner might have exited the chat room. To get paid, 
-    you need to click the <strong>Finish the HIT and Go Back to AMT</strong> button to submit your HIT.`)
+    $("#submit_notification").html(`Thank you for your participation. Your partner might have exited the chat room. To get paid, 
+    you need to click the <strong>Submit the HIT and Go Back to AMT</strong> button to submit your HIT.`)
 }
 
 // if the partner reconnected
@@ -54,6 +54,7 @@ if (response.type == "reconnection") {
     if ( $("#new_message").is(":disabled")) {
         alert("Reconnected!");
         $("#new_message").prop("disabled", false);
+        $("#submit_notification").html(``);
         if (session_utterance >= 2) {
             $('#new_session').prop("disabled", false);
         }

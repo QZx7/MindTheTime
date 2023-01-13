@@ -140,7 +140,7 @@ global_room_pool = {}
 global_message_dict: Dict[int, List[Dict[Text, Text]]] = {}
 
 # Event
-event_dict = read_event("event.json")
+event_dict = read_event("random_event.json")
 initial_dict = read_event("initial.json")
 news_dict = read_event("news.json")
 global_event_dict: Dict[int, Dict[Text, List[Dict[Text, Any]]]] = {}
