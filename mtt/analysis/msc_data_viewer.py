@@ -50,10 +50,23 @@ def load_data(data_path: Text):
 
 
 def continuous_event_viewer(data_path: Text):
-    data_file = open(data_path, "r", encoding='utf-8')
+    data_file = open(data_path, "r", encoding="utf-8")
+    reformat_data = open(r"./mtt/chat/data/new_continuous.json", "w", encoding="utf-8")
     continuous_data = json.load(data_file)
     for key, value in continuous_data.items():
         print(f"{key}: {len(value)}")
+
+    new_list = []
+    id = 0
+    for key, value in continuous_data.items():
+        for item in value:
+            item["id"] = id
+            item["duration_key"] = key
+            new_list.append(item)
+            id += 1
+    # print(new_list)
+    json.dump(new_list, reformat_data, indent=4)
+
 
 if __name__ == "__main__":
     # data_path = "./data/msc/valid.txt"

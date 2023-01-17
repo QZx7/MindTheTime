@@ -21,31 +21,49 @@ LOG_PATH = os.path.join(os.path.dirname(__file__), "log")
 CURRENT_TIME = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 
 
-class MessageBuffer(object):
-    def __init__(self, id):
-        # cond is notified whenever the message cache is updated
-        self.id = id
-        self.cond = tornado.locks.Condition()
-        self.cache = []
-        self.cache_size = 200
+class TimeMachine:
+    def __init__(
+        self,
+        room_id: int,
+        continuous_event: List[Dict],
+        random_event: Dict[Text, List[Text]],
+        news: Dict[Text, List[Text]],
+    ) -> None:
+        self.continuous_event = (continuous_event,)
+        self.random_event = (random_event,)
+        self.news = (news,)
+        self.room_id = room_id
+        self.next_gap = ""
+        self.next_duration_key = ""
+        pass
 
-    def get_messages_since(self, cursor):
-        """Returns a list of messages newer than the given cursor.
-        ``cursor`` should be the ``id`` of the last message received.
-        """
-        results = []
-        for msg in reversed(self.cache):
-            if msg["id"] == cursor:
-                break
-            results.append(msg)
-        results.reverse()
-        return results
+    def assign_schedule(self):
+        random.randint(range(len(self.continuous_event)))
 
-    def add_message(self, message):
-        self.cache.append(message)
-        if len(self.cache) > self.cache_size:
-            self.cache = self.cache[-self.cache_size :]
-        self.cond.notify_all()
+    def move_forward(self):
+        possible_units = ["minutes", "hours", "days", "weeks", "months", "year"]
+        duration = random.randint(0, len(possible_units) - 1)
+
+        if duration == 0:
+            gap_number = random.randint(1, 59)
+            self.next_gap = f"{gap_number} minutes" if gap_number > 1 else "1 minute"
+        elif duration == 1:
+            gap_number = random.randint(1, 23)
+            self.next_gap = f"{gap_number} hours" if gap_number > 1 else "1 hour"
+        elif duration == 2:
+            gap_number = random.randint(1, 5)
+            self.next_gap = f"{gap_number} days" if gap_number > 1 else "1 day"
+        elif duration == 3:
+            gap_number = random.randint(1, 3)
+            self.next_gap = f"{gap_number} weeks" if gap_number > 1 else "1 week"
+        elif duration == 4:
+            gap_number = random.randint(1, 11)
+            self.next_gap = f"{gap_number} months" if gap_number > 1 else "1 month"
+        elif duration == 5:
+            self.next_gap = "1 year"
+
+        self.next_duration_key = possible_units[duration]
+        return self.next_gap, self.next_duration_key
 
 
 def read_event(filename: Text):

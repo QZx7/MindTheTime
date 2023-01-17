@@ -1,0 +1,1457 @@
+[
+    {
+        "id": 0,
+        "initial": "You just started writing your doctor thesis, which would take about one year.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:1": [
+                    "Review the requirements and guidelines for the thesis",
+                    "Review relevant literature and research in the field",
+                    "Outline the structure and main points of the thesis"
+                ],
+                "M:3": [
+                    "Write the introduction and first chapter of the thesis"
+                ],
+                "M:6": [
+                    "Write the remaining chapters of the thesis, focusing on one chapter at a time"
+                ],
+                "M:9": [
+                    "Review and revise the entire thesis for clarity, coherence, and flow",
+                    "Have the thesis reviewed by a colleague or academic advisor for feedback and suggestions for improvement"
+                ],
+                "M:10": [
+                    "Make any necessary revisions based on feedback",
+                    "Prepare the final version of the thesis, including formatting and citations"
+                ],
+                "M:11": [
+                    "Submit the final version of the thesis to the relevant committee or department"
+                ],
+                "M:12": [
+                    "Address any final comments or revisions requested by the committee or department",
+                    "Defend the thesis",
+                    "Celebrate the completion of the thesis!"
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 1,
+        "initial": "You just started build a new house from scratch, which would take about one year.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:3": [
+                    "Hire a qualified contractor and architect to develop a plan for building the house.",
+                    "Obtain building permits and approval from local planning and zoning board.",
+                    "Clear the land and prepare the site for construction."
+                ],
+                "M:5": [
+                    "Pour the foundation.",
+                    "Frame the walls and install windows and doors."
+                ],
+                "M:6": [
+                    "Install plumbing, electrical, and HVAC systems."
+                ],
+                "M:8": [
+                    "Install insulation and drywall.",
+                    "Hang cabinets and apply finishes."
+                ],
+                "M:9": [
+                    "Install flooring and stairs."
+                ],
+                "M:11": [
+                    "Paint walls and install light fixtures.",
+                    "Landscape the yard and install sidewalks."
+                ],
+                "M:12": [
+                    "Perform a final inspection and secure a Certificate of Occupancy."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 2,
+        "initial": "You just started a one-year collage program.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "W:1": [
+                    "Review course syllabus.",
+                    "Attend orientation meeting.",
+                    "Register for classes.",
+                    "Set up a study schedule."
+                ],
+                "M:3": [
+                    "Attend classes.",
+                    "Complete assigned readings and assignments.",
+                    "Begin studying for mid-term exams."
+                ],
+                "M:6": [
+                    "Continue attending classes.",
+                    "Complete mid-term exams.",
+                    "Begin studying for final exams."
+                ],
+                "M:7": [
+                    "Complete final exams.",
+                    "Continue attending classes.",
+                    "Complete portfolio.",
+                    "Begin studying for comprehensive exams."
+                ],
+                "M:8": [
+                    "Continue attending classes.",
+                    "Complete comprehensive exams.",
+                    "Begin writing thesis."
+                ],
+                "M:10": [
+                    "Continue attending classes.",
+                    "Complete thesis.",
+                    "Begin preparing for final oral defense."
+                ],
+                "M:11": [
+                    "Submit the thesis.",
+                    "Complete final oral defense.",
+                    "Collect the diploma."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 3,
+        "initial": "You just started to prepare for the bar exam next year.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:1": [
+                    "Familiarize yourself with the bar exam format and individual state requirements.",
+                    "Create a study schedule that accounts for all the bar topics you need to cover.",
+                    "Begin studying the first bar topics in your study schedule.",
+                    "Start researching bar exam preparation materials and programs."
+                ],
+                "M:2": [
+                    "Continue studying bar topics according to your study schedule.",
+                    "Enroll in a bar exam preparation course if desired.",
+                    "Find a bar exam mentor or study group to review material and discuss strategies."
+                ],
+                "M:4": [
+                    "Take additional practice exams to assess your progress.",
+                    "Continue researching bar exam preparation materials and programs."
+                ],
+                "M:6": [
+                    "Begin to review all material covered thus far.",
+                    "Take additional practice exams to assess your progress."
+                ],
+                "M:8": [
+                    "Begin to focus on the most difficult topics and any areas of weakness."
+                ],
+                "M:11": [
+                    "Continue reviewing bar topics according to your study schedule.",
+                    "Take additional practice exams to assess your progress."
+                ],
+                "M:12": [
+                    "Finalize your bar exam preparation and start to relax."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 4,
+        "initial": "You just started to prepare for a marathon context, which would take about one year.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:1": [
+                    "Choose the marathon and make a commitment to participate.",
+                    "Set realistic goals for yourself.",
+                    "Develop a plan to achieve your goals."
+                ],
+                "M:2": [
+                    "Start an exercise program.",
+                    "Find a coach or running group .",
+                    "Begin gradually increasing the intensity and duration of your runs."
+                ],
+                "M:5": [
+                    "Focus on increasing your aerobic base.",
+                    "Increase your weekly mileage.",
+                    "Incorporate speed and hill workouts."
+                ],
+                "M:8": [
+                    "Increase the frequency and duration of your long runs.",
+                    "Begin doing back-to-back runs.",
+                    "Incorporate cross-training activities."
+                ],
+                "M:9": [
+                    "Increase the intensity of your speed and hill workouts.",
+                    "Reduce the amount of cross-training.",
+                    "Begin tapering your runs."
+                ],
+                "M:11": [
+                    "Adjust your nutrition plan.",
+                    "Adjust your gear.",
+                    "Make sure you are well-rested."
+                ],
+                "M:12": [
+                    "Follow your race day plan.",
+                    "Take the race and enjoy the experience."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 5,
+        "initial": "You just started planning to release a new music album, which would take about one year.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:1": [
+                    "Think about the theme of the album."
+                ],
+                "M:3": [
+                    "Begin writing and recording songs.",
+                    "Select the 10 best songs for the album.",
+                    "Begin producing the tracks."
+                ],
+                "M:6": [
+                    "Finalize production of the tracks.",
+                    "Begin mixing and mastering."
+                ],
+                "M:7": [
+                    "Finalize mixing and mastering.",
+                    "Begin artwork for the album.",
+                    "Begin planning for the album release."
+                ],
+                "M:8": [
+                    "Finalize artwork.",
+                    "Begin promotions for the album."
+                ],
+                "M:9": [
+                    "Launch a pre-order campaign.",
+                    "Prepare press releases.",
+                    "Prepare interviews and press appearances."
+                ],
+                "M:11": [
+                    "Prepare for the album release.",
+                    "Launch the album.",
+                    "Promote the album."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 6,
+        "initial": "You just started learning piano, which would about one year.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:3": [
+                    "Learn the basics of the piano and hand positioning.",
+                    "Learn to play basic chords and melodies.",
+                    "Learn to read sheet music."
+                ],
+                "M:6": [
+                    "Practice playing familiar songs.",
+                    "Learn about music theory."
+                ],
+                "M:9": [
+                    "Learn more advanced techniques such as arpeggios and scales",
+                    "Practice playing different genres of music."
+                ],
+                "M:12": [
+                    "Focus on performance and technique.",
+                    "Perform in a final recital."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 7,
+        "initial": "You just started writing a new sci-fi novel, which would take about one year.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:2": [
+                    "Research and world-building, outlining the story and characters",
+                    "Research on the sci-fi genre and specific sub-genres that you want to focus on.",
+                    "Build the world, characters, culture, and technology of your story.",
+                    "Outline the plot, character arcs and the main conflicts of the story."
+                ],
+                "M:4": [
+                    "Write the first draft of the novel",
+                    "Start writing your first draft, focusing on completing the rough structure of the story.",
+                    "Aim to hit a specific word count (e.g. 25,000 words) by the end of the month"
+                ],
+                "M:6": [
+                    "Revise and edit the first draft",
+                    "Revise the manuscript by going through it from start to finish, looking for plot holes, inconsistencies, and weaknesses in the story and the characters.",
+                    "Edit the manuscript for grammar, punctuation, and sentence structure.",
+                    "Get feedback from beta readers, writing groups, or writing mentor"
+                ],
+                "M:8": [
+                    "Polish the manuscript, addressing feedback",
+                    "Make the changes that have been suggested by beta readers or writing mentors.",
+                    "Polish the manuscript, looking for ways to tighten the pacing, add emotional depth and to make the characters more relatable."
+                ],
+                "M:10": [
+                    "Submitting the manuscript to literary agents or publishers",
+                    "Write a query letter and synopsis of your novel.",
+                    "Submit your manuscript to literary agents or publishers.",
+                    "Follow up with agents and publishers to check the status of your submission."
+                ],
+                "M:12": [
+                    "Responding to publishing offers, or reworking the manuscript based on feedback",
+                    "Review any offers that you received, and negotiate the terms if necessary.",
+                    "Rewrite the manuscript based on feedback received, if needed.",
+                    "Consider self-publishing if you haven't received any offers, or if the offers didn't meet your expectations"
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 8,
+        "initial": "You just started a MBA program in the university, which would take about one year to finish.",
+        "time_span": "1 year",
+        "schedules": [
+            {
+                "M:1": [
+                    "Research different MBA programs and decide which one to join.",
+                    "Apply to the chosen MBA program.",
+                    "Wait for the acceptance letter."
+                ],
+                "M:3": [
+                    "Attend orientation session and meet peers.",
+                    "Get familiar with the college campus and resources.",
+                    "Take the first classes."
+                ],
+                "M:5": [
+                    "Attend extra-curricular activities and events.",
+                    "Attend career fairs and network.",
+                    "Start working on projects."
+                ],
+                "M:7": [
+                    "Start preparing for internships.",
+                    "Research and attend additional professional development activities."
+                ],
+                "M:8": [
+                    "Start applying for internships.",
+                    "Prepare for exams."
+                ],
+                "M:10": [
+                    "Complete internships.",
+                    "Take final exams."
+                ],
+                "M:12": [
+                    "Finalize the exams and collect the certificate."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 9,
+        "initial": "You just started a project of developing a new cosmetic product for your company, which would take about one year.",
+        "time_span": "",
+        "schedules": [
+            {
+                "M:1": [
+                    "Define the project objectives and requirements.",
+                    "Conduct market research to identify consumer needs, trends, and competitors.",
+                    "Develop the concept for the new product."
+                ],
+                "M:4": [
+                    "Develop several prototypes of the new product based on the concept.",
+                    "Test the prototypes to evaluate their performance, stability and safety.",
+                    "Select the most promising prototype for further development."
+                ],
+                "M:6": [
+                    "Perform stability tests on the selected prototype to determine its shelf life.",
+                    "Make any necessary adjustments to the formulation."
+                ],
+                "M:8": [
+                    "Perform safety testing on the final formulation to ensure it is safe for use.",
+                    "File the safety report."
+                ],
+                "M:10": [
+                    "Scale up the production process to prepare for commercial manufacturing.",
+                    "Produce the final product."
+                ],
+                "M:12": [
+                    "Develop packaging and labeling for the new product.",
+                    "Make sure the packaging and labeling meet all legal requirements",
+                    "Launch the new cosmetic product to the market."
+                ]
+            }
+        ],
+        "duration_key": "year"
+    },
+    {
+        "id": 10,
+        "initial": "You just started to learn Spanish, which would take about 7 months",
+        "time_span": "7 months",
+        "schedules": [
+            {
+                "M:1": [
+                    "Purchase a language learning program.",
+                    "Familiarize yourself with the language\u2019s pronunciation and basic grammar.",
+                    "Establish a basic vocabulary.",
+                    "Begin building sentences."
+                ],
+                "M:2": [
+                    "Continue to practice and review the language basics.",
+                    "Start listening to native speakers and use language learning tools such as podcasts, videos, and music.",
+                    "Begin reading simple language books and articles."
+                ],
+                "M:3": [
+                    "Expand your vocabulary",
+                    "Start conversations with native speakers.",
+                    "Take online classes or in-person classes.",
+                    "Get comfortable discussing everyday topics."
+                ],
+                "M:4": [
+                    "Increase your reading comprehension.",
+                    "Improve your grammar to form more complex sentences.",
+                    "Practice writing in the language.",
+                    "Expand your conversation topics."
+                ],
+                "M:5": [
+                    "Take language proficiency tests.",
+                    "Practice more complex conversations.",
+                    "Increase your reading comprehension.",
+                    "Take a language-immersion trip."
+                ],
+                "M:6": [
+                    "Start speaking the language confidently.",
+                    "Expand your vocabulary.",
+                    "Increase your reading and writing skills.",
+                    "Begin taking advanced classes."
+                ],
+                "M:7": [
+                    "Refine your grammar."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 11,
+        "initial": "You just started an internship in a buisness company, which would take about 6 months.",
+        "time_span": "6 months",
+        "schedules": [
+            {
+                "M:1": [
+                    "Orientation: Learn company policies and procedures, meet coworkers, and familiarize yourself with the workplace.",
+                    "Shadow experienced coworkers to observe their specific roles and responsibilities."
+                ],
+                "M:2": [
+                    "Begin working independently on assigned tasks and projects.",
+                    "Attend departmental meetings and trainings."
+                ],
+                "M:3": [
+                    "Develop a deeper understanding of the company\u2019s operations and culture.",
+                    "Increase participation in team activities and special projects."
+                ],
+                "M:4": [
+                    "Take on more complex tasks and projects.",
+                    "Receive ongoing feedback from colleagues and supervisors."
+                ],
+                "M:5": [
+                    "Begin to transition into a leadership role.",
+                    "Assist with the onboarding and training of new interns."
+                ],
+                "M:6": [
+                    "Review progress and accomplishments with supervisors.",
+                    "Participate in final presentations and wrap-up activities."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 12,
+        "initial": "You just started planning to get a driver license, which would take about 2 months.",
+        "time_span": "2 months",
+        "schedules": [
+            {
+                "W:1": [
+                    "Research the requirements and the process for obtaining a driver license in your state.",
+                    "Gather the necessary documents for the driver license application.",
+                    "Apply for a learner's permit and pass the written test."
+                ],
+                "W:2": [
+                    "Begin practicing driving with an adult.",
+                    "Practice driving in a variety of conditions, including nighttime and in bad weather.",
+                    "Take a driver education course if required."
+                ],
+                "W:3": [
+                    "Take the driving test and pass.",
+                    "Pay the licensing fee and receive the driver license."
+                ],
+                "W:4": [
+                    "Take a defensive driving course.",
+                    "Practice driving in different traffic situations."
+                ],
+                "W:6": [
+                    "Take a defensive driving course.",
+                    "Practice driving in different traffic situations."
+                ],
+                "W:7": [
+                    "Take a behind-the-wheel test to demonstrate safe driving skills.",
+                    "Receive a certificate of completion."
+                ],
+                "W:9": [
+                    "Take a road test and pass.",
+                    "Receive the driver license."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 13,
+        "initial": "You are about to get married and currently planning your wedding, which will be in 5 months later.",
+        "time_span": "5 months",
+        "schedules": [
+            {
+                "M:1": [
+                    "Choose a date",
+                    "Create a budget",
+                    "Draft a guest list",
+                    "Research ceremony and reception venues",
+                    "Consider hiring a wedding planner",
+                    "Start researching and booking vendors",
+                    "Send out save-the-dates"
+                ],
+                "M:2": [
+                    "Finalize guest list",
+                    "Book ceremony and reception venues",
+                    "Reserve rental items",
+                    "Book photographers and videographers",
+                    "Book caterers, baker, florists, etc.",
+                    "Begin shopping for wedding attire"
+                ],
+                "M:3": [
+                    "Finalize music and entertainment",
+                    "Send out invitations",
+                    "Begin wedding party attire shopping",
+                    "Reserve transportation",
+                    "Purchase wedding rings",
+                    "Finalize menu"
+                ],
+                "M:4": [
+                    "Finalize all details with vendors",
+                    "Finalize ceremony and reception details",
+                    "Purchase gifts for wedding party",
+                    "Create seating chart",
+                    "Book honeymoon",
+                    "Print place cards"
+                ],
+                "M:4|W:3": [
+                    "Finalize honeymoon reservations",
+                    "Finalize seating chart",
+                    "Finalize rental orders",
+                    "Finalize all attire",
+                    "Finalize music selections",
+                    "Print all programs, menus, etc."
+                ],
+                "M5": [
+                    "Finalize rehearsal dinner details",
+                    "Finalize ceremony and reception details",
+                    "Finalize rental orders",
+                    "Finalize music selections",
+                    "Finalize transportation details",
+                    "Finalize any remaining vendor contracts"
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 14,
+        "initial": "You just started building a swimming pool in your new house, which would take about 3 months.",
+        "time_span": "3 months",
+        "schedules": [
+            {
+                "W:1": [
+                    "Site preparation and excavation of the pool area."
+                ],
+                "W:2": [
+                    "Installation of plumbing and electrical for the pool equipment"
+                ],
+                "W:6": [
+                    "Forming and pouring the pool's concrete walls and floor.",
+                    "Finishing the interior of the pool with plaster or other finish materials."
+                ],
+                "W:7": [
+                    "Installing the pool equipment, such as the pump, filter, and heater."
+                ],
+                "W:9": [
+                    "Backfilling and grading the area around the pool.",
+                    "Installing pool decking and coping around the pool"
+                ],
+                "W:10": [
+                    "Final cleaning and preparing the pool for use."
+                ],
+                "W:12": [
+                    "Final touches and inspection."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 15,
+        "initial": "You just started developing a finance management software for your client, which would take about 6 months",
+        "time_span": "6 months",
+        "schedules": [
+            {
+                "M:1": [
+                    "Identify project goals and objectives",
+                    "Gather requirements from stakeholders",
+                    "Create project plan and documentation"
+                ],
+                "M:2": [
+                    "Create wireframes and mockups of the software.",
+                    "Develop a functional prototype for testing and feedback."
+                ],
+                "M:4": [
+                    "Develop the software according to the plan and design.",
+                    "Test and debug the software during development"
+                ],
+                "M:5": [
+                    "Conduct thorough testing of the software to ensure it meets requirements and is free of bugs.",
+                    "Address any issues discovered during testing."
+                ],
+                "M:5|W:1": [
+                    "Deploy the software to a staging environment for final testing.",
+                    "Provide training to users on how to use the software."
+                ],
+                "M:5|W:2": [
+                    "Release the software to the production environment.",
+                    "Monitor the software's performance and address any issues that arise"
+                ],
+                "M:6": [
+                    "Monitor and maintain the software.",
+                    "Provide ongoing support and troubleshoot issues as they arise."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 16,
+        "initial": "You just started preparing and executing a social media marketing campaign for your company, which would take about 3 months.",
+        "time_span": "3 months",
+        "schedules": [
+            {
+                "W:4": [
+                    "Research the target audience and their social media habits.",
+                    "Identify the platforms that the target audience uses most.",
+                    "Develop a marketing plan and campaign goals.",
+                    "Define KPIs for measurement."
+                ],
+                "W:5": [
+                    "Create high-quality, engaging content that aligns with the campaign goals and appeals to the target audience.",
+                    "Plan the content calendar."
+                ],
+                "W:6": [
+                    "Design the ad campaign including ad copy, images, and targeting.",
+                    "Set up the campaign on the selected social media platforms."
+                ],
+                "W:10": [
+                    "Execute the campaign and monitor it for the first 2 weeks.",
+                    "Adjust the campaign based on its performance and monitor it for the next 2 weeks.",
+                    "Optimize the campaign during the last 2 weeks."
+                ],
+                "W:11": [
+                    "Analyze the campaign data, measure performance against the defined KPIs.",
+                    "Identify successes and opportunities for improvement"
+                ],
+                "W:12": [
+                    "Refine the strategy, taking into account the campaign results.",
+                    "Make adjustments to the content and targeting strategy as necessary.",
+                    "Finish up the preparation and scale up the campaign."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 17,
+        "initial": "You just started renovating your old house, which would take about 3 months.",
+        "time_span": "3 months",
+        "schedules": [
+            {
+                "W:1": [
+                    "Remove old fixtures and finishes"
+                ],
+                "W:2": [
+                    "Complete demolition of existing structures as necessary"
+                ],
+                "W:4": [
+                    "Repair or replace any damaged foundation elements"
+                ],
+                "W:8": [
+                    "Install new plumbing and electrical systems",
+                    "Frame walls, floors, and ceilings"
+                ],
+                "W:12": [
+                    "Install HVAC system and insulation",
+                    "Install new windows and exterior doors"
+                ],
+                "W:16": [
+                    "Install drywall, flooring, trim and finish"
+                ],
+                "W:20": [
+                    "Paint and final cleaning"
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 18,
+        "initial": "You just started taking an online course in data science, which would take about 4 months.",
+        "time_span": "4 months",
+        "schedules": [
+            {
+                "W:1": [
+                    "Review course syllabus, objectives and prerequisites."
+                ],
+                "W:4": [
+                    "Learn basic statistics and data exploration."
+                ],
+                "W:8": [
+                    "Learn Python programming and data manipulation."
+                ],
+                "W:12": [
+                    "Learn data visualization and descriptive analytics."
+                ],
+                "W:16": [
+                    "Learn predictive modeling and Machine learning."
+                ],
+                "W:20": [
+                    "Learn big data and distributed computing."
+                ],
+                "W:24": [
+                    "Applied project and case studies."
+                ],
+                "W:26": [
+                    "Prepare for and take final exam."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 19,
+        "initial": "You just started looking for a new job, which would take about 2 months.",
+        "time_span": "2 months",
+        "schedules": [
+            {
+                "W:1": [
+                    "Assess your skills, experience and career goals.",
+                    "Make a list of your skills, qualifications, and experience.",
+                    "Determine what you're looking for in a new job and what type of work aligns with your career goals."
+                ],
+                "W:2": [
+                    "Identify target companies and job positions.",
+                    "Research potential companies and industries that align with your skills and career goals.",
+                    "Identify specific job positions and roles within those companies that you're interested in."
+                ],
+                "W:4": [
+                    "Refine your resume and cover letter.",
+                    "Revise your resume to highlight your relevant skills and experiences.",
+                    "Write a compelling cover letter tailored to the position and company you're applying to.",
+                    "Proofread and ask for feedback on your resume and cover letter."
+                ],
+                "W:6": [
+                    "Submit job applications.",
+                    "Submit job applications and portfolios through online job boards and company websites.",
+                    "Reach out to people in your network and inform them of your job search. Ask for referrals.",
+                    "Follow up on the applications, by sending email or making calls."
+                ],
+                "W:8": [
+                    "Attend Interviews.",
+                    "Negotiate job offers and make your decision."
+                ]
+            }
+        ],
+        "duration_key": "month"
+    },
+    {
+        "id": 20,
+        "initial": "You just started to write a new business plan, which would take about 2 weeks.",
+        "time_span": "2 weeks",
+        "schedules": [
+            {
+                "D:1": [
+                    "Outline the plan and research the market.",
+                    "Define target customer, problem, solution and the business model."
+                ],
+                "D:2": [
+                    "Research and analyze the industry.",
+                    "Look for any trends, challenges, opportunities and competition in the market."
+                ],
+                "D:4": [
+                    "Research and analyze the target customer.",
+                    "Define personas, customer segments, pain points and value proposition."
+                ],
+                "D:8": [
+                    "Research and analyze the financials.",
+                    "Establish the financial projections, and forecast future performance.",
+                    "Prepare the business plan document.",
+                    "Write the introduction, executive summary, company overview, and industry analysis sections."
+                ],
+                "D:10": [
+                    "Write the product or service, marketing and sales, and financial plan sections."
+                ],
+                "D:12": [
+                    "Write the management and organizational structure sections.",
+                    "Make any necessary adjustments based on the feedbacks."
+                ],
+                "D:14": [
+                    "Proofreading, formatting and finalize the document.",
+                    "Print and prepare presentations, if needed."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 21,
+        "initial": "You just started a road trip inside your country, which would take about 2 weeks.",
+        "time_span": "2 weeks",
+        "schedules": [
+            {
+                "D:1": [
+                    "Depart home in the morning and drive to the National Park.",
+                    "Check into a hotel or campground near the park entrance."
+                ],
+                "D:2": [
+                    "Spend the day exploring the park and taking in scenic views.",
+                    "Visit famous landmarks.",
+                    "Take a hike to the top of mountain."
+                ],
+                "D:3": [
+                    "Take a guided tour and hike to Glacier Point for panoramic views of the park."
+                ],
+                "D:5": [
+                    "Go on a backpacking trip in the wilderness of the park.",
+                    "Obtain a permit from the park ranger station and spend the next two days exploring the park's backcountry."
+                ],
+                "D:8": [
+                    "Participate in a ranger-led program, such as a nature walk or campfire program.",
+                    "In the evening, stargaze at the night sky.",
+                    "Enjoy leisure activities including camping, fishing, or wildlife viewing.",
+                    "Take a dip in the river and rent a canoe and explore the park's lakes."
+                ],
+                "D:12": [
+                    "Take a scenic drive on the road, which runs through the park and offers stunning views.",
+                    "Do some more hiking and enjoy the park's natural beauty."
+                ],
+                "D:13": [
+                    "Pack up and depart for home."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 22,
+        "initial": "You just started a basic photography course, which would take about 3 weeks.",
+        "time_span": "3 weeks",
+        "schedules": [
+            {
+                "D:1": [
+                    "Introduction to the course and basic camera operation.",
+                    "Learn about the different parts of a camera and how to use them."
+                ],
+                "D:3": [
+                    "Learn about aperture, shutter speed, and ISO.",
+                    "Practice adjusting these settings and understanding their effects on an image."
+                ],
+                "D:5": [
+                    "Learn about composition and the rule of thirds.",
+                    "Practice taking photos and analyzing them for composition."
+                ],
+                "D:9": [
+                    "Learn about lighting and how to use natural light to create interesting photos.",
+                    "Learn about flash photography and how to use flash to improve your photos in different situations."
+                ],
+                "D:11": [
+                    "Learn about portrait photography and how to take great portraits of people.",
+                    "Learn about landscape photography and how to take great photos of nature and the environment."
+                ],
+                "D:13": [
+                    "Learn about post-processing and how to use editing software to enhance your photos.",
+                    "Final class, review and final project."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 23,
+        "initial": "You just started a basic cookery course, learning how to cook different dishers. The course will take about 2 weeks.",
+        "time_span": "2 weeks",
+        "schedules": [
+            {
+                "D:1": [
+                    "Introduction to the course and basic kitchen safety.",
+                    "Learn about the different tools and equipment needed for cooking."
+                ],
+                "D:3": [
+                    "Learn about basic knife skills and how to properly chop and slice vegetables and fruits.",
+                    "Learn about the different types of cooking methods, such as boiling, saut\u00e9ing, and roasting."
+                ],
+                "D:5": [
+                    "Learn about the basics of baking and making dough. Practice making bread and pastries.",
+                    "Learn about different cuisines and ingredients.",
+                    "Practice making dishes from different cultures such as Italian, Chinese, and Mexican."
+                ],
+                "D:7": [
+                    "Learn about preparing and cooking different types of meats, such as beef, chicken, and fish.",
+                    "Learn about making sauces and dressings and how to properly season food."
+                ],
+                "D:10": [
+                    "Learn about cooking with herbs and spices and how to make your own spice blends.",
+                    "Learn about healthy cooking and how to make nutritious and balanced meals."
+                ],
+                "D:14": [
+                    "Final class, review and final project."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 24,
+        "initial": "You just started writing a research paper about creating AI models that understand time. It will take about 3 weeks.",
+        "time_span": "3 weeks",
+        "schedules": [
+            {
+                "D:2": [
+                    "Review literature on AI models understanding time. Identify key research studies and gather relevant materials."
+                ],
+                "D:5": [
+                    "Develop a research question and hypothesis. Outline the structure of the paper.",
+                    "Collect data and conduct initial analysis."
+                ],
+                "D:10": [
+                    "Write the introduction, literature review, and methods sections of the paper.",
+                    "Continue to analyze data and write the results section."
+                ],
+                "D:13": [
+                    "Write the discussion and conclusion sections, making sure to link back to the research question and hypothesis.",
+                    "Revise and edit the paper, checking for clarity and coherence."
+                ],
+                "D:15": [
+                    "Prepare the final version of the paper, including formatting, citations, and references.",
+                    "Learn about healthy cooking and how to make nutritious and balanced meals."
+                ],
+                "D:16": [
+                    "Submit the paper and prepare for any feedback or revisions requested by the instructor."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 25,
+        "initial": "You just started writing a grant proposal, which would take about 2 weeks.",
+        "time_span": "2 weeks",
+        "schedules": [
+            {
+                "D:2": [
+                    "Research potential funding sources and review the requirements and guidelines for grant proposal submissions."
+                ],
+                "D:5": [
+                    "Develop a project plan and objectives, including a detailed description of the project, its goals, and the proposed budget.",
+                    "Identify and gather necessary supporting documentation such as letters of support, and any relevant background information."
+                ],
+                "D:7": [
+                    "Write the introduction and background section of the proposal, highlighting the importance of the project and the problem it aims to address."
+                ],
+                "D:9": [
+                    "Write the methods and implementation section, detailing the proposed activities, timeline, and evaluation plan for the project."
+                ],
+                "D:11": [
+                    "Write the budget and budget justification section, outlining all costs associated with the project and explaining how the requested funding will be used."
+                ],
+                "D:13": [
+                    "Review, edit and finalize the proposal, making sure it meets the requirements and guidelines of the funding source."
+                ],
+                "D:14": [
+                    "Submit the proposal and follow up with the funding agency."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 26,
+        "initial": "You just started rehearsing a play with your firends and you will perform it on an event in about 3 weeks.",
+        "time_span": "3 weeks",
+        "schedules": [
+            {
+                "D:2": [
+                    "Read through the script and familiarize yourself with the characters and their motivations."
+                ],
+                "D:5": [
+                    "Begin blocking the scenes, working out the movement and positioning of the actors on stage.",
+                    "Start working on character development and working on the script with friends."
+                ],
+                "D:7": [
+                    "Continue blocking and rehearsing individual scenes."
+                ],
+                "D:9": [
+                    "Begin rehearsing full acts and working on the pacing of the play."
+                ],
+                "D:13": [
+                    "Work on character development and improve the dialogue delivery.",
+                    "Rehearse the play from start to finish and work on transitions between scenes."
+                ],
+                "D:15": [
+                    "Rehearse technical elements such as lighting and sound cues."
+                ],
+                "D:18": [
+                    "Final dress rehearsal and last-minute adjustments."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 27,
+        "initial": "You just started preparing and launching a crowdfunding campaign, which would take about 2 weeks.",
+        "time_span": "2 weeks",
+        "schedules": [
+            {
+                "D:2": [
+                    "Research different crowdfunding platforms and determine which one is the best fit for your campaign."
+                ],
+                "D:5": [
+                    "Develop a campaign strategy and create a list of potential supporters and influencers.",
+                    "Create a campaign page, including a video, images and a detailed description of the project."
+                ],
+                "D:7": [
+                    "Create a budget and financial plan for the campaign, and set a fundraising goal."
+                ],
+                "D:9": [
+                    "Develop a marketing and promotion plan to reach potential supporters and influencers."
+                ],
+                "D:11": [
+                    "Finalize the campaign page, and make sure that all the details are correct and all the rewards are set up."
+                ],
+                "D:13": [
+                    "Schedule the launch date and send a press release to local media and influencers."
+                ],
+                "D:14": [
+                    "Launch the campaign and begin outreach and promotion."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 28,
+        "initial": "You just started working on an assignment for a course, which would take about 2 weeks.",
+        "time_span": "2 weeks",
+        "schedules": [
+            {
+                "D:2": [
+                    "Review the assignment instructions and rubric to ensure you understand the requirements and expectations."
+                ],
+                "D:4": [
+                    "Research the topic and gather relevant information, taking notes as you go."
+                ],
+                "D:7": [
+                    "Begin organizing the information and outlining the structure of the paper.",
+                    "Write the first draft of the assignment, focusing on getting your ideas down on paper."
+                ],
+                "D:9": [
+                    "Revise and edit the draft, checking for clarity and coherence."
+                ],
+                "D:13": [
+                    "Make final edits and proofread for grammar and spelling errors.",
+                    "Review the assignment to ensure it meets the requirements and the rubric."
+                ],
+                "D:14": [
+                    "Final touch and submit the assignment."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 29,
+        "initial": "You just started working on building a blog website, which would take about 3 weeks.",
+        "time_span": "3 weeks",
+        "schedules": [
+            {
+                "D:2": [
+                    "Research different blog platforms and decide which one to use (ex: WordPress, Blogger, Squarespace, etc.)."
+                ],
+                "D:5": [
+                    "Register a domain name and set up hosting.",
+                    "Install the chosen platform and begin customizing the theme and layout."
+                ],
+                "D:7": [
+                    "Add and organize pages, such as the 'About Me' and 'Contact' pages."
+                ],
+                "D:9": [
+                    "Create and publish a few sample blog posts to get a feel for the platform's features and tools.",
+                    "Add customizations such as social media integration, and optimize the website for search engines."
+                ],
+                "D:13": [
+                    "Test the website and make any necessary adjustments.",
+                    "Finalize the design, layout, and customizations."
+                ],
+                "D:17": [
+                    "Finalize the content and proofreading.",
+                    "Finalize the SEO and meta tags.",
+                    "Finalize the testing and debugging."
+                ],
+                "D:21": [
+                    "Finalize the launch and promotion plan.",
+                    "Launch the website and begin promoting it through social media and other channels."
+                ]
+            }
+        ],
+        "duration_key": "week"
+    },
+    {
+        "id": 30,
+        "initial": "You are about to have a short vacation to the beach, which would take about 3 days.",
+        "time_span": "3 days",
+        "schedules": [
+            {
+                "H:9": [
+                    "Depart for the beach.",
+                    "Drive to the location."
+                ],
+                "H:14": [
+                    "Arrive at the beach and check into the hotel. ",
+                    "Unpack your bags and take a short nap before starting your beach vacation."
+                ],
+                "H:16": [
+                    "Lunch on the beach.",
+                    "Try some of the local seafood restaurants"
+                ],
+                "H:19": [
+                    "Relax on the beach and take a swim.",
+                    "Read a book.",
+                    "Swim in the ocean."
+                ],
+                "D:2|H:9": [
+                    "Breakfast at the hotel.",
+                    "Wake up early and enjoy a delicious breakfast at the hotel."
+                ],
+                "D:2|H:19": [
+                    "Explore the local area and activities.",
+                    "Visit nearby towns, and trying new activities.",
+                    "Visit local market and art galleries."
+                ],
+                "D:3|H:9": [
+                    "Pack and check out of the hotel. ",
+                    "Head back home."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 31,
+        "initial": "You are about to visit the nearby town for about tow days.",
+        "time_span": "2 days",
+        "schedules": [
+            {
+                "H:9": [
+                    "Arrive in town and check into hotel."
+                ],
+                "H:14": [
+                    "Tour the town's main attractions.",
+                    "Have lunch at a local restaurant."
+                ],
+                "H:18": [
+                    "Go shopping in the downtown area.",
+                    "Visit a local museum."
+                ],
+                "D:2|H:9": [
+                    "Check out of hotel."
+                ],
+                "D:2|H:14": [
+                    "Visit local parks and gardens.",
+                    "Have lunch at a local restaurant."
+                ],
+                "D:2|H:18": [
+                    "Explore the town's historic sites.",
+                    "Stop for coffee or tea."
+                ],
+                "D:2|H:20": [
+                    "Return home."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 32,
+        "initial": "You are about to attend a music festival in another city, which will take about 4 days.",
+        "time_span": "4 days",
+        "schedules": [
+            {
+                "D:1": [
+                    "Arrive at the city and check into hotel.",
+                    "Explore the city and grab lunch and dinner.",
+                    "Attend the opening night concert."
+                ],
+                "D:2|H:9": [
+                    "Have breakfast."
+                ],
+                "D:2": [
+                    "Attend daytime concerts and workshops.",
+                    "Attend evening concerts."
+                ],
+                "D:3": [
+                    "Explore some historic musical sites."
+                ],
+                "D:4": [
+                    "Check out of the hotel.",
+                    "Prepare for heading back home."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 33,
+        "initial": "You are about to conduct a research experiment on your new AI models, which woill take about 3 days.",
+        "time_span": "3 days",
+        "schedules": [
+            {
+                "D:1": [
+                    "Prepare the AI system and test it to ensure that it is functioning correctly.",
+                    "Gather all necessary data and resources for the experiment."
+                ],
+                "D:2|H:12": [
+                    "Prepare the AI system for the experiment.",
+                    "Running the AI system on different inputs and test its performance."
+                ],
+                "D:2|H:15": [
+                    "Making note of any issues or unexpected results."
+                ],
+                "D:2|H:17": [
+                    "Review and discuss the results of the analysis with any team members or collaborators."
+                ],
+                "D:3": [
+                    "Clean up and organize data collected during the experiment.",
+                    "Write up a report on the results of the experiment and next steps"
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 34,
+        "initial": "You just started organizing the storage room, which would take about 2 days.",
+        "time_span": "2 days",
+        "schedules": [
+            {
+                "D:1|H:12": [
+                    "Gather all necessary supplies, such as boxes, labels, tape, and a trash bag.",
+                    "Begin sorting through the items in the storage room, separating them into categories such as 'keep,' 'donate,' or 'trash.'"
+                ],
+                "D:1|H:17": [
+                    "Continue sorting and organizing the items in the storage room.",
+                    "Begin packaging and labeling the items that will be kept."
+                ],
+                "D:2|H:9": [
+                    "Begin moving items back into the storage room, placing them in designated areas based on their category."
+                ],
+                "D:2|H:12": [
+                    "Continue moving and organizing items in the storage room."
+                ],
+                "D:2|H:15": [
+                    "Finishing touches, clean and vacuum the room."
+                ],
+                "D:2": [
+                    "Take a final look and make sure everything is in its place."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 35,
+        "initial": "You just started moving to a new apartment, which would take 5 days.",
+        "time_span": "5 days",
+        "schedules": [
+            {
+                "D:1": [
+                    "Sort through your belongings and decide what items you want to take with you and what items you want to sell, donate, or throw away.",
+                    "Start packing the items you'll be taking with you.",
+                    "Make arrangements for a moving truck, if you're hiring one."
+                ],
+                "D:2": [
+                    "Continue packing your belongings, focusing on items that you don't use regularly.",
+                    "Label all boxes with their contents and the room they belong to.",
+                    "Disassemble any large furniture, such as beds and desks."
+                ],
+                "D:3": [
+                    "Pack any remaining items and finish disassembling furniture.",
+                    "Confirm the moving truck and movers schedule."
+                ],
+                "D:4": [
+                    "Move day, the movers will come and take your belongings to the new apartment.",
+                    "Clean the old apartment and return the keys."
+                ],
+                "D:5": [
+                    "Unpack and organize your belongings in your new apartment.",
+                    "Set up essential items, such as beds, sofas, and kitchen appliances.",
+                    "Start to enjoy your new home!"
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 36,
+        "initial": "You just started preparing for a presentation of the annual financial report of your company, which would take about 4 days.",
+        "time_span": "4 days",
+        "schedules": [
+            {
+                "D:1": [
+                    "Gather all necessary financial documents, such as income statements, balance sheets, and cash flow statements.",
+                    "Begin reviewing and analyzing the data."
+                ],
+                "D:2": [
+                    "Continue reviewing and analyzing financial data.",
+                    "Begin creating slides for the presentation."
+                ],
+                "D:3": [
+                    "Finalize slides and practice the presentation.",
+                    "Prepare any additional materials that will be needed, such as handouts or visual aids."
+                ],
+                "D:4": [
+                    "Review and finalize all materials.",
+                    "Practice the presentation again.",
+                    "Prepare for the actual presentation."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 37,
+        "initial": "You just started preparing for a birthday party for your friend, which would take about 3 days.",
+        "time_span": "3 days",
+        "schedules": [
+            {
+                "D:1": [
+                    "Decide on a theme and guest list.",
+                    "Create a rough plan for food, decorations, and activities.",
+                    "Send out invitations."
+                ],
+                "D:2": [
+                    "Purchase decorations, party favors, and any other party supplies needed.",
+                    "Prepare food or make arrangements with a caterer.",
+                    "Set up the party space."
+                ],
+                "D:3": [
+                    "Finalize any last-minute preparations.",
+                    "Put the finishing touches on decorations.",
+                    "Greet guests and make sure they're comfortable."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 38,
+        "initial": "You will attend an international conference in a different country, which will take about 5 days.",
+        "time_span": "5 days",
+        "schedules": [
+            {
+                "D:1": [
+                    "Arrive at the conference location.",
+                    "Check-in at the hotel.",
+                    "Attend the conference registration and opening reception.",
+                    "Free time to explore the city in the evening."
+                ],
+                "D:2|H:12": [
+                    "Attend keynote speeches and sessions in the morning.",
+                    "Lunch break."
+                ],
+                "D:2|H:20": [
+                    "Attend breakout sessions in the afternoon.",
+                    "Dinner and networking event.",
+                    "Free time to explore the city in the evening."
+                ],
+                "D:3": [
+                    "Attend keynote speeches and sessions in the morning.",
+                    "Attend breakout sessions in the afternoon.",
+                    "Dinner with colleagues."
+                ],
+                "D:4|H:14": [
+                    "Attend keynote speeches and sessions in the morning.",
+                    "Closing reception."
+                ],
+                "D:5": [
+                    "Attend any remaining sessions or events.",
+                    "Check-out of the hotel.",
+                    "Depart for home."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 39,
+        "initial": "You are about to host a charity event, which takes about 3 days.",
+        "time_span": "3 days",
+        "schedules": [
+            {
+                "D:1|H:12": [
+                    "Set up of the venue, including tables, chairs, decorations, and sound equipment.",
+                    "Finalize details with vendors (caterer, florist, etc.)."
+                ],
+                "D:1|H:18": [
+                    "Rehearsal for any performances or speeches.",
+                    "Meet with volunteers and assign tasks."
+                ],
+                "D:2": [
+                    "Event setup and decoration of the venue.",
+                    "Receive and set up any donated items for silent auction or raffle.",
+                    "Greet and check-in guests as they arrive.",
+                    "Start of the event (speeches, performances, dinner, silent auction, raffle, etc.)"
+                ],
+                "D:3|H:12": [
+                    "Clean up of the venue.",
+                    "Collect any remaining silent auction or raffle items."
+                ],
+                "D:3|H:18": [
+                    "Count and deposit funds raised from the event.",
+                    "Send thank you notes to sponsors, volunteers, attendees, and donors."
+                ]
+            }
+        ],
+        "duration_key": "Day"
+    },
+    {
+        "id": 40,
+        "initial": "You just started watching a movie, which would take about 2 hours.",
+        "time_span": "2 hours",
+        "schedules": [
+            {}
+        ],
+        "duration_key": "Hour"
+    }
+]

@@ -1,6 +1,7 @@
 {
     "year": [
         {
+            "id": "0",
             "initial": "You just started writing your doctor thesis, which would take about one year.",
             "time_span": "1 year",
             "schedules": [
@@ -36,6 +37,7 @@
             ]
         },
         {
+            "id": "1",
             "initial": "You just started build a new house from scratch, which would take about one year.",
             "time_span": "1 year",
             "schedules": [
@@ -70,6 +72,7 @@
             ]
         },
         {
+            "id": "2",
             "initial": "You just started a one-year collage program.",
             "time_span":"1 year",
             "schedules": [
@@ -115,6 +118,7 @@
             ]
         },
         {
+            "id": "3",
             "initial": "You just started to prepare for the bar exam next year.",
             "time_span": "1 year",
             "schedules": [
@@ -152,6 +156,7 @@
             ]
         },
         {
+            "id": "4",
             "initial": "You just started to prepare for a marathon context, which would take about one year.",
             "time_span": "1 year",
             "schedules": [
@@ -194,6 +199,7 @@
             ]
         },
         {
+            "id": "5",
             "initial": "You just started planning to release a new music album, which would take about one year.",
             "time_span": "1 year",
             "schedules": [
@@ -233,6 +239,7 @@
             ]
         },
         {
+            "id": "6",
             "initial": "You just started learning piano, which would about one year.",
             "time_span":"1 year",
             "schedules": [
@@ -258,6 +265,7 @@
             ]
         },
         {
+            "id": "7",
             "initial": "You just started writing a new sci-fi novel, which would take about one year.",
             "time_span": "1 year",
             "schedules": [
@@ -300,6 +308,7 @@
             ]
         },
         {
+            "id": "8",
             "initial": "You just started a MBA program in the university, which would take about one year to finish.",
             "time_span":"1 year",
             "schedules": [
@@ -339,6 +348,7 @@
             ]
         },
         {
+            "id": "9",
             "initial": "You just started a project of developing a new cosmetic product for your company, which would take about one year.",
             "time_span": "",
             "schedules": [
@@ -376,6 +386,7 @@
     ],
     "month": [
         {
+            "id": "0",
             "initial": "You just started to learn Spanish, which would take about 7 months",
             "time_span": "7 months",
             "schedules": [
@@ -422,6 +433,7 @@
             ]
         },
         {
+            "id": "1",
             "initial": "You just started an internship in a buisness company, which would take about 6 months.",
             "time_span": "6 months",
             "schedules": [
@@ -454,6 +466,7 @@
             ]
         },
         {
+            "id": "3",
             "initial": "You just started planning to get a driver license, which would take about 2 months.",
             "time_span": "2 months",
             "schedules": [
@@ -492,6 +505,7 @@
             ]
         },
         {
+            "id": "4",
             "initial": "You are about to get married and currently planning your wedding, which will be in 5 months later.",
             "time_span": "5 months",
             "schedules": [
@@ -549,6 +563,7 @@
             ]
         },
         {
+            "id": "5",
             "initial": "You just started building a swimming pool in your new house, which would take about 3 months.",
             "time_span": "3 months",
             "schedules": [
@@ -580,6 +595,7 @@
             ]
         },
         {
+            "id": "6",
             "initial": "You just started developing a finance management software for your client, which would take about 6 months",
             "time_span":"6 months",
             "schedules": [
@@ -617,6 +633,7 @@
             ]
         },
         {
+            "id": "7",
             "initial": "You just started preparing and executing a social media marketing campaign for your company, which would take about 3 months.",
             "time_span": "3 months",
             "schedules": [
@@ -653,6 +670,7 @@
             ]
         },
         {
+            "id": "8",
             "initial": "You just started renovating your old house, which would take about 3 months.",
             "time_span": "3 months",
             "schedules": [
@@ -684,6 +702,7 @@
             ]
         },
         {
+            "id": "9",
             "initial": "You just started taking an online course in data science, which would take about 4 months.",
             "time_span": "4 months",
             "schedules": [
@@ -716,6 +735,7 @@
             ]
         },
         {
+            "id": "2",
             "initial": "You just started looking for a new job, which would take about 2 months.",
             "time_span": "2 months",
             "schedules": [
@@ -752,6 +772,7 @@
     ],
     "week": [
         {
+            "id": "0",
             "initial": "You just started to write a new business plan, which would take about 2 weeks.",
             "time_span": "2 weeks",
             "schedules": [
@@ -789,6 +810,7 @@
             ]
         },
         {
+            "id": "1",
             "initial": "You just started a road trip inside your country, which would take about 2 weeks.",
             "time_span": "2 weeks",
             "schedules": [
@@ -825,6 +847,7 @@
             ]
         },
         {
+            "id": "2",
             "initial": "You just started a basic photography course, which would take about 3 weeks.",
             "time_span": "3 weeks",
             "schedules": [
@@ -857,6 +880,7 @@
             ]
         },
         {
+            "id": "3",
             "initial": "You just started a basic cookery course, learning how to cook different dishers. The course will take about 2 weeks.",
             "time_span": "2 weeks",
             "schedules": [
@@ -889,6 +913,7 @@
             ]
         },
         {
+            "id": "4",
             "initial": "You just started writing a research paper about creating AI models that understand time. It will take about 3 weeks.",
             "time_span": "3 weeks",
             "schedules": [
@@ -919,6 +944,7 @@
             ]
         },
         {
+            "id": "5",
             "initial": "You just started writing a grant proposal, which would take about 2 weeks.",
             "time_span": "2 weeks",
             "schedules": [
@@ -949,6 +975,7 @@
             ]
         },
         {
+            "id": "6",
             "initial": "You just started rehearsing a play with your firends and you will perform it on an event in about 3 weeks.",
             "time_span": "3 weeks",
             "schedules": [
@@ -980,6 +1007,7 @@
             ]
         },
         {
+            "id": "7",
             "initial": "You just started preparing and launching a crowdfunding campaign, which would take about 2 weeks.",
             "time_span": "2 weeks",
             "schedules": [
@@ -1010,6 +1038,7 @@
             ]
         },
         {
+            "id": "8",
             "initial": "You just started working on an assignment for a course, which would take about 2 weeks.",
             "time_span": "2 weeks",
             "schedules": [
@@ -1038,6 +1067,7 @@
             ]
         },
         {
+            "id": "9",
             "initial": "You just started working on building a blog website, which would take about 3 weeks.",
             "time_span": "3 weeks",
             "schedules": [
@@ -1075,6 +1105,7 @@
     ],
     "Day": [
         {
+            "id": "0",
             "initial": "You are about to have a short vacation to the beach, which would take about 3 days.",
             "time_span": "3 days",
             "schedules": [
@@ -1113,6 +1144,7 @@
             ]
         },
         {
+            "id": "1",
             "initial": "You are about to visit the nearby town for about tow days.",
             "time_span": "2 days",
             "schedules": [
@@ -1146,13 +1178,249 @@
             ]
         },
         {
+            "id": "2",
             "initial": "You are about to attend a music festival in another city, which will take about 4 days.",
             "time_span": "4 days",
             "schedules": [
                 {
-                    "H:12": [
-                        "Arrive at the city and check into hotel."
+                    "D:1": [
+                        "Arrive at the city and check into hotel.",
+                        "Explore the city and grab lunch and dinner.",
+                        "Attend the opening night concert."
+                    ],
+                    "D:2|H:9": [
+                        "Have breakfast."
+                    ],
+                    "D:2": [
+                        "Attend daytime concerts and workshops.",
+                        "Attend evening concerts."
+                    ],
+                    "D:3": [
+                        "Explore some historic musical sites."
+                    ],
+                    "D:4": [
+                        "Check out of the hotel.",
+                        "Prepare for heading back home."
                     ]
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "initial": "You are about to conduct a research experiment on your new AI models, which woill take about 3 days.",
+            "time_span": "3 days",
+            "schedules": [
+                {
+                    "D:1": [
+                        "Prepare the AI system and test it to ensure that it is functioning correctly.",
+                        "Gather all necessary data and resources for the experiment."
+                    ],
+                    "D:2|H:12": [
+                        "Prepare the AI system for the experiment.",
+                        "Running the AI system on different inputs and test its performance."
+                    ],
+                    "D:2|H:15": [
+                        "Making note of any issues or unexpected results."
+                    ],
+                    "D:2|H:17": [
+                        "Review and discuss the results of the analysis with any team members or collaborators."
+                    ],
+                    "D:3": [
+                        "Clean up and organize data collected during the experiment.",
+                        "Write up a report on the results of the experiment and next steps"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "initial": "You just started organizing the storage room, which would take about 2 days.",
+            "time_span":"2 days",
+            "schedules": [
+                {
+                    "D:1|H:12": [
+                        "Gather all necessary supplies, such as boxes, labels, tape, and a trash bag.",
+                        "Begin sorting through the items in the storage room, separating them into categories such as 'keep,' 'donate,' or 'trash.'"
+                    ],
+                    "D:1|H:17": [
+                        "Continue sorting and organizing the items in the storage room.",
+                        "Begin packaging and labeling the items that will be kept."
+                    ],
+                    "D:2|H:9": [
+                        "Begin moving items back into the storage room, placing them in designated areas based on their category."
+                    ],
+                    "D:2|H:12": [
+                        "Continue moving and organizing items in the storage room."
+                    ],
+                    "D:2|H:15": [
+                        "Finishing touches, clean and vacuum the room."
+                    ],
+                    "D:2": [
+                        "Take a final look and make sure everything is in its place."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "initial": "You just started moving to a new apartment, which would take 5 days.",
+            "time_span": "5 days",
+            "schedules": [
+                {
+                    "D:1": [
+                        "Sort through your belongings and decide what items you want to take with you and what items you want to sell, donate, or throw away.",
+                        "Start packing the items you'll be taking with you.",
+                        "Make arrangements for a moving truck, if you're hiring one."
+                    ],
+                    "D:2": [
+                        "Continue packing your belongings, focusing on items that you don't use regularly.",
+                        "Label all boxes with their contents and the room they belong to.",
+                        "Disassemble any large furniture, such as beds and desks."
+                    ],
+                    "D:3": [
+                        "Pack any remaining items and finish disassembling furniture.",
+                        "Confirm the moving truck and movers schedule."
+                    ],
+                    "D:4": [
+                        "Move day, the movers will come and take your belongings to the new apartment.",
+                        "Clean the old apartment and return the keys."
+                    ],
+                    "D:5": [
+                        "Unpack and organize your belongings in your new apartment.",
+                        "Set up essential items, such as beds, sofas, and kitchen appliances.",
+                        "Start to enjoy your new home!"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "initial": "You just started preparing for a presentation of the annual financial report of your company, which would take about 4 days.",
+            "time_span": "4 days",
+            "schedules": [
+                {
+                    "D:1": [
+                        "Gather all necessary financial documents, such as income statements, balance sheets, and cash flow statements.",
+                        "Begin reviewing and analyzing the data."
+                    ],
+                    "D:2": [
+                        "Continue reviewing and analyzing financial data.",
+                        "Begin creating slides for the presentation."
+                    ],
+                    "D:3": [
+                        "Finalize slides and practice the presentation.",
+                        "Prepare any additional materials that will be needed, such as handouts or visual aids."
+                    ],
+                    "D:4": [
+                        "Review and finalize all materials.",
+                        "Practice the presentation again.",
+                        "Prepare for the actual presentation."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "initial": "You just started preparing for a birthday party for your friend, which would take about 3 days.",
+            "time_span": "3 days",
+            "schedules": [
+                {
+                    "D:1": [
+                        "Decide on a theme and guest list.",
+                        "Create a rough plan for food, decorations, and activities.",
+                        "Send out invitations."
+                    ],
+                    "D:2": [
+                        "Purchase decorations, party favors, and any other party supplies needed.",
+                        "Prepare food or make arrangements with a caterer.",
+                        "Set up the party space."
+                    ],
+                    "D:3": [
+                        "Finalize any last-minute preparations.",
+                        "Put the finishing touches on decorations.",
+                        "Greet guests and make sure they're comfortable."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "initial": "You will attend an international conference in a different country, which will take about 5 days.",
+            "time_span": "5 days",
+            "schedules": [
+                {
+                    "D:1": [
+                        "Arrive at the conference location.",
+                        "Check-in at the hotel.",
+                        "Attend the conference registration and opening reception.",
+                        "Free time to explore the city in the evening."
+                    ],
+                    "D:2|H:12": [
+                        "Attend keynote speeches and sessions in the morning.",
+                        "Lunch break."
+                    ],
+                    "D:2|H:20": [
+                        "Attend breakout sessions in the afternoon.",
+                        "Dinner and networking event.",
+                        "Free time to explore the city in the evening."
+                    ],
+                    "D:3": [
+                        "Attend keynote speeches and sessions in the morning.",
+                        "Attend breakout sessions in the afternoon.",
+                        "Dinner with colleagues."
+                    ],
+                    "D:4|H:14": [
+                        "Attend keynote speeches and sessions in the morning.",
+                        "Closing reception."
+                    ],
+                    "D:5": [
+                        "Attend any remaining sessions or events.",
+                        "Check-out of the hotel.",
+                        "Depart for home."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "initial": "You are about to host a charity event, which takes about 3 days.",
+            "time_span": "3 days",
+            "schedules": [
+                {
+                    "D:1|H:12": [
+                        "Set up of the venue, including tables, chairs, decorations, and sound equipment.",
+                        "Finalize details with vendors (caterer, florist, etc.)."
+                    ],
+                    "D:1|H:18": [
+                        "Rehearsal for any performances or speeches.",
+                        "Meet with volunteers and assign tasks."
+                    ],
+                    "D:2": [
+                        "Event setup and decoration of the venue.",
+                        "Receive and set up any donated items for silent auction or raffle.",
+                        "Greet and check-in guests as they arrive.",
+                        "Start of the event (speeches, performances, dinner, silent auction, raffle, etc.)"
+                    ],
+                    "D:3|H:12": [
+                        "Clean up of the venue.",
+                        "Collect any remaining silent auction or raffle items."
+                    ],
+                    "D:3|H:18": [
+                        "Count and deposit funds raised from the event.",
+                        "Send thank you notes to sponsors, volunteers, attendees, and donors."
+                    ]
+                }
+            ]
+        }
+    ],
+    "Hour": [
+        {
+            "id": "0",
+            "initial": "You just started watching a movie, which would take about 2 hours.",
+            "time_span": "2 hours",
+            "schedules": [
+                {
+
                 }
             ]
         }
