@@ -62,6 +62,10 @@ def continuous_event_viewer(data_path: Text):
         for item in value:
             item["id"] = id
             item["duration_key"] = key
+            for schedule in item["schedules"]:
+                for time_key, time_value in schedule:
+                    time_key.split(":")
+
             new_list.append(item)
             id += 1
     # print(new_list)
