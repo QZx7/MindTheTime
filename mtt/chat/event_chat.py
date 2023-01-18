@@ -100,7 +100,7 @@ def move_forward() -> Union[Text, Text]:
     return gap, duration_key
 
 
-def get_initial_progress(event_dict: List[Dict[Text, Any]]) -> Union[Dict, Text]:
+def get_initial_progress(event_dict: List[Dict[Text, Any]]) -> Dict:
     """Get the initial events.
 
     Args:
@@ -110,8 +110,7 @@ def get_initial_progress(event_dict: List[Dict[Text, Any]]) -> Union[Dict, Text]
         List[Text]: A list of initial events.
     """
     initial_event = random.choice(event_dict)
-    event_text = initial_event["initial"]
-    return initial_event, event_text
+    return initial_event
 
 
 def time_to_minutes(time: Text) -> int:
@@ -189,10 +188,10 @@ def get_next_progress(
     # else
     else:
         for index in range(len(schedule)):
+            print(schedule[index]["schedule_time"])
             if schedule_time_to_minutes(schedule[index]["schedule_time"]) >= (
                 start_time + gap_time
             ):
-                print(schedule[index]["schedule_time"])
                 if index > 1:
                     progress = schedule[index - 1]["schedule_content"]
                 else:
@@ -449,29 +448,35 @@ class RoomHandler(tornado.web.RequestHandler):
         # For each new room, if the current connection
         # is the first user, generate the initial gap and events.
         if room_id not in global_event_dict:
-            gap, duration_key = get_random_gap(life_event_dict)
+            initial_event = get_initial_progress(progress_dict)
             room_event_info = {
-                "gap": [{"gap": gap, "duration_key": duration_key}],
-                "events": [{workerId: get_initial_progress(initial_dict)}],
+                "gap": [""],
+                "events": [{workerId: {"progress": [initial_event["initial"]]}}],
             }
+
+            # gap, duration_key = get_random_gap(life_event_dict)
+            # room_event_info = {
+            #     "gap": [{"gap": gap, "duration_key": duration_key}],
+            #     "events": [{workerId: get_initial_progress(initial_dict)}],
+            # }
+
             global_event_dict[room_id] = room_event_info
 
         # If the current client is matched with some other clinets in a room
         # but hasn't get events yet.
         elif workerId not in global_event_dict[room_id]["events"][0]:
             # generate some initial events with the same duration key.
-            duration_key = global_event_dict[room_id]["gap"][0]["duration_key"]
-            global_event_dict[room_id]["events"][0][workerId] = get_initial_progress(
-                initial_dict
-            )
-
+            # duration_key = global_event_dict[room_id]["gap"][0]["duration_key"]
+            global_event_dict[room_id]["events"][0][workerId] = {
+                "progress": [get_initial_progress(progress_dict)["initial"]]
+            }
         # Return the events of this client to the itself.
         room_client_info = {
             "room_id": room_id,
             "speaker_1": global_room_pool[room_id]["speaker_1"],
             "speaker_2": global_room_pool[room_id]["speaker_2"],
             "worker_id": workerId,
-            "gap_info": global_event_dict[room_id]["gap"][-1]["gap"],
+            "gap_info": global_event_dict[room_id]["gap"][-1],
             "events_info": global_event_dict[room_id]["events"][-1][workerId],
         }
         log_request(room_id, workerId, event_status="initial", log_type="events")
@@ -620,22 +625,23 @@ async def main():
 
 
 if __name__ == "__main__":
-    # asyncio.run(main())
+    asyncio.run(main())
     # print(time_to_minutes("3 weeks"))
     # print(schedule_time_to_minutes("W:1"))
-    initial_event, event_text = get_initial_progress(progress_dict)
-    print(initial_event, event_text)
-    start_time = 0
-    while True:
-        input_text = input("move forward?\n")
-        if input_text == "N":
-            gap, duration_key = move_forward()
-            print(gap, duration_key)
-            gap_time = time_to_minutes(gap)
-            progress, finished = get_next_progress(initial_event, gap_time, start_time)
-            print(progress, finished)
-            start_time += gap_time
+    # initial_event = get_initial_progress(progress_dict)
+    # print(initial_event, initial_event["initial"])
+    # start_time = 0
+    # while True:
+    #     input_text = input("move forward?\n")
+    #     if input_text == "N":
+    #         gap, duration_key = move_forward()
+    #         print(gap, duration_key)
+    #         gap_time = time_to_minutes(gap)
+    #         progress, finished = get_next_progress(initial_event, gap_time, start_time)
+    #         print(progress, finished)
+    #         start_time += gap_time
 
-            if finished:
-                print("Creating new event..")
-                initial_event, event_text = get_initial_progress(progress_dict)
+    #         if finished:
+    #             print("Creating new event..")
+    #             initial_event = get_initial_progress(progress_dict)
+    #             start_time = 0

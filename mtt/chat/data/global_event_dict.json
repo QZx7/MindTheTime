@@ -16,12 +16,32 @@
         ],
         "events": [
             {
-                "00000": ["fkdlsjfkls", "jfdslkfjsld", "fjdslf"],
-                "00001": ["riowepiroe", "iroepwqr", "rioewq"]
+                "00000": {
+                    "progress": [],
+                    "life_events": [],
+                    "world_events": [],
+                    "plans": []
+                },
+                "00001": {
+                    "progress": [],
+                    "life_events": [],
+                    "world_events": [],
+                    "plans": []
+                }
             },
             {
-                "00000": ["fkdlsjfkls", "jfdslkfjsld", "fjdslf"],
-                "00001": ["riowepiroe", "iroepwqr", "rioewq"]
+                "00000": {
+                    "progress": [],
+                    "life_events": [],
+                    "world_events": [],
+                    "plans": []
+                },
+                "00001": {
+                    "progress": [],
+                    "life_events": [],
+                    "world_events": [],
+                    "plans": []
+                }
             }
         ]
     }
