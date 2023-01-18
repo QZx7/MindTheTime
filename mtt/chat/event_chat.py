@@ -68,6 +68,11 @@ def get_random_gap(event_dict: Dict[Text, List[Text]]):
 
 
 def move_forward() -> Union[Text, Text]:
+    """Move the time machine forward to a random period of time.
+
+    Returns:
+        Union[Text, Text]: Replace the time gap and its duration key.
+    """
     possible_units = ["minutes", "hours", "days", "weeks", "months", "year"]
     duration = random.randint(0, len(possible_units) - 1)
     gap = ""
@@ -118,7 +123,7 @@ def time_to_minutes(time: Text) -> int:
     Returns:
         int: Time in minutes.
     """
-    time_parts = time.split(" ")[0]
+    time_parts = time.split(" ")
     time_number = int(time_parts[0])
     time_unit = time_parts[1]
 
@@ -138,17 +143,9 @@ def time_to_minutes(time: Text) -> int:
 
 
 def schedule_time_to_minutes(time: Text) -> int:
-    time = 0
-    if "|" in time:
-        key_parts = time.split("|")
-        for key in key_parts:
-            time += single_time_to_minutes(key)
-    else:
-        time = single_time_to_minutes(time)
-
     def single_time_to_minutes(time: Text) -> int:
         time_parts = time.split(":")
-        time_number = int(time_parts)[1]
+        time_number = int(time_parts[1])
         time_unit = time_parts[0]
 
         multiplyer = 1
@@ -160,21 +157,49 @@ def schedule_time_to_minutes(time: Text) -> int:
             multiplyer = multiplyer * 60 * 24
         elif "H" in time_unit:
             multiplyer *= 60
+        return time_number * multiplyer
 
-        return time_number * time_unit
+    schedule_time = 0
+    if "|" in time:
+        key_parts = time.split("|")
+        for key in key_parts:
+            schedule_time += single_time_to_minutes(key)
+    else:
+        schedule_time = single_time_to_minutes(time)
 
-    return time
+    return schedule_time
 
 
-def get_progress(
-    event: Dict[Text, Union[int, Text, List[Dict[Text, List[Text]]]]], gap: Text
+def get_next_progress(
+    event: Dict[
+        Text, Union[int, Text, List[List[Dict[Text, Union[Text, List[Text]]]]]]
+    ],
+    gap_time: int,
+    start_time: int,
 ) -> List[Text]:
-    gap = time_to_minutes(gap)
+    finish_status = False
+    progress = []
+    schedule = event["schedules"][0]
+    # if the gap covers the whole schedule
+    if schedule_time_to_minutes(schedule[-1]["schedule_time"]) < start_time + gap_time:
+        print(schedule[-1]["schedule_time"])
+        finish_status = True
+        progress = ["You finished that."]
 
-    for key, value in event["schedules"][0].items():
-        if schedule_time_to_minutes(key) >= gap:
-            print(value)
-            break
+    # else
+    else:
+        for index in range(len(schedule)):
+            if schedule_time_to_minutes(schedule[index]["schedule_time"]) >= (
+                start_time + gap_time
+            ):
+                print(schedule[index]["schedule_time"])
+                if index > 1:
+                    progress = schedule[index - 1]["schedule_content"]
+                else:
+                    progress = ["No significant progress."]
+                break
+
+    return progress, finish_status
 
 
 def get_life_events(
@@ -221,9 +246,10 @@ global_room_pool = {}
 global_message_dict: Dict[int, List[Dict[Text, Text]]] = {}
 
 # Event
-event_dict = read_event("random_event.json")
+progress_dict = read_event("new_continuous.json")
+life_event_dict = read_event("random_event.json")
 initial_dict = read_event("initial.json")
-news_dict = read_event("news.json")
+world_event_dict = read_event("news.json")
 global_event_dict: Dict[int, Dict[Text, List[Dict[Text, Any]]]] = {}
 
 
@@ -423,7 +449,7 @@ class RoomHandler(tornado.web.RequestHandler):
         # For each new room, if the current connection
         # is the first user, generate the initial gap and events.
         if room_id not in global_event_dict:
-            gap, duration_key = get_random_gap(event_dict)
+            gap, duration_key = get_random_gap(life_event_dict)
             room_event_info = {
                 "gap": [{"gap": gap, "duration_key": duration_key}],
                 "events": [{workerId: get_initial_progress(initial_dict)}],
@@ -495,14 +521,14 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
         # Process the new session message
         if message_data["type"] == "session":
             # generate a new gap and duration key
-            gap, duration_key = get_random_gap(event_dict)
+            gap, duration_key = get_random_gap(life_event_dict)
             global_event_dict[self.room_id]["gap"].append(
                 {"gap": gap, "duration_key": duration_key}
             )
-            speaker_1_events = get_life_events(event_dict, duration_key, 3)
-            speaker_2_events = get_life_events(event_dict, duration_key, 3)
-            speaker_1_events.extend(get_world_events(news_dict, 3))
-            speaker_2_events.extend(get_world_events(news_dict, 3))
+            speaker_1_events = get_life_events(life_event_dict, duration_key, 3)
+            speaker_2_events = get_life_events(life_event_dict, duration_key, 3)
+            speaker_1_events.extend(get_world_events(world_event_dict, 3))
+            speaker_2_events.extend(get_world_events(world_event_dict, 3))
             global_event_dict[self.room_id]["events"].append(
                 {
                     global_room_pool[self.room_id]["speaker_1"]: speaker_1_events,
@@ -594,4 +620,22 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    # asyncio.run(main())
+    # print(time_to_minutes("3 weeks"))
+    # print(schedule_time_to_minutes("W:1"))
+    initial_event, event_text = get_initial_progress(progress_dict)
+    print(initial_event, event_text)
+    start_time = 0
+    while True:
+        input_text = input("move forward?\n")
+        if input_text == "N":
+            gap, duration_key = move_forward()
+            print(gap, duration_key)
+            gap_time = time_to_minutes(gap)
+            progress, finished = get_next_progress(initial_event, gap_time, start_time)
+            print(progress, finished)
+            start_time += gap_time
+
+            if finished:
+                print("Creating new event..")
+                initial_event, event_text = get_initial_progress(progress_dict)
