@@ -38,53 +38,59 @@ ws.onmessage = function (evt) {
         }
         
         $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
-}
+    }
 
-// if the server send a disconnection resposne
-if (response.type == "partner_disconnect") {
-    alert(response.text);
-    $("#new_message").prop("disabled", true);
-    $("#new_session").prop("disabled", true);
-    $("#submit_notification").html(`Thank you for your participation. Your partner might have exited the chat room. To get paid, 
-    you need to click the <strong>Submit the HIT and Go Back to AMT</strong> button to submit your HIT.`)
-}
+    // if the server send a disconnection resposne
+    if (response.type == "partner_disconnect") {
+        alert(response.text);
+        $("#new_message").prop("disabled", true);
+        $("#new_session").prop("disabled", true);
+        $("#submit_notification").html(`Thank you for your participation. Your partner might have exited the chat room. To get paid, 
+        you need to click the <strong>Submit the HIT and Go Back to AMT</strong> button to submit your HIT.`)
+    }
 
-// if the partner reconnected
-if (response.type == "reconnection") {
-    if ( $("#new_message").is(":disabled")) {
-        alert("Reconnected!");
-        $("#new_message").prop("disabled", false);
-        $("#submit_notification").html(``);
-        if (session_utterance >= 2) {
-            $('#new_session').prop("disabled", false);
+    // if the partner reconnected
+    if (response.type == "reconnection") {
+        if ( $("#new_message").is(":disabled")) {
+            alert("Reconnected!");
+            $("#new_message").prop("disabled", false);
+            $("#submit_notification").html(``);
+            if (session_utterance >= 2) {
+                $('#new_session').prop("disabled", false);
+            }
         }
     }
-}
 
-// if the server send a session resposne
-if (response.type == "session") {
-    events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Life Events: </strong> <br>`
-    for (let i = 0; i < response.events.length - 3; i++) {
-        events_html += response.events[i] + "<br>"
-    }
-    events_html += "<strong>World Events: </strong><br>"
-    for (let j = 3; j < response.events.length; j++) {
-        events_html += response.events[j] + "<br>"
-    }
-    $("#events").html(events_html);
-    $("#inbox").append(
-        `<div class="list-group-item list-group-item-dark">
-                <p class="text-wrap">
-                (The above conversation heppened ${response.gap} ago)
-                </p>
-        </div>`
-    );
-    $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
+    // if the server send a session resposne
+    if (response.type == "session") {
+        alert(response.events.life_events)
+        events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Progress: </strong> <br>`
+        for (let i = 0; i<response.events.progress.length; i++) {
+            events_html += response.progress[i] + "<br>"
+        }
+        events_html += "<strong>Life Events: <strong><br>"
+        for (let i = 0; i < response.events.life_events.length; i++) {
+            events_html += response.life_events[i] + "<br>"
+        }
+        events_html += "<strong>World Events: </strong><br>"
+        for (let i = 0; i < response.events.world_events.length; i++) {
+            events_html += response.world_events[i] + "<br>"
+        }
+        events_html += "<strong>Future Plans: </strong><br>"
+        $("#events").html(events_html);
+        $("#inbox").append(
+            `<div class="list-group-item list-group-item-dark">
+                    <p class="text-wrap">
+                    (The above conversation heppened ${response.gap} ago)
+                    </p>
+            </div>`
+        );
+        $("#inbox_container").scrollTop($("#inbox_container")[0].scrollHeight);
 
-    if (!$("#time_machine").is(':visible')) {
-        $("#time_machine").modal('toggle');
+        if (!$("#time_machine").is(':visible')) {
+            $("#time_machine").modal('toggle');
+        }
     }
-}
 
 // if the server send a report response
 if (response.type == "report") {

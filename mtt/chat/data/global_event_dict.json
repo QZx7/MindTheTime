@@ -1,48 +1,197 @@
 {
     "0": {
         "gap": [
-            {
-                "time": "3 hours",
-                "duration_key": "hour"
-            },
-            {
-                "time": "2 days",
-                "duration_key": "day"
-            },
-            {
-                "time": "3 weeks",
-                "duration_key": "week"
-            }
+            "",
+            "3 days",
+            "2 months",
+            "7 months",
+            "4 days",
+            "8 days"
         ],
-        "events": [
-            {
-                "00000": {
-                    "progress": [],
-                    "life_events": [],
-                    "world_events": [],
-                    "plans": []
+        "timelines": {
+            "00000": [
+                {
+                    "event_id": "13",
+                    "start_time": 0,
+                    "schedule": [
+                        {
+                            "progress": ["You are about to get married and currently planning your wedding, which will be in 5 months later."],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        },
+                        {
+                            "progress": ["No significant progress"],
+                            "life_events": [
+                                "You attend a music festival.",
+                                "You go to an aquarium.",
+                                "You visit an animal sanctuary."
+                            ],
+                            "world_events": [
+                                "Thousands lose power after three substations targeted in Washington state, sheriff says.",
+                                "Prince Harry reveals whether he’s circumcised in bombshell ‘Spare’ memoir",
+                                "Pope Francis leads funeral for predecessor Benedict XVI, a first in modern times"
+                            ],
+                            "plans": [
+                                "",
+                                "Research ceremony and reception venues",
+                                "Consider hiring a wedding planner",
+                                "You are planning to visit an amusement part."
+                            ]
+                        },
+                        {
+                            "progress": [
+                                "Finalize guest list.",
+                                "Book ceremony and reception venues.",
+                                "Reserve rental items.",
+                                "Book photographers and videographers",
+                                "Book caterers, baker, florists, etc.",
+                                "Begin shopping for wedding attire"
+                            ],
+                            "life_events": [
+                                "You change a new job and start a new career.",
+                                "You go back to school and enroll in a degree program.",
+                                "You have a wedding anniversary."
+                            ],
+                            "world_events": [
+                                "HTC Announces Its Standalone VR Headset",
+                                "Google Chrome Is About to Be Problem on Your Parents’ PC by Ending Support on Windows 7,8 and 8.1",
+                                "Spotify and Google team up to supercharge the Android 13 media player"
+                            ],
+                            "plans": [
+                                "Purchase gifts for wedding party",
+                                "Create seating chart",
+                                "Book honeymoon",
+                                "Print place cards"
+                            ]
+                        },
+                        {
+                            "progress": [
+                                "Finished the wedding."
+                            ],
+                            "life_events": [
+                                "You start a new business.",
+                                "You take an online course.",
+                                "You get married."
+                            ],
+                            "world_events": [
+                                "KFC became Japan's go-to Christmas dinner.",
+                                "Surging Electricity Prices Make Some Gas Vehicles Cheaper Than Electric Ones In Europe.",
+                                "Oil Passes Natural Gas as Main Fuel for Power Plants in New England."
+                            ],
+                            "plans": [
+                                "You are planning to finish a large painting project.",
+                                "You are planning to write a research paper.",
+                                "You are planning to complete a work assignment."
+                            ]
+                        }
+                    ]
                 },
-                "00001": {
-                    "progress": [],
-                    "life_events": [],
-                    "world_events": [],
-                    "plans": []
+                {
+                    "event_id": "21",
+                    "start_time": 0,
+                    "schedule": [
+                        {
+                            "progress": [
+                                "You just started a road trip inside your country, which would take about 2 weeks."
+                            ],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        },
+                        {
+                            "progress": [
+                                "No significant progress"
+                            ],
+                            "life_events": [
+                                "You attend a music festival.",
+                                "You attend a soccer sport event.",
+                                "You attend an offline e-sports event."
+                            ],
+                            "world_events": [
+                                "'Serpent' serial killer Charles Sobhraj returns to France after 19 years in prison.",
+                                "Ex-Maoist rebel leader Prachanda becomes Nepal PM for third time.",
+                                "The UK royal family attend Christmas day service."
+                            ],
+                            "plans": [
+                                "Participate in a ranger-led program, such as a nature walk or campfire program.",
+                                "In the evening, stargaze at the night sky.",
+                                "Enjoy leisure activities including camping, fishing, or wildlife viewing.",
+                                "Take a dip in the river and rent a canoe and explore the park's lakes."
+                            ]
+                        },
+                        {
+                            "progress": [
+                                "Take a scenic drive on the road, which runs through the park and offers stunning views.",
+                                "Do some more hiking and enjoy the park's natural beauty."
+                            ],
+                            "life_events": [
+                                "You create and launch a crowdfunding campaign.",
+                                "You complete a professional development course.",
+                                "You plan and execute a community service project."
+                            ],
+                            "world_events": [
+                                "Facebook parent Meta will pay $725M to settle user data case.",
+                                "Target Recalls Over 200,000 Children’s Weighted Blankets After 2 Girls Die.",
+                                "Crypto Founders And Bitcoin Moguls Lost $116 Billion In 2022."
+                            ],
+                            "plans": [
+                                "Pack up and depart for home."
+                            ]
+                        }
+                    ]
                 }
-            },
-            {
-                "00000": {
-                    "progress": [],
-                    "life_events": [],
-                    "world_events": [],
-                    "plans": []
+            ],
+            "00001": [
+                {
+                    "event_id": "",
+                    "start_time": 0,
+                    "schedule": [
+                        {
+                            "progress": [],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        },
+                        {
+                            "progress": [],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        },
+                        {
+                            "progress": [],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        }
+                    ]
                 },
-                "00001": {
-                    "progress": [],
-                    "life_events": [],
-                    "world_events": [],
-                    "plans": []
+                {
+                    "event_id": "",
+                    "start_time": 0,
+                    "schedule": [
+                        {
+                            "progress": [],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        },
+                        {
+                            "progress": [],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        },
+                        {
+                            "progress": [],
+                            "life_events": [],
+                            "world_events": [],
+                            "plans": []
+                        }
+                    ]
                 }
-            }
-        ]
+            ]
+        }
     }
 }

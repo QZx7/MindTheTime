@@ -1,4 +1,24 @@
 {
+    "minute": [
+        "You watch a TV drama episode.",
+        "You prepare for lunch.",
+        "You clean your bedroom.",
+        "You do laundry.",
+        "You organize your shedule and to-do list.",
+        "You take a nap.",
+        "You listen to a podcast about politics.",
+        "You meditate.",
+        "You watch a YouTube video.",
+        "You fold and put away clothes.",
+        "You make a phone call with your friend.",
+        "You organize your closet.",
+        "You complete a crossword puzzle.",
+        "You take a quick shower.",
+        "You do a beauty treatment.",
+        "You attend a webinar.",
+        "You play with your pet.",
+        "You organize your digital files and folders."
+    ],
     "hour": [
         "You build a garden wall.",
         "You paint a room.",
@@ -93,9 +113,7 @@
         "You go to a planetarium.",
         "You take a pottery class.",
         "You visit an animal sanctuary.",
-        "You take a sailing."
-    ],
-    "weekend": [
+        "You take a sailing.",
         "You go on a hike for a nature work.",
         "You visit a museum.",
         "You go a picinic in the park.",
