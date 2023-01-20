@@ -1,6 +1,6 @@
-[
-    {
-        "id": 0,
+{
+    "0": {
+        "id": "0",
         "initial": "You just started writing your doctor thesis, which would take about one year.",
         "time_span": "1 year",
         "schedules": [
@@ -57,8 +57,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 1,
+    "1": {
+        "id": "1",
         "initial": "You just started build a new house from scratch, which would take about one year.",
         "time_span": "1 year",
         "schedules": [
@@ -114,8 +114,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 2,
+    "2": {
+        "id": "2",
         "initial": "You just started a one-year collage program.",
         "time_span": "1 year",
         "schedules": [
@@ -182,8 +182,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 3,
+    "3": {
+        "id": "3",
         "initial": "You just started to prepare for the bar exam next year.",
         "time_span": "1 year",
         "schedules": [
@@ -242,8 +242,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 4,
+    "4": {
+        "id": "4",
         "initial": "You just started to prepare for a marathon context, which would take about one year.",
         "time_span": "1 year",
         "schedules": [
@@ -307,8 +307,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 5,
+    "5": {
+        "id": "5",
         "initial": "You just started planning to release a new music album, which would take about one year.",
         "time_span": "1 year",
         "schedules": [
@@ -369,8 +369,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 6,
+    "6": {
+        "id": "6",
         "initial": "You just started learning piano, which would about one year.",
         "time_span": "1 year",
         "schedules": [
@@ -408,8 +408,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 7,
+    "7": {
+        "id": "7",
         "initial": "You just started writing a new sci-fi novel, which would take about one year.",
         "time_span": "1 year",
         "schedules": [
@@ -470,8 +470,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 8,
+    "8": {
+        "id": "8",
         "initial": "You just started a MBA program in the university, which would take about one year to finish.",
         "time_span": "1 year",
         "schedules": [
@@ -531,8 +531,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 9,
+    "9": {
+        "id": "9",
         "initial": "You just started a project of developing a new cosmetic product for your company, which would take about one year.",
         "time_span": "",
         "schedules": [
@@ -586,8 +586,8 @@
         ],
         "duration_key": "year"
     },
-    {
-        "id": 10,
+    "10": {
+        "id": "10",
         "initial": "You just started to learn Spanish, which would take about 7 months",
         "time_span": "7 months",
         "schedules": [
@@ -655,8 +655,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 11,
+    "11": {
+        "id": "11",
         "initial": "You just started an internship in a buisness company, which would take about 6 months.",
         "time_span": "6 months",
         "schedules": [
@@ -707,8 +707,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 12,
+    "12": {
+        "id": "12",
         "initial": "You just started planning to get a driver license, which would take about 2 months.",
         "time_span": "2 months",
         "schedules": [
@@ -768,8 +768,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 13,
+    "13": {
+        "id": "13",
         "initial": "You are about to get married and currently planning your wedding, which will be in 5 months later.",
         "time_span": "5 months",
         "schedules": [
@@ -831,7 +831,7 @@
                     ]
                 },
                 {
-                    "schedule_time": "M5",
+                    "schedule_time": "M:5",
                     "schedule_content": [
                         "Finalize rehearsal dinner details",
                         "Finalize ceremony and reception details",
@@ -845,8 +845,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 14,
+    "14": {
+        "id": "14",
         "initial": "You just started building a swimming pool in your new house, which would take about 3 months.",
         "time_span": "3 months",
         "schedules": [
@@ -899,8 +899,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 15,
+    "15": {
+        "id": "15",
         "initial": "You just started developing a finance management software for your client, which would take about 6 months",
         "time_span": "6 months",
         "schedules": [
@@ -959,8 +959,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 16,
+    "16": {
+        "id": "16",
         "initial": "You just started preparing and executing a social media marketing campaign for your company, which would take about 3 months.",
         "time_span": "3 months",
         "schedules": [
@@ -1015,8 +1015,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 17,
+    "17": {
+        "id": "17",
         "initial": "You just started renovating your old house, which would take about 3 months.",
         "time_span": "3 months",
         "schedules": [
@@ -1069,8 +1069,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 18,
+    "18": {
+        "id": "18",
         "initial": "You just started taking an online course in data science, which would take about 4 months.",
         "time_span": "4 months",
         "schedules": [
@@ -1127,8 +1127,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 19,
+    "19": {
+        "id": "19",
         "initial": "You just started looking for a new job, which would take about 2 months.",
         "time_span": "2 months",
         "schedules": [
@@ -1178,8 +1178,8 @@
         ],
         "duration_key": "month"
     },
-    {
-        "id": 20,
+    "20": {
+        "id": "20",
         "initial": "You just started to write a new business plan, which would take about 2 weeks.",
         "time_span": "2 weeks",
         "schedules": [
@@ -1238,8 +1238,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 21,
+    "21": {
+        "id": "21",
         "initial": "You just started a road trip inside your country, which would take about 2 weeks.",
         "time_span": "2 weeks",
         "schedules": [
@@ -1298,8 +1298,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 22,
+    "22": {
+        "id": "22",
         "initial": "You just started a basic photography course, which would take about 3 weeks.",
         "time_span": "3 weeks",
         "schedules": [
@@ -1350,8 +1350,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 23,
+    "23": {
+        "id": "23",
         "initial": "You just started a basic cookery course, learning how to cook different dishers. The course will take about 2 weeks.",
         "time_span": "2 weeks",
         "schedules": [
@@ -1402,8 +1402,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 24,
+    "24": {
+        "id": "24",
         "initial": "You just started writing a research paper about creating AI models that understand time. It will take about 3 weeks.",
         "time_span": "3 weeks",
         "schedules": [
@@ -1452,8 +1452,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 25,
+    "25": {
+        "id": "25",
         "initial": "You just started writing a grant proposal, which would take about 2 weeks.",
         "time_span": "2 weeks",
         "schedules": [
@@ -1505,8 +1505,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 26,
+    "26": {
+        "id": "26",
         "initial": "You just started rehearsing a play with your firends and you will perform it on an event in about 3 weeks.",
         "time_span": "3 weeks",
         "schedules": [
@@ -1559,8 +1559,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 27,
+    "27": {
+        "id": "27",
         "initial": "You just started preparing and launching a crowdfunding campaign, which would take about 2 weeks.",
         "time_span": "2 weeks",
         "schedules": [
@@ -1612,8 +1612,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 28,
+    "28": {
+        "id": "28",
         "initial": "You just started working on an assignment for a course, which would take about 2 weeks.",
         "time_span": "2 weeks",
         "schedules": [
@@ -1660,8 +1660,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 29,
+    "29": {
+        "id": "29",
         "initial": "You just started working on building a blog website, which would take about 3 weeks.",
         "time_span": "3 weeks",
         "schedules": [
@@ -1718,8 +1718,8 @@
         ],
         "duration_key": "week"
     },
-    {
-        "id": 30,
+    "30": {
+        "id": "30",
         "initial": "You are about to have a short vacation to the beach, which would take about 3 days.",
         "time_span": "3 days",
         "schedules": [
@@ -1779,8 +1779,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 31,
+    "31": {
+        "id": "31",
         "initial": "You are about to visit the nearby town for about tow days.",
         "time_span": "2 days",
         "schedules": [
@@ -1835,8 +1835,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 32,
+    "32": {
+        "id": "32",
         "initial": "You are about to attend a music festival in another city, which will take about 4 days.",
         "time_span": "4 days",
         "schedules": [
@@ -1879,8 +1879,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 33,
+    "33": {
+        "id": "33",
         "initial": "You are about to conduct a research experiment on your new AI models, which woill take about 3 days.",
         "time_span": "3 days",
         "schedules": [
@@ -1922,8 +1922,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 34,
+    "34": {
+        "id": "34",
         "initial": "You just started organizing the storage room, which would take about 2 days.",
         "time_span": "2 days",
         "schedules": [
@@ -1970,8 +1970,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 35,
+    "35": {
+        "id": "35",
         "initial": "You just started moving to a new apartment, which would take 5 days.",
         "time_span": "5 days",
         "schedules": [
@@ -2018,8 +2018,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 36,
+    "36": {
+        "id": "36",
         "initial": "You just started preparing for a presentation of the annual financial report of your company, which would take about 4 days.",
         "time_span": "4 days",
         "schedules": [
@@ -2057,8 +2057,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 37,
+    "37": {
+        "id": "37",
         "initial": "You just started preparing for a birthday party for your friend, which would take about 3 days.",
         "time_span": "3 days",
         "schedules": [
@@ -2091,8 +2091,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 38,
+    "38": {
+        "id": "38",
         "initial": "You will attend an international conference in a different country, which will take about 5 days.",
         "time_span": "5 days",
         "schedules": [
@@ -2148,8 +2148,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 39,
+    "39": {
+        "id": "39",
         "initial": "You are about to host a charity event, which takes about 3 days.",
         "time_span": "3 days",
         "schedules": [
@@ -2195,8 +2195,8 @@
         ],
         "duration_key": "Day"
     },
-    {
-        "id": 40,
+    "40": {
+        "id": "40",
         "initial": "You just started watching a movie, which would take about 2 hours.",
         "time_span": "2 hours",
         "schedules": [
@@ -2204,4 +2204,4 @@
         ],
         "duration_key": "Hour"
     }
-]
+}

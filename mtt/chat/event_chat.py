@@ -11,7 +11,7 @@ import datetime
 from tornado.options import define, options, parse_command_line
 from tornado import ioloop
 from concurrent.futures import ThreadPoolExecutor
-from typing import Text, Dict, List, Any, Optional, Union
+from typing import Text, Dict, List, Any, Optional, Union, Tuple
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=True, help="run in debug mode")
@@ -61,7 +61,12 @@ def move_forward() -> Union[Text, Text]:
     return gap, duration_key
 
 
-def get_initial_progress(event_dict: List[Dict[Text, Any]]) -> Dict:
+def get_initial_progress(
+    event_dict: Dict[
+        Text,
+        Dict[Text, Union[int, Text, List[List[Dict[Text, Union[Text, List[Text]]]]]]],
+    ]
+) -> Dict:
     """Get the initial events.
 
     Args:
@@ -70,7 +75,7 @@ def get_initial_progress(event_dict: List[Dict[Text, Any]]) -> Dict:
     Returns:
         List[Text]: A list of initial events.
     """
-    initial_event = random.choice(event_dict)
+    initial_event = random.choice(list(event_dict.values()))
     return initial_event
 
 
@@ -88,7 +93,8 @@ def time_to_minutes(time: Text) -> int:
     time_unit = time_parts[1]
 
     assert (
-        "hour" in time_unit
+        "minute" in time_unit
+        or "hour" in time_unit
         or "day" in time_unit
         or "week" in time_unit
         or "month" in time_unit
@@ -155,7 +161,7 @@ def get_next_progress(
     ],
     gap_time: int,
     start_time: int,
-) -> List[Text]:
+) -> Tuple[List[Text], List[Text], bool]:
     """Get the next progress as described in a given progress schedule.
 
     Args:
@@ -168,7 +174,9 @@ def get_next_progress(
     """
     finish_status = False
     progress = []
+    next = []
     schedule = event["schedules"][0]
+    print(f"Schedule: {schedule}")
     # if the gap covers the whole schedule
     if schedule_time_to_minutes(schedule[-1]["schedule_time"]) < start_time + gap_time:
         print(schedule[-1]["schedule_time"])
@@ -179,16 +187,18 @@ def get_next_progress(
     else:
         for index in range(len(schedule)):
             print(schedule[index]["schedule_time"])
-            if schedule_time_to_minutes(schedule[index]["schedule_time"]) >= (
-                start_time + gap_time
-            ):
-                if index > 1:
+            schedule_time = schedule_time_to_minutes(schedule[index]["schedule_time"])
+            if schedule_time >= (start_time + gap_time):
+                next = schedule[index]["schedule_content"]
+                if index > 0 and start_time < schedule_time_to_minutes(
+                    schedule[index - 1]["schedule_time"]
+                ):
                     progress = schedule[index - 1]["schedule_content"]
                 else:
                     progress = ["No significant progress."]
                 break
 
-    return progress, finish_status
+    return progress, next, finish_status
 
 
 def get_life_events(
@@ -225,20 +235,26 @@ def get_world_events(
     return events
 
 
+def get_random_future_plans(
+    event_dict: Dict[Text, List[Text]], event_number: int
+) -> List[Text]:
+    events = random.sample(event_dict["plan"], k=event_number)
+    return events
+
+
 # Global arguments to manage the server and rooms
 executor = ThreadPoolExecutor(4)
 global_user_pool = {}
 matching_queue = []
 global_room_id = 0
 global_room_pool = {}
-# global_message_buffer_dict: Dict[int, MessageBuffer] = {}
 global_message_dict: Dict[int, List[Dict[Text, Text]]] = {}
 
 # Event
 progress_dict = read_event("progress.json")
 life_event_dict = read_event("life_events.json")
 world_event_dict = read_event("world_events.json")
-# future_plan_dict = read_event("future_plan.json")
+future_plan_dict = read_event("future_plans.json")
 global_event_dict: Dict[
     int,
     Dict[
@@ -460,20 +476,12 @@ class RoomHandler(tornado.web.RequestHandler):
                     ]
                 },
             }
-
-            # gap, duration_key = get_random_gap(life_event_dict)
-            # room_event_info = {
-            #     "gap": [{"gap": gap, "duration_key": duration_key}],
-            #     "events": [{workerId: get_initial_progress(initial_dict)}],
-            # }
-
             global_event_dict[room_id] = room_event_info
 
         # If the current client is matched with some other clinets in a room
         # but hasn't get events yet.
         elif workerId not in global_event_dict[room_id]["timelines"]:
             # generate some initial events with the same duration key.
-            # duration_key = global_event_dict[room_id]["gap"][0]["duration_key"]
             initial_event = get_initial_progress(progress_dict)
             global_event_dict[room_id]["timelines"][workerId] = [
                 {
@@ -482,9 +490,6 @@ class RoomHandler(tornado.web.RequestHandler):
                     "schedule": [{"progress": initial_event["initial"]}],
                 }
             ]
-            # global_event_dict[room_id]["events"][0][workerId] = {
-            #     "progress": [get_initial_progress(progress_dict)["initial"]]
-            # }
         # Return the events of this client to the itself.
         room_client_info = {
             "room_id": room_id,
@@ -543,10 +548,6 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
         # Process the new session message
         if message_data["type"] == "session":
             # generate a new gap and duration key
-            # gap, duration_key = get_random_gap(life_event_dict)
-            # global_event_dict[self.room_id]["gap"].append(
-            #     {"gap": gap, "duration_key": duration_key}
-            # )
             gap, duration_key = move_forward()
             print(f"generate gap {gap}")
             global_event_dict[self.room_id]["gap"].append(gap)
@@ -556,7 +557,7 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
             for worker, timeline in global_event_dict[self.room_id][
                 "timelines"
             ].items():
-                progress, finish_status = get_next_progress(
+                progress, next, finish_status = get_next_progress(
                     progress_dict[timeline[-1]["event_id"]],
                     gap_time,
                     timeline[-1]["start_time"],
@@ -568,6 +569,7 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                             life_event_dict, duration_key, 3
                         ),
                         "world_events": get_world_events(world_event_dict, 3),
+                        "plans": next + get_random_future_plans(future_plan_dict, 2),
                     }
                 )
                 global_event_dict[self.room_id]["timelines"][worker][-1][
@@ -579,23 +581,10 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                         {
                             "event_id": initial_event["id"],
                             "start_time": 0,
-                            "schedule": [{"progress": initial_event["initial"]}],
+                            "schedule": [{"progress": [initial_event["initial"]]}],
                         }
                     )
 
-            # global_event_dict[self.room_id]["events"].append(
-            #     {global_room_pool[self.room_id]["speaker_1"]: {}}
-            # )
-            # speaker_1_events = get_life_events(life_event_dict, duration_key, 3)
-            # speaker_2_events = get_life_events(life_event_dict, duration_key, 3)
-            # speaker_1_events.extend(get_world_events(world_event_dict, 3))
-            # speaker_2_events.extend(get_world_events(world_event_dict, 3))
-            # global_event_dict[self.room_id]["events"].append(
-            #     {
-            #         global_room_pool[self.room_id]["speaker_1"]: speaker_1_events,
-            #         global_room_pool[self.room_id]["speaker_2"]: speaker_2_events,
-            #     }
-            # )
             for c in clients[self.room_id]:
                 print(f"sending to {c.worker_id}")
                 # log_request(
@@ -604,13 +593,30 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 #     event_status=str(len(global_event_dict[self.room_id]["events"])),
                 #     log_type="events",
                 # )
+                event_info = {}
+                if (
+                    "life_events"
+                    not in global_event_dict[self.room_id]["timelines"][c.worker_id][
+                        -1
+                    ]["schedule"][-1]
+                ):
+                    event_info = global_event_dict[self.room_id]["timelines"][
+                        c.worker_id
+                    ][-2]["schedule"][-1]
+                    event_info["progress"].extend(
+                        global_event_dict[self.room_id]["timelines"][c.worker_id][-1][
+                            "schedule"
+                        ][-1]["progress"]
+                    )
+                else:
+                    event_info = global_event_dict[self.room_id]["timelines"][
+                        c.worker_id
+                    ][-1]["schedule"][-1]
                 response = {
                     "type": "session",
                     "session": 0,
                     "gap": gap,
-                    "events": global_event_dict[self.room_id]["timelines"][c.worker_id][
-                        -1
-                    ]["schedule"][-1],
+                    "events": event_info,
                 }
                 print(response)
                 c.write_message(json.dumps(response))
@@ -692,13 +698,14 @@ if __name__ == "__main__":
     #     input_text = input("move forward?\n")
     #     if input_text == "N":
     #         gap, duration_key = move_forward()
-    #         print(gap, duration_key)
+    #         print(f"*** Gap:{gap}")
     #         gap_time = time_to_minutes(gap)
     #         progress, finished = get_next_progress(initial_event, gap_time, start_time)
-    #         print(progress, finished)
+    #         print(f"*** progress:{progress}")
     #         start_time += gap_time
 
     #         if finished:
     #             print("Creating new event..")
     #             initial_event = get_initial_progress(progress_dict)
+    #             print(initial_event, initial_event["initial"])
     #             start_time = 0

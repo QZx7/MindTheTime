@@ -56,11 +56,11 @@ def continuous_event_viewer(data_path: Text):
     for key, value in continuous_data.items():
         print(f"{key}: {len(value)}")
 
-    new_list = []
+    new_list = {}
     id = 0
     for key, value in continuous_data.items():
         for item in value:
-            item["id"] = id
+            item["id"] = str(id)
             item["duration_key"] = key
             new_schedule_list = []
             for schedule in item["schedules"]:
@@ -73,7 +73,7 @@ def continuous_event_viewer(data_path: Text):
                     new_schedule.append(new_schedule_item)
             new_schedule_list.append(new_schedule.copy())
             item["schedules"] = new_schedule_list
-            new_list.append(item)
+            new_list[id] = item
             id += 1
     # print(new_list)
     json.dump(new_list, reformat_data, indent=4)

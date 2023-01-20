@@ -1,8 +1,12 @@
 //var socket_host = "wss://eventchat.tk:443/event"
 var socket_host = "ws://localhost:8888/event"
 
+var MINIMUM_UTTERANCE_EACH_SESSION = 11;
+var MINIMUM_SESSION_NUMBER = 7;
+
 var ws = new WebSocket(socket_host);
 var session_utterance = 0;
+var session_number = 0
 // register self as client
 ws.onopen = function() {
     message = {
@@ -55,7 +59,7 @@ ws.onmessage = function (evt) {
             alert("Reconnected!");
             $("#new_message").prop("disabled", false);
             $("#submit_notification").html(``);
-            if (session_utterance >= 2) {
+            if (session_utterance >= MINIMUM_UTTERANCE_EACH_SESSION) {
                 $('#new_session').prop("disabled", false);
             }
         }
@@ -63,25 +67,27 @@ ws.onmessage = function (evt) {
 
     // if the server send a session resposne
     if (response.type == "session") {
-        alert(response.events.life_events)
         events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Progress: </strong> <br>`
         for (let i = 0; i<response.events.progress.length; i++) {
-            events_html += response.progress[i] + "<br>"
+            events_html += response.events.progress[i] + "<br>"
         }
-        events_html += "<strong>Life Events: <strong><br>"
+        events_html += "<strong>Life Events: </strong><br>"
         for (let i = 0; i < response.events.life_events.length; i++) {
-            events_html += response.life_events[i] + "<br>"
+            events_html += response.events.life_events[i] + "<br>"
         }
         events_html += "<strong>World Events: </strong><br>"
         for (let i = 0; i < response.events.world_events.length; i++) {
-            events_html += response.world_events[i] + "<br>"
+            events_html += response.events.world_events[i] + "<br>"
         }
         events_html += "<strong>Future Plans: </strong><br>"
+        for (let i = 0; i < response.events.plans.length; i++) {
+            events_html += response.events.plans[i] + "<br>"
+        }
         $("#events").html(events_html);
         $("#inbox").append(
             `<div class="list-group-item list-group-item-dark">
                     <p class="text-wrap">
-                    (The above conversation heppened ${response.gap} ago)
+                    (The above conversation was ${response.gap} ago)
                     </p>
             </div>`
         );
@@ -115,6 +121,8 @@ $("#new_session").on("click", function() {
     }
     ws.send(JSON.stringify(message));
     session_utterance = 0;
+    session_number += 1;
+    $('#new_session').prop("disabled", true);
 });
 
 //event listener for new message
@@ -128,7 +136,7 @@ $("#new_message").on("click", function() {
     ws.send(JSON.stringify(message));
     $("#message").val("").select();
     session_utterance += 1;
-    if (session_utterance >= 2) {
+    if (session_utterance >= MINIMUM_UTTERANCE_EACH_SESSION) {
         $('#new_session').prop("disabled", false);
     }
 });
@@ -146,7 +154,7 @@ $("#report").on("click", function() {
 
 // event listener for submit check
 $('#submitCheck').change(function () {
-    if ($('#submitCheck').is(":checked")) {
+    if ($('#submitCheck').is(":checked") && (session_number >= MINIMUM_SESSION_NUMBER)) {
         $('#hit_submit').prop("disabled", false)
     }
     else {
