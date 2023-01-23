@@ -7,6 +7,7 @@ import os.path
 import json
 import random
 import datetime
+import uuid
 
 from tornado.options import define, options, parse_command_line
 from tornado import ioloop
@@ -394,10 +395,11 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         # matching = False
         workerId = ""
-        try:
-            workerId = self.get_argument("workerId")
-        except tornado.web.MissingArgumentError:
-            self.render("invalid_argument.html")
+        # try:
+        workerId = self.get_argument("workerId", uuid.uuid1().hex)
+        # except tornado.web.MissingArgumentError:
+            # workerId = uuid.uuid1().hex
+            # self.render("invalid_argument.html")
         # Once connected, assign worker_status and add worker to
         # worker pool.
         worker_status = {
