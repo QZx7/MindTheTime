@@ -412,6 +412,10 @@ class MainHandler(tornado.web.RequestHandler):
         self.render("index.html", message=worker_status)
 
 
+class FinishHandler(tornado.web.RequestHandler):
+    def post(self):
+        self.render("finish.html")
+
 class MatchHandler(tornado.websocket.WebSocketHandler):
     """Handle the matching
 
@@ -678,6 +682,7 @@ async def main():
             (r"/match", MatchHandler),
             (r"/room/id/([0-9]+$)", RoomHandler),
             (r"/event", EventUpdateHandler),
+            (r"/finish", FinishHandler)
         ],
         cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
         template_path=os.path.join(os.path.dirname(__file__), "templates"),

@@ -2194,14 +2194,5 @@
             ]
         ],
         "duration_key": "Day"
-    },
-    "40": {
-        "id": "40",
-        "initial": "You just started watching a movie, which would take about 2 hours.",
-        "time_span": "2 hours",
-        "schedules": [
-            []
-        ],
-        "duration_key": "Hour"
     }
 }

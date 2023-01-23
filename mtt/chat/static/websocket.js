@@ -1,8 +1,8 @@
 //var socket_host = "wss://eventchat.tk:443/event"
 var socket_host = "ws://localhost:8888/event"
 
-var MINIMUM_UTTERANCE_EACH_SESSION = 11;
-var MINIMUM_SESSION_NUMBER = 7;
+var MINIMUM_UTTERANCE_EACH_SESSION = 5;
+var MINIMUM_SESSION_NUMBER = 4;
 
 var ws = new WebSocket(socket_host);
 var session_utterance = 0;
@@ -49,8 +49,10 @@ ws.onmessage = function (evt) {
         alert(response.text);
         $("#new_message").prop("disabled", true);
         $("#new_session").prop("disabled", true);
-        $("#submit_notification").html(`Thank you for your participation. Your partner might have exited the chat room. To get paid, 
-        you need to click the <strong>Submit the HIT and Go Back to AMT</strong> button to submit your HIT.`)
+        // $("#submit_notification").html(`Thank you for your participation. Your partner might have exited the chat room. To get paid, 
+        // you need to click the <strong>Submit the HIT and Go Back to AMT</strong> button to submit your HIT.`)
+        $("#submit_notification").html(`Thank you for your participation. Your partner might have exited the chat room.
+        Please click the <strong>Submit</strong> button to submit your task.`)
     }
 
     // if the partner reconnected
@@ -67,7 +69,8 @@ ws.onmessage = function (evt) {
 
     // if the server send a session resposne
     if (response.type == "session") {
-        events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Progress: </strong> <br>`
+        session_number += 1;
+        events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Finished Progress: </strong> <br>`
         for (let i = 0; i<response.events.progress.length; i++) {
             events_html += response.events.progress[i] + "<br>"
         }
@@ -121,8 +124,12 @@ $("#new_session").on("click", function() {
     }
     ws.send(JSON.stringify(message));
     session_utterance = 0;
-    session_number += 1;
+    // session_number += 1;
     $('#new_session').prop("disabled", true);
+    if (session_number >= MINIMUM_SESSION_NUMBER) {
+        $('#submit_notification').html(`<p>You are able to submit now as you have finished 7 sessions. But you could be rewarded
+        to finish the conversations as natural as possible if more sessions are necessary. </p>`)
+    }
 });
 
 //event listener for new message
