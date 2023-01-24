@@ -1,5 +1,5 @@
-//var socket_host = "wss://eventchat.tk:443/event"
-var socket_host = "ws://localhost:8888/event"
+var socket_host = "wss://eventchat.tk:443/event"
+// var socket_host = "ws://localhost:8888/event"
 
 var MINIMUM_UTTERANCE_EACH_SESSION = 5;
 var MINIMUM_SESSION_NUMBER = 4;

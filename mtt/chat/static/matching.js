@@ -1,5 +1,5 @@
-// var socket_host = "wss://eventchat.tk:443/match";
-var socket_host = "ws://localhost:8888/match";
+var socket_host = "wss://eventchat.tk:443/match";
+// var socket_host = "ws://localhost:8888/match";
 var ws = new WebSocket(socket_host);
 
 function showNotificaiton() {
