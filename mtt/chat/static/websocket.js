@@ -127,7 +127,7 @@ $("#new_session").on("click", function() {
     // session_number += 1;
     $('#new_session').prop("disabled", true);
     if (session_number >= MINIMUM_SESSION_NUMBER) {
-        $('#submit_notification').html(`<p>You are able to submit now as you have finished 7 sessions. But you could be rewarded
+        $('#submit_notification').html(`<p>You are able to submit now as you have finished the minimum number of sessions. But you could be rewarded
         to finish the conversations as natural as possible if more sessions are necessary. </p>`)
     }
 });
