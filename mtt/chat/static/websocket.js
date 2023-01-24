@@ -70,7 +70,7 @@ ws.onmessage = function (evt) {
     // if the server send a session resposne
     if (response.type == "session") {
         session_number += 1;
-        events_html = `${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Finished Progress: </strong> <br>`
+        events_html = `<p>${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Finished Progress: </strong> <br>`
         for (let i = 0; i<response.events.progress.length; i++) {
             events_html += response.events.progress[i] + "<br>"
         }
@@ -86,6 +86,7 @@ ws.onmessage = function (evt) {
         for (let i = 0; i < response.events.plans.length; i++) {
             events_html += response.events.plans[i] + "<br>"
         }
+        events_html += "</p>"
         $("#events").html(events_html);
         $("#inbox").append(
             `<div class="list-group-item list-group-item-dark">

@@ -22,7 +22,7 @@
 
       <div class="row mt-5">
         <p>Chat history</p>
-        <div class="overflow-auto" style="height: 40vh; background-color: azure;" id="inbox_container">
+        <div class="overflow-auto" style="height: 30vh; background-color: azure;" id="inbox_container">
           <div class=""></div>
           <div class="col-9 align-self-end list-group d-inline-block" id="inbox">
 
@@ -30,15 +30,39 @@
         </div>
       </div>
 
-      <div class="row mt-5" id="input">
-        <table>
+      <div class="row" id="input">
+        <div class="row">
+          <div class="col">
+            <label>Your ID: {{room_client_info['worker_id']}}</label>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col">
+            <textarea name="body" id="message" style="width: 40vw;" placeholder="Your message ..."></textarea>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col-2">
+              <input class="btn btn-primary" type="button" value="Post" id="new_message">
+              <input type="hidden" name="next" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}">
+          </div>
+          <div class="col-2">
+              <input type="button" class="btn btn-primary" value="End Current Session" id="new_session" data-bs-toggle="modal" data-bs-target="#time_machine" disabled="true"/>
+              <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}"/>
+          </div>
+        </div>
+        <div class="row mt-3" id="events">
+          <p>
+            <strong>Initial Event:</strong> {{room_client_info["events_info"]["progress"]}}
+          </p>
+        </div>
+        <!-- <table>
           <tr>
-            <td><label>Your ID: {{room_client_info['worker_id']}}</label></td>
+            <td></td>
           </tr>
           <tr>
-            <div id="events">
-              <strong>Initial Event:</strong> {{room_client_info["events_info"]["progress"]}}
-            </div>
+            
           </tr>
           <tr>
             <td><textarea name="body" id="message" style="width: 40vw;" placeholder="Your message ..."></textarea></td>
@@ -52,9 +76,9 @@
               <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}"/>
             </td>
           </tr>
-        </table>
+        </table> -->
       </div>
-      <div class="row">
+      <div class="row mt-3">
         <p>At least 5 utterances are required for each session. At least 5 sessions are required.</p>
       </div>
 
