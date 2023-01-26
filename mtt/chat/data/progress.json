@@ -1507,7 +1507,7 @@
     },
     "26": {
         "id": "26",
-        "initial": "You just started rehearsing a play with your firends and you will perform it on an event in about 3 weeks.",
+        "initial": "You just started rehearsing a play with your friends and you will perform it at an event in about 3 weeks",
         "time_span": "3 weeks",
         "schedules": [
             [
