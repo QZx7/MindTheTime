@@ -1,4 +1,5 @@
 var host = window.location.host;
+alert(host);
 var socket_host = "";
 if (host == "localhost:8888") {
     socket_host = "ws://localhost:8888/match";
