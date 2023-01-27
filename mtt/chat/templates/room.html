@@ -57,29 +57,10 @@
             <strong>Initial Event:</strong> {{room_client_info["events_info"]["progress"]}}
           </p>
         </div>
-        <!-- <table>
-          <tr>
-            <td></td>
-          </tr>
-          <tr>
-            
-          </tr>
-          <tr>
-            <td><textarea name="body" id="message" style="width: 40vw;" placeholder="Your message ..."></textarea></td>
-            <td style="padding-left: 20px;">
-              <input class="btn btn-primary" type="button" value="Post" id="new_message">
-              <input type="hidden" name="next" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}">
-              {% module xsrf_form_html() %}
-            </td>
-            <td style="padding-left: 20px;">
-              <input type="button" class="btn btn-primary" value="End Current Session" id="new_session" data-bs-toggle="modal" data-bs-target="#time_machine" disabled="true"/>
-              <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}"/>
-            </td>
-          </tr>
-        </table> -->
       </div>
+      
       <div class="row mt-3">
-        <p>At least 5 utterances are required for each session. At least 5 sessions are required.</p>
+        <p>At least <strong id="min_utterance"></strong> utterances are required for each session. At least <strong id="min_session"></strong> sessions are required.</p>
       </div>
 
       <!-- Modal Time Machine -->
@@ -113,8 +94,8 @@
       <!-- Modal -->
 
       <!-- Modal Instruction -->
-      <div class="modal fade" id="instruction" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+      <div class="modal fade bd-example-modal-lg" id="instruction" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
               Instruction
@@ -124,64 +105,82 @@
             </div>
 
             <div class="modal-body">
-              <div class="row mt-5 text-left">
-                <h2 class="mt-5">Task Description</h2>
+              <div class="row text-left">
+                <h2 class="mt-2">Task Description</h2>
                 <p>
-                  In this task, you will be paired with another participant and engage in a <strong>multi-session conversation</strong>. 
-                  Before each session, you will be provided with a simulated time gap and some events that may have occurred 
-                  during that gap. Your task is to have a conversation with your partner, taking into account the events and 
-                  time gap that have been provided.
-                </p>
+                In this task, you will be paired with another participant and engage in a <strong>multi-session conversation</strong>.
+                At the beginning of each conversation, you will be provided with an event that you initiate (e.g., writing a novel,
+                having a trip, etc.). You will need to share with your task partner the progress of this event in the subsequent sessions.
 
                 <p>
-                Instructions: <br>
-
-                1. You will be matched with another participant and will have several sessions together. <br>
-                2. Before each session, you will be given a simulated time gap (e.g. 1 week, 1 month, etc.) and a list of events that may have occurred during that time.<br>
-                3. Use the information provided to continue the conversation with your partner, taking into account the events and time gap that have occurred. <br>
-                4. Be respectful and polite to your partner at all times.<br>
+                We will provide the time that has passed since the previous session, and you need to have natural dialogues as if this 
+                time has really passed in your conversation with respect to the progress of the event.
                 </p>
 
-                <p>
-                    Requirements: <br>
-
-                1. Must be able to communicate in English fluently. <br>
-                2. Must be able to commit to at least 2 sessions with your partner. <br>
-                3. Must be able to follow instructions and engage in a respectful and polite conversation with your partner. <br>
-                </p>
-
-                <h2 class="mt-5">Task steps:</h2>
+                
+                <h2 class="mt-2">Instructions</h2>    
                 <h4>Step 1: Match</h4>
                 <p>
+                    You will be matched with another participant and will have several sessions together. <br>
                     When you are ready for the task, hit the <strong>Start Matching</strong> button at the bottom of this page.
                 </p>
                 <h4>Step 2: Confirm your initial events</h4>
                 <p>
-                    After redirected to the chat room, you will need to confirm your initial event.
-                    You could use this inital event as your current status (we also encourage to use your own initial events
-                    that descript your status).
+                    After redirected to the chat room, you will need to confirm your initial event. <br>
+                    E.g., <i>You just started writing your doctor thesis, which would take about one year.</i> <br>
+                    <br>
+                    You are also encouraged to create your own events and subsequent time-based progress. 
                 </p>
                 <h4>Step 3: Have the conversation</h4>
                 <p>
                     You can input your text in the <strong>Input Area</strong> and hit the <strong>Post</strong> button to send
-                    your messages. Your messages can NOT be deleted once sent.
+                    your messages. <br> 
+                    Your messages can NOT be deleted once sent.
                 </p>
-                <h4>Step 4: Start a new session</h4>
+                <h4>Step 4: End current session and move the time forward</h4>
                 <p>
-                    Each session require at least one turn from each participant. Both you and your task partner can start a new
-                    session at any time by hitting the <strong>New Session</strong> button.
-                    Each conversation should have <strong>2 to 7 sessions</strong>.
-                </p>
-                <h4>Step 5: Confirm the new events</h4>
+                    Each session should have at least <strong>20</strong> utterances. However, we recommend all participants
+                    to end the session as natural as possible. Participants who provide high quality dialogue data will be rewarded.
                 <p>
-                    In a new session, you will find new time gap and events. You will then need to continue the conversation as
-                    if you have experienced the time gap in reality.
+                    To end the current session, hit the <strong>End Session and Time Forward</strong> button. This will move the
+                    timeline forward with a random amount of time (e.g. 1 week, 1 month, etc.) and bring you and your task partner to the next session.
                 </p>
-                
+
+                <h4>Step 5: Confirm the progress and new events</h4>
                 <p>
-                    Repeat step 3 to 5 until the end of the conversation.
+                    In a new session, you will be provided new information, including progress on ongoing event, life events, world events and future plans. <br>
+                    <br>
+                    E.g., <br>
+                    In this 1 month, you finished:<br>
+                    <strong>Finished Progress:</strong> <br>
+                    Review the requirements and guidelines for the thesis.<br>
+                    Review relevant literature and research in the field.<br>
+                    <strong>Life Events:</strong> <br>
+                    You gain weight.
+                    You take an online course learning cooking. <br>
+                    <strong>World Events:</strong> <br>
+                    Samsung Unveils SmartThings Station at CES 2023, Making Smarter Homes Accessible for Everyone.<br>
+                    HTC Announces Its Standalone VR Headset.<br>
+                    <strong>Futrue Plans:</strong> <br>
+                    Write the introduction of your thesis. <br>
+                    Design a system to collect data. <br>
                 </p>
-                <h4>Step Payment</h4>
+
+                <p>
+                    You are able to use these progress and events for the dialogues. However, you do NOT have to include every event in the dialogue. <br>
+                Make your conversations as <strong>natural</strong> as possible.
+                </p>
+
+                <p>
+                    Repeat step 3-5 until the end of the multi-session conversation.
+                </p>
+                <h2 class="mt-2">Evaluation Criteria (Important)</h2>
+                <p>
+                    1. <strong>Naturalness.</strong> You are able to do free conversation, however, you are responsible to make your conversation natural. <br>
+                    2. <strong>Fluent English.</strong> Your must communicate in English fluently. <br>
+                    2. <strong>Non-offensive.</strong> You are not allowed to post any offensive, abusive and harmful messages in the conversation. 
+                </p>
+
                 <p style="color: crimson;">
                     To get paid, you need to submit your HIT by clicking the <strong>Finish the HIT and Go Back to AMT</strong>
                     after the conversation.

@@ -1,8 +1,15 @@
-var socket_host = "wss://eventchat.tk:443/event"
-// var socket_host = "ws://localhost:8888/event"
+var host = window.location.host;
+var socket_host = "";
+if (host == "localhost:8888") {
+    socket_host = "ws://localhost:8888/event";
+}else if (host == "www.eventchat.tk") {
+    socket_host = "wss://eventchat.tk:443/event";
+}
 
-var MINIMUM_UTTERANCE_EACH_SESSION = 5;
-var MINIMUM_SESSION_NUMBER = 4;
+var MINIMUM_UTTERANCE_EACH_SESSION = 10;
+var MINIMUM_SESSION_NUMBER = 7;
+$("#min_utterance").html(`${MINIMUM_UTTERANCE_EACH_SESSION}`)
+$("#min_session").html(`${MINIMUM_SESSION_NUMBER}`)
 
 var ws = new WebSocket(socket_host);
 var session_utterance = 0;
