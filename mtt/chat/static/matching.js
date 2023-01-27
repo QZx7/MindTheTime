@@ -3,7 +3,7 @@ alert(host);
 var socket_host = "";
 if (host == "localhost:8888") {
     socket_host = "ws://localhost:8888/match";
-}else if (host == "www.eventchat.tk") {
+}else if (host == "eventchat.tk") {
     socket_host = "wss://eventchat.tk:443/match";
 }
 
