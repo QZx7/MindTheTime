@@ -357,14 +357,14 @@ def log_request(
     log_message = {}
     # logging the initial events
     if log_type == "events":
-        if event_status == "initial" or event_status == "news":
+        if event_status == "initial":
             log_message = {
                 "type": "event",
                 "event_type": "initial",
                 "speaker": workId,
                 "room_id": room_id,
                 "gap": "None",
-                "events": global_event_dict[room_id]["events"][0][workId],
+                "events": global_event_dict[room_id]["timelines"][workId][0]["schedule"][0],
             }
         else:
             log_message = {
@@ -373,7 +373,7 @@ def log_request(
                 "speaker": workId,
                 "room_id": room_id,
                 "gap": global_event_dict[room_id]["gap"][-1],
-                "events": global_event_dict[room_id]["events"][-1][workId],
+                "events": global_event_dict[room_id]["timelines"][workId][-1]["schedule"][-1],
             }
     elif log_type == "chat":
         log_message = {
@@ -510,7 +510,7 @@ class RoomHandler(tornado.web.RequestHandler):
                 "schedule"
             ][-1],
         }
-        # log_request(room_id, workerId, event_status="initial", log_type="events")
+        log_request(room_id, workerId, event_status="initial", log_type="events")
 
         # create message history dictionary for this room
         if room_id not in global_message_dict:
@@ -596,12 +596,12 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
 
             for c in clients[self.room_id]:
                 print(f"sending to {c.worker_id}")
-                # log_request(
-                #     self.room_id,
-                #     c.worker_id,
-                #     event_status=str(len(global_event_dict[self.room_id]["events"])),
-                #     log_type="events",
-                # )
+                log_request(
+                    self.room_id,
+                    c.worker_id,
+                    event_status="events",
+                    log_type="events",
+                )
                 event_info = {}
                 if (
                     "life_events"
@@ -635,12 +635,12 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
             global_message_dict[self.room_id].append(
                 {"speaker": self.worker_id, "text": message_data["message"]}
             )
-            # log_request(
-            #     self.room_id,
-            #     self.worker_id,
-            #     chat_text=message_data["message"],
-            #     log_type="chat",
-            # )
+            log_request(
+                self.room_id,
+                self.worker_id,
+                chat_text=message_data["message"],
+                log_type="chat",
+            )
             for c in clients[self.room_id]:
                 response = {
                     "type": "message",
