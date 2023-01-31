@@ -21,6 +21,9 @@
       </div>
 
       <div class="row mt-5">
+        <p>
+          You are matched with your task partner. You can start the conversation by typing in the message area and hit the Post button.
+        </p>
         <p>Chat history</p>
         <div class="overflow-auto" style="height: 30vh; background-color: azure;" id="inbox_container">
           <div class=""></div>
@@ -31,11 +34,11 @@
       </div>
 
       <div class="row" id="input">
-        <div class="row">
+        <!-- <div class="row">
           <div class="col">
             <label>Your ID: {{room_client_info['worker_id']}}</label>
           </div>
-        </div>
+        </div> -->
 
         <div class="row mt-3">
           <div class="col">
@@ -49,6 +52,7 @@
           </div>
           <div class="col-2">
               <input type="button" class="btn btn-primary" value="End Current Session" id="new_session" data-bs-toggle="modal" data-bs-target="#time_machine" disabled="true"/>
+              <p id="sessions_finished">Sessions you have finished: 0</p>
               <input type="hidden" name="nextSession" value="{{ request.path }}?workerId={{room_client_info['worker_id']}}"/>
           </div>
         </div>
@@ -58,7 +62,7 @@
           </p>
         </div>
       </div>
-      
+
       <div class="row mt-3">
         <p>At least <strong id="min_utterance"></strong> utterances are required for each session. At least <strong id="min_session"></strong> sessions are required.</p>
       </div>
@@ -308,30 +312,33 @@
         <hr style="height:30px">
       </div>
 
-      <!-- <div id="mturk">
+      <p id="progress_report">
+
+      </p>
+
+      <div id="mturk">
         <form name='mturk_form' method='post' id='mturk_form' action='https://workersandbox.mturk.com/mturk/externalSubmit'>
           <input type="hidden" id="assignmentId" value="" name="assignmentId"/>
           <div>
             <input type="checkbox" id="submitCheck" name="submitCheck"/>
             <label for="submitCheck">I have finished the HIT and I'm ready to submit.</label>
           </div>
-          <p><input type="text" id="feedback" name="feedback" placeholder="Feedback... (your thoughts on the task)"/></p>
-          <p><input class="btn btn-primary" type="submit" id="hit_submit" disabled="true" value="Submit the HIT and Go Back To AMT"/> </p>
+          <p><input class="btn btn-primary" type="submit" id="hit_submit" disabled="true" value="Submit the HIT"/> </p>
         </form>
       </div>
-      <script language='Javascript'>turkSetAssignmentID();</script> -->
+      <script language='Javascript'>turkSetAssignmentID();</script>
       <div>
 
       </div>
-        <form name='mturk_form' method='post' id='mturk_form' action='/finish'>
+        <!-- <form name='mturk_form' method='post' id='mturk_form' action='/finish'>
           <input type="hidden" id="assignmentId" value="" name="assignmentId"/>
           <div>
             <input type="checkbox" id="submitCheck" name="submitCheck"/>
-            <label for="submitCheck">I have finished the task.</label>
+            <label for="submitCheck">I have finished the task. (Check this if you have finished the conversations.)</label>
           </div>
-          <p><input type="text" id="feedback" name="feedback" placeholder="Feedback... (your thoughts on the task)"/></p>
           <p><input class="btn btn-primary" type="submit" id="hit_submit" disabled="true" value="Submit the Task"/> </p>
-        </form>
+        </form> -->
+
       <div>
         <hr style="height:30px">
       </div>
@@ -345,10 +352,10 @@
         
         <div>
           <label for="report">
-            You can report any offensive, abusive, toxic and harmful behaviors here. We will handle that as soon as possible.
+            You can report any problems in the task here, including unfinished task, offensive behaviors, etc. We will handle that as soon as possible.
           </label>
           <div>
-            <textarea id="report_message" name="report message" placeholder="Describe the offensive behaviors here..." style="width: 40vw;"></textarea>
+            <textarea id="report_message" name="report message" placeholder="Describe the situation or any offensive behaviors..." style="width: 40vw;"></textarea>
           </div>
           <input class="btn btn-secondary" type="button" name="report" id="report" value="Send your report"/>
         </div>
