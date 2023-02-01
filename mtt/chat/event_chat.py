@@ -399,6 +399,13 @@ def log_request(
             "speaker": workId,
             "text": chat_text,
         }
+    elif log_type == "report":
+        log_message = {
+            "type": "report",
+            "room_id": room_id,
+            "speaker": workId,
+            "text": chat_text
+        }
     save_file.write(json.dumps(log_message) + "\n")
 
 
@@ -668,6 +675,12 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 c.write_message(json.dumps(response))
 
         if message_data["type"] == "report":
+            log_request(
+                self.room_id,
+                self.worker_id,
+                chat_text=message_data["report"],
+                log_type="report"
+            )
             response = {
                 "type": "report",
                 "text": "Thanks for your report. We will process your report ASAP!",
