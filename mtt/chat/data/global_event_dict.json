@@ -15,10 +15,7 @@
                     "start_time": 0,
                     "schedule": [
                         {
-                            "progress": ["You are about to get married and currently planning your wedding, which will be in 5 months later."],
-                            "life_events": [],
-                            "world_events": [],
-                            "plans": []
+                            "progress": ["You are about to get married and currently planning your wedding, which will be in 5 months later."]
                         },
                         {
                             "progress": ["No significant progress"],
@@ -94,10 +91,7 @@
                         {
                             "progress": [
                                 "You just started a road trip inside your country, which would take about 2 weeks."
-                            ],
-                            "life_events": [],
-                            "world_events": [],
-                            "plans": []
+                            ]
                         },
                         {
                             "progress": [

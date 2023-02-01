@@ -1781,7 +1781,7 @@
     },
     "31": {
         "id": "31",
-        "initial": "You are about to visit the nearby town for about tow days.",
+        "initial": "You are about to visit the nearby town for about two days.",
         "time_span": "2 days",
         "schedules": [
             [

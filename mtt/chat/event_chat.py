@@ -182,7 +182,7 @@ def get_next_progress(
     if schedule_time_to_minutes(schedule[-1]["schedule_time"]) < start_time + gap_time:
         print(schedule[-1]["schedule_time"])
         finish_status = True
-        progress = ["You finished that."]
+        progress = ["You finished the previous progress."]
 
     # else
     else:
@@ -364,16 +364,33 @@ def log_request(
                 "speaker": workId,
                 "room_id": room_id,
                 "gap": "None",
-                "events": global_event_dict[room_id]["timelines"][workId][0]["schedule"][0],
+                "events": global_event_dict[room_id]["timelines"][workId][0][
+                    "schedule"
+                ][0],
             }
         else:
+            event_info = {}
+            if (
+                "life_events"
+                not in global_event_dict[room_id]["timelines"][workId][-1]["schedule"][
+                    -1
+                ]
+            ):
+                event_info = global_event_dict[room_id]["timelines"][workId][-2][
+                    "schedule"
+                ][-1]
+                event_info["progress"].extend(
+                    global_event_dict[room_id]["timelines"][workId][-1]["schedule"][-1][
+                        "progress"
+                    ]
+                )
             log_message = {
                 "type": "event",
                 "event_type": "subsequent",
                 "speaker": workId,
                 "room_id": room_id,
                 "gap": global_event_dict[room_id]["gap"][-1],
-                "events": global_event_dict[room_id]["timelines"][workId][-1]["schedule"][-1],
+                "events": event_info,
             }
     elif log_type == "chat":
         log_message = {
@@ -418,6 +435,7 @@ class MainHandler(tornado.web.RequestHandler):
 class FinishHandler(tornado.web.RequestHandler):
     def post(self):
         self.render("finish.html")
+
 
 class MatchHandler(tornado.websocket.WebSocketHandler):
     """Handle the matching
@@ -533,8 +551,8 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
     def on_message(self, message):
 
         message_data = json.loads(message)
-        if message_data["type"] != "ping":
-            print(f"websocket message: {message}")
+        # if message_data["type"] != "ping":
+        #     print(f"websocket message: {message}")
 
         # Process the initial message and register the current connection as a client.
         if message_data["type"] == "initialize":
@@ -547,18 +565,18 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
             else:
                 clients[self.room_id].append(self)
                 for c in clients[self.room_id]:
-                    print(f"sending to {c.worker_id}")
+                    # print(f"sending to {c.worker_id}")
                     response = {
                         "type": "reconnection",
                     }
                     c.write_message(json.dumps(response))
-            print(clients)
+            # print(clients)
 
         # Process the new session message
         if message_data["type"] == "session":
             # generate a new gap and duration key
             gap, duration_key = move_forward()
-            print(f"generate gap {gap}")
+            # print(f"generate gap {gap}")
             global_event_dict[self.room_id]["gap"].append(gap)
             gap_time = time_to_minutes(gap)
 
@@ -595,7 +613,7 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                     )
 
             for c in clients[self.room_id]:
-                print(f"sending to {c.worker_id}")
+                # print(f"sending to {c.worker_id}")
                 log_request(
                     self.room_id,
                     c.worker_id,
@@ -668,13 +686,13 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
         global_user_pool.pop(worker, None)
         if clients[room]:
             for c in clients[room]:
-                print("writing to...")
+                # print("writing to...")
                 response = {
                     "type": "partner_disconnect",
                     "text": "You partner has disconnected from the server.",
                 }
                 c.write_message(json.dumps(response))
-        print(clients)
+        # print(clients)
 
 
 async def main():
@@ -685,7 +703,7 @@ async def main():
             (r"/match", MatchHandler),
             (r"/room/id/([0-9]+$)", RoomHandler),
             (r"/event", EventUpdateHandler),
-            (r"/finish", FinishHandler)
+            (r"/finish", FinishHandler),
         ],
         cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
         template_path=os.path.join(os.path.dirname(__file__), "templates"),

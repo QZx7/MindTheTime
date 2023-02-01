@@ -92,6 +92,10 @@ ws.onmessage = function (evt) {
     if (response.type == "session") {
         session_number += 1;
         $("#sessions_finished").html(`Sessions you have finished: ${session_number}`)
+        if (session_number >= MINIMUM_SESSION_NUMBER) {
+            $('#submit_notification').html(`<p>You are able to submit as you have finished the minimum number of sessions. But you could be rewarded
+            to finish the conversations as natural as possible if more sessions are necessary. </p>`)
+        }
         session_utterance = 0;
         events_html = `<p>${response.gap} has/have passed. During this time, the following events happened.<br> <strong>Finished Progress: </strong> <br>`
         for (let i = 0; i<response.events.progress.length; i++) {
@@ -152,10 +156,6 @@ $("#new_session").on("click", function() {
     // session_utterance = 0;
     // session_number += 1;
     // $('#new_session').prop("disabled", true);
-    if (session_number >= MINIMUM_SESSION_NUMBER) {
-        $('#submit_notification').html(`<p>You are able to submit now as you have finished the minimum number of sessions. But you could be rewarded
-        to finish the conversations as natural as possible if more sessions are necessary. </p>`)
-    }
 });
 
 //event listener for new message
