@@ -3,6 +3,7 @@ import tornado.locks
 import tornado.web
 import tornado.websocket
 import tornado.httpserver
+import tornado.gen
 import os.path
 import json
 import random
@@ -277,64 +278,63 @@ def match(workerId: Text):
     Returns:
         _type_: Room information if matched
     """
-    print("start matching...")
+    # print("start matching...")
     global matching_queue
     global global_room_id
-    while True:
-        # If this user is already matched with other user
-        if (
-            global_user_pool[workerId]["is_matching"] == False
-            and global_user_pool[workerId]["matched"]
-        ):
-            room_id = global_user_pool[workerId]["room_id"]
-            room_info = {
-                "room_id": room_id,
-                "speaker_1": global_room_pool[room_id]["speaker_1"],
-                "speaker_2": global_room_pool[room_id]["speaker_2"],
-            }
-            return room_info
+    # while True:
+    # If this user is already matched with other user
+    if (
+        global_user_pool[workerId]["is_matching"] == False
+        and global_user_pool[workerId]["matched"]
+    ):
+        room_id = global_user_pool[workerId]["room_id"]
+        room_info = {
+            "room_id": room_id,
+            "speaker_1": global_room_pool[room_id]["speaker_1"],
+            "speaker_2": global_room_pool[room_id]["speaker_2"],
+        }
+        return room_info
 
-        # if this user is not matched with anyone else, match this user with the
-        # first person in the queue.
-        if len(matching_queue) >= 2:
+    # if this user is not matched with anyone else, match this user with the
+    # first person in the queue.
+    if len(matching_queue) >= 2:
+        # global settings
+        speaker_1 = workerId
+        matching_queue.remove(workerId)
+        speaker_2 = matching_queue.pop(0)
 
-            # global settings
-            speaker_1 = workerId
-            matching_queue.remove(workerId)
-            speaker_2 = matching_queue.pop(0)
+        # create save file for this room
+        save_location = os.path.join(LOG_PATH, CURRENT_TIME + f"-{global_room_id}.log")
+        f = open(save_location, "a")
+        f.write(f"Room Id: {global_room_id} \n")
+        f.close()
 
-            # create save file for this room
-            save_location = os.path.join(
-                LOG_PATH, CURRENT_TIME + f"-{global_room_id}.log"
-            )
-            f = open(save_location, "a")
-            f.write(f"Room Id: {global_room_id} \n")
-            f.close()
+        global_room_pool[global_room_id] = {
+            "speaker_1": speaker_1,
+            "speaker_2": speaker_2,
+            "save_location": save_location,
+        }
 
-            global_room_pool[global_room_id] = {
-                "speaker_1": speaker_1,
-                "speaker_2": speaker_2,
-                "save_location": save_location,
-            }
+        # worker settings
+        global_user_pool[speaker_1]["is_matching"] = False
+        global_user_pool[speaker_1]["room_id"] = global_room_id
+        global_user_pool[speaker_1]["matched"] = True
 
-            # worker settings
-            global_user_pool[speaker_1]["is_matching"] = False
-            global_user_pool[speaker_1]["room_id"] = global_room_id
-            global_user_pool[speaker_1]["matched"] = True
+        global_user_pool[speaker_2]["is_matching"] = False
+        global_user_pool[speaker_2]["room_id"] = global_room_id
+        global_user_pool[speaker_2]["matched"] = True
 
-            global_user_pool[speaker_2]["is_matching"] = False
-            global_user_pool[speaker_2]["room_id"] = global_room_id
-            global_user_pool[speaker_2]["matched"] = True
-
-            # self
-            room_info = {
-                "room_id": global_room_id,
-                "speaker_1": speaker_1,
-                "speaker_2": speaker_2,
-                "save_location": save_location,
-            }
-            global_room_id += 1
-            return room_info
+        # self
+        room_info = {
+            "room_id": global_room_id,
+            "speaker_1": speaker_1,
+            "speaker_2": speaker_2,
+            "save_location": save_location,
+        }
+        global_room_id += 1
+        return room_info
+    else:
+        return None
 
 
 def log_request(
@@ -404,7 +404,7 @@ def log_request(
             "type": "report",
             "room_id": room_id,
             "speaker": workId,
-            "text": chat_text
+            "text": chat_text,
         }
     save_file.write(json.dumps(log_message) + "\n")
 
@@ -416,11 +416,15 @@ class MainHandler(tornado.web.RequestHandler):
         tornado (_type_): a RequestHandler class
     """
 
+    def __init__(self, application, request) -> None:
+        super().__init__(application, request)
+        self.worker_id = ""
+
     def get(self):
         # matching = False
-        workerId = ""
+        # workerId = ""
         try:
-            workerId = self.get_argument("workerId")
+            self.worker_id = self.get_argument("workerId")
             assignmentId = self.get_argument("assignmentId")
             hitId = self.get_argument("hitId")
         except tornado.web.MissingArgumentError:
@@ -432,11 +436,14 @@ class MainHandler(tornado.web.RequestHandler):
         worker_status = {
             "is_matching": False,
             "matched": False,
-            "worker_id": workerId,
+            "worker_id": self.worker_id,
             "room_id": "",
         }
-        global_user_pool[workerId] = worker_status
+        global_user_pool[self.worker_id] = worker_status
         self.render("index.html", message=worker_status)
+
+    def on_connection_close(self) -> None:
+        print(f"{self.worker_id} left")
 
 
 class FinishHandler(tornado.web.RequestHandler):
@@ -451,36 +458,66 @@ class MatchHandler(tornado.websocket.WebSocketHandler):
         tornado (_type_): _description_
     """
 
+    def __init__(self, application: tornado.web.Application, request) -> None:
+        super().__init__(application, request)
+        self.worker_id = ""
+
     async def on_message(self, message):
         global matching_queue
         message_data = json.loads(message)
 
         # someone joined
         if message_data["type"] == "joined":
-            print("Joined")
+            self.worker_id = message_data["worker_id"]
+            print(f"[Log] {self.worker_id} Joined")
 
         # someone started matching
         elif message_data["type"] == "matching":
-            workerId = message_data["worker_id"]
-            print(f"Worker: {workerId} started matching.")
-            print(f"matching queue: {matching_queue}")
-            if not global_user_pool[workerId]["matched"]:
-                global_user_pool[workerId]["is_matching"] = True
-                if workerId not in matching_queue:
-                    matching_queue.append(workerId)
+            # workerId = message_data["worker_id"]
+            matching_clients[self.worker_id] = self
+            print(f"[Log] Worker: {self.worker_id} started matching.")
+            if not global_user_pool[self.worker_id]["matched"]:
+                global_user_pool[self.worker_id]["is_matching"] = True
+                if self.worker_id not in matching_queue:
+                    matching_queue.append(self.worker_id)
+            print(f"[Log] matching queue: {matching_queue}")
             # Matched. if there are more than two users, open a new room.
             room_info = await ioloop.IOLoop.current().run_in_executor(
-                executor, match, workerId
+                executor, match, self.worker_id
             )
-            response = {"type": "matching", "room_info": room_info}
-            # self.write_message()
-            print(f"matched, room_info: {room_info}")
-            self.write_message(json.dumps(response))
+            # room_info = ioloop.IOLoop.current().add_callback(match, self.worker_id)
+            if room_info != None:
+                response = {"type": "matching", "room_info": room_info}
+                print(f"[Log] matched, room_info: {room_info}")
+                matching_clients[room_info["speaker_1"]].write_message(
+                    json.dumps(response)
+                )
+                matching_clients[room_info["speaker_2"]].write_message(
+                    json.dumps(response)
+                )
+                del matching_clients[room_info["speaker_1"]]
+                del matching_clients[room_info["speaker_2"]]
+                # self.write_message(json.dumps(response))
 
         # ping pong
         elif message_data["type"] == "ping":
             response = {"type": "ping", "text": "pong"}
             self.write_message(json.dumps(response))
+
+    def on_close(self) -> None:
+        print("left")
+        if (
+            global_user_pool[self.worker_id]["is_matching"] == True
+            and global_user_pool[self.worker_id]["matched"] == False
+        ):
+            # remove user from matching queue
+            matching_queue.remove(self.worker_id)
+            global_user_pool[self.worker_id]["is_matching"] == False
+            print(f"[Log] {self.worker_id} left matching")
+            print(f"[Log] matching queue: {matching_queue}")
+
+
+matching_clients: Dict[Text, MatchHandler] = {}
 
 
 class RoomHandler(tornado.web.RequestHandler):
@@ -493,7 +530,7 @@ class RoomHandler(tornado.web.RequestHandler):
     def get(self, room_id):
         workerId = self.get_argument("workerId")
         room_id = int(room_id)
-
+        print(f"[Log] Room {room_id} is initialed")
         # For each new room, if the current connection
         # is the first user, generate the initial gap and events.
         if room_id not in global_event_dict:
@@ -543,9 +580,6 @@ class RoomHandler(tornado.web.RequestHandler):
         self.render("room.html", room_client_info=room_client_info)
 
 
-clients: Dict[int, List[tornado.websocket.WebSocketHandler]] = {}
-
-
 class EventUpdateHandler(tornado.websocket.WebSocketHandler):
     def __init__(self, application, request) -> None:
         super().__init__(application, request)
@@ -553,10 +587,9 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
         self.room_id = 0
 
     def open(self):
-        print("WebSocket opened")
+        print("[Log] WebSocket opened")
 
     def on_message(self, message):
-
         message_data = json.loads(message)
         # if message_data["type"] != "ping":
         #     print(f"websocket message: {message}")
@@ -652,7 +685,7 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                     "gap": gap,
                     "events": event_info,
                 }
-                print(response)
+                print(f"[Log] New session in room {self.room_id}. {response}")
                 c.write_message(json.dumps(response))
 
         # Process the new message
@@ -679,7 +712,7 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 self.room_id,
                 self.worker_id,
                 chat_text=message_data["report"],
-                log_type="report"
+                log_type="report",
             )
             response = {
                 "type": "report",
@@ -706,6 +739,9 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                 }
                 c.write_message(json.dumps(response))
         # print(clients)
+
+
+clients: Dict[int, List[EventUpdateHandler]] = {}
 
 
 async def main():
