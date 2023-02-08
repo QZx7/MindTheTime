@@ -183,7 +183,7 @@ def get_next_progress(
     if schedule_time_to_minutes(schedule[-1]["schedule_time"]) < start_time + gap_time:
         print(schedule[-1]["schedule_time"])
         finish_status = True
-        progress = ["You finished the previous progress."]
+        progress = ["You finished the previous progress and started the following new event."]
 
     # else
     else:
