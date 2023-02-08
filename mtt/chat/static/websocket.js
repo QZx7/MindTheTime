@@ -92,6 +92,7 @@ ws.onmessage = function (evt) {
     if (response.type == "session") {
         session_number += 1;
         $("#sessions_finished").html(`Sessions you have finished: ${session_number}`)
+        $('#session_submit').val(session_number)
         if (session_number >= MINIMUM_SESSION_NUMBER) {
             $('#submit_notification').html(`<p>You are able to submit as you have finished the minimum number of sessions. But you could be rewarded
             to finish the conversations as natural as possible if more sessions are necessary. </p>`)
