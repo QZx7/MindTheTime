@@ -340,6 +340,7 @@ def match(workerId: Text):
 def log_request(
     room_id: int,
     workId: Text,
+    assignmentId: Text = "",
     log_type: Text = "chat",
     event_status: Optional[Text] = "initial",
     chat_text: Optional[Text] = "",
@@ -359,8 +360,10 @@ def log_request(
     if log_type == "events":
         if event_status == "initial":
             log_message = {
+                "time": datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
                 "type": "event",
                 "event_type": "initial",
+                "assignmentId": assignmentId,
                 "speaker": workId,
                 "room_id": room_id,
                 "gap": "None",
@@ -385,6 +388,7 @@ def log_request(
                     ]
                 )
             log_message = {
+                "time": datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
                 "type": "event",
                 "event_type": "subsequent",
                 "speaker": workId,
@@ -394,6 +398,7 @@ def log_request(
             }
     elif log_type == "chat":
         log_message = {
+            "time": datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
             "type": "chat",
             "room_id": room_id,
             "speaker": workId,
@@ -401,6 +406,7 @@ def log_request(
         }
     elif log_type == "report":
         log_message = {
+            "time": datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
             "type": "report",
             "room_id": room_id,
             "speaker": workId,
@@ -529,6 +535,7 @@ class RoomHandler(tornado.web.RequestHandler):
 
     def get(self, room_id):
         workerId = self.get_argument("workerId")
+        assignmentId = self.get_argument("assignmentId")
         room_id = int(room_id)
         print(f"[Log] Room {room_id} is initialed")
         # For each new room, if the current connection
@@ -572,7 +579,7 @@ class RoomHandler(tornado.web.RequestHandler):
                 "schedule"
             ][-1],
         }
-        log_request(room_id, workerId, event_status="initial", log_type="events")
+        log_request(room_id, workerId, assignmentId, event_status="initial", log_type="events")
 
         # create message history dictionary for this room
         if room_id not in global_message_dict:
