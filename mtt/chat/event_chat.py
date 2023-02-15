@@ -343,6 +343,7 @@ def log_request(
     assignmentId: Text = "",
     log_type: Text = "chat",
     event_status: Optional[Text] = "initial",
+    event_info: Optional[Dict] = {},
     chat_text: Optional[Text] = "",
 ):
     """Log the coming request from a client.
@@ -372,21 +373,6 @@ def log_request(
                 ][0],
             }
         else:
-            event_info = {}
-            if (
-                "life_events"
-                not in global_event_dict[room_id]["timelines"][workId][-1]["schedule"][
-                    -1
-                ]
-            ):
-                event_info = global_event_dict[room_id]["timelines"][workId][-2][
-                    "schedule"
-                ][-1]
-                event_info["progress"].extend(
-                    global_event_dict[room_id]["timelines"][workId][-1]["schedule"][-1][
-                        "progress"
-                    ]
-                )
             log_message = {
                 "time": datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
                 "type": "event",
@@ -660,13 +646,6 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                     )
 
             for c in clients[self.room_id]:
-                # print(f"sending to {c.worker_id}")
-                log_request(
-                    self.room_id,
-                    c.worker_id,
-                    event_status="events",
-                    log_type="events",
-                )
                 event_info = {}
                 if (
                     "life_events"
@@ -690,9 +669,16 @@ class EventUpdateHandler(tornado.websocket.WebSocketHandler):
                     "type": "session",
                     "session": 0,
                     "gap": gap,
-                    "events": event_info,
+                    "events": event_info.copy(),
                 }
                 print(f"[Log] New session in room {self.room_id}. {response}")
+                log_request(
+                    self.room_id,
+                    c.worker_id,
+                    event_status="events",
+                    event_info=event_info,
+                    log_type="events",
+                )
                 c.write_message(json.dumps(response))
 
         # Process the new message
