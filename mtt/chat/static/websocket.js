@@ -7,7 +7,7 @@ if (host == "localhost:8888") {
 }
 
 // the minimum utterance number in each session.
-var MINIMUM_UTTERANCE_EACH_SESSION = 20;
+var MINIMUM_UTTERANCE_EACH_SESSION = 5;
 // the minimum session to finish this work and get fully paid.
 var MINIMUM_SESSION_NUMBER = 3;
 // the minimum session to get part of the payment due to the issues on the partner's side.
