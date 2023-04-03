@@ -1,0 +1,3859 @@
+[
+    {
+        "conversation_id": 35,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started taking an online course in data science, which would take about 4 months."
+            },
+            "speaker_2": {
+                "progress": "You just started building a swimming pool in your new house, which would take about 3 months."
+            }
+        },
+        "gap": [
+            "5 days",
+            "5 days",
+            "2 weeks",
+            "2 weeks",
+            "2 weeks",
+            "2 weeks"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You visit a beach and relax in the sun.",
+                        "You go to Las Vegas for casino.",
+                        "You go to an art gallery."
+                    ],
+                    "world_events": [
+                        "Employers could sue unions under planned anti-strike laws",
+                        "Sam Bankman-Fried found \u2018chilling\u2019 in JFK airport lounge on $250M bail bond.",
+                        "'Serpent' serial killer Charles Sobhraj returns to France after 19 years in prison."
+                    ],
+                    "plans": [
+                        "Review course syllabus, objectives and prerequisites.",
+                        "You are planning to meet with your team on Monday to discuss the progress of your project and set goals for the week.",
+                        "You are planning to save up for a big trip or vacation in the coming 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "Review course syllabus, objectives and prerequisites."
+                    ],
+                    "life_events": [
+                        "You write and record a new album.",
+                        "You complete a home organization.",
+                        "You attend a multi-day workshop."
+                    ],
+                    "world_events": [
+                        "Tesla owner says he had to cancel Christmas plans because car would not charge in freezing weather.",
+                        "Pope calls for end to 'senseless' war in Ukraine during Christmas message.",
+                        "Argentina won the championship of World Cup."
+                    ],
+                    "plans": [
+                        "Learn basic statistics and data exploration.",
+                        "You are planning to set aside time to review and reflect on your personal and professional goals for the year and make any necessary adjustments.",
+                        "You are planning to focus on improving your physical and mental well-being in the next 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "Learn basic statistics and data exploration."
+                    ],
+                    "life_events": [
+                        "You create and implement a social media marketing strategy.",
+                        "You complete a home renovation.",
+                        "You write and submit a new grant proposal."
+                    ],
+                    "world_events": [
+                        "Ukraine war: Kyiv rejects Putin's 'trivial' Christmas truce",
+                        "Germany's energy crisis is a cue to chop wood and stock up.",
+                        "November Carbon Emissions In Europe Lowest In 30 Years."
+                    ],
+                    "plans": [
+                        "Learn Python programming and data manipulation.",
+                        "You are planning to dedicate time to learning a new skill or hobby, such as a language or instrument, during the month.",
+                        "You are planning to spend Wednesday and Thursday working on a proposal that is due on Friday."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You go to an aquarium.",
+                        "You go to an art gallery.",
+                        "You visit a nearby city."
+                    ],
+                    "world_events": [
+                        "Up to half of the world\u2019s glaciers could disappear even if ambitious climate targets are hit, new study finds",
+                        "Google Chrome Is About to Be Problem on Your Parents\u2019 PC by Ending Support on Windows 7,8 and 8.1",
+                        "Major NGOs halt work in Afghanistan after Taliban ban on female workers."
+                    ],
+                    "plans": [
+                        "Site preparation and excavation of the pool area.",
+                        "You are planning to host a dinner party for friends and family at the end of the month to catch up and celebrate.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track."
+                    ]
+                },
+                {
+                    "progress": [
+                        "Installation of plumbing and electrical for the pool equipment"
+                    ],
+                    "life_events": [
+                        "You plan a large party.",
+                        "You write and record a new album.",
+                        "You produce a short video about food and upload it to YouTube."
+                    ],
+                    "world_events": [
+                        "Federal Trade Commission proposes ban on noncompete clauses",
+                        "Nintendo Slashes Prices Of Switch eShop Games In New Year Sale (North America)",
+                        "Prince Harry reveals whether he\u2019s circumcised in bombshell \u2018Spare\u2019 memoir"
+                    ],
+                    "plans": [
+                        "Forming and pouring the pool's concrete walls and floor.",
+                        "Finishing the interior of the pool with plaster or other finish materials.",
+                        "You are planning to make a career transition or switch to a new field in the next 6 months.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You write and record a new album.",
+                        "You renovate your kitchen.",
+                        "You plan and execute a wedding."
+                    ],
+                    "world_events": [
+                        "Fatal winter storm leaves millions without power in North America with -45C temperatures.",
+                        "Zelensky's sobering Christmas message to Ukraine describes 'Loss of Hope'.",
+                        "KFC became Japan's go-to Christmas dinner."
+                    ],
+                    "plans": [
+                        "Forming and pouring the pool's concrete walls and floor.",
+                        "Finishing the interior of the pool with plaster or other finish materials.",
+                        "You are planning to take a sabbatical or extended time off to travel and explore new places in the coming year.",
+                        "You are planning to relax and catch up on any work that needs to be done before the start of the next week on Sunday."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi, how are you doing?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hi dude! I'm good, What about you?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm also doing great. how about you?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What do you do for your living?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I started  a job and now I'm building swimming pool in my new house"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I have just started taking an online course in data science."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "wow its sounds great. how much time will take to complete your course"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "It would take about 4 months dude! What about the duration of your work?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It would take about 3 month."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Oh, best wishes peer!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Wishes you the same from my side"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What do usually do in spending leisure time?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I like to listen the music especially popup"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Great, I too love music! Do you like Snoop Dogg!?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yeah, of course, dude...one of the best rapper"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm glad that you too love him!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "whether you go to a cafe or some other restaurant in a last week?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I usually visit Starbucks and I love their coffee dude!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "oh yesterday i went to a restaurant they served a terrible lunch cant explain to dude"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Oh, Can you elaborate your experience?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It was so bad."
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "Happy to see you again!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey, whats up  dude?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I've recently visited a Beach to get relaxed under the Sun."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Wow. happy to hear it. I went to an aquarium and went to visit a nearby city and i went to see art gallery . its was awesome experience"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Nice to hear peer! Also I've went to Las Vegas for Casino and to an art gallery!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey dude i heard these news. Can you able to solve it? Google Chrome Is About to Be Problem on a Parents\u2019 PC by Ending Support on Windows 7,8 and 8.1. will you help me?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I think there may be some errors in their previous OS versions! Kindly do check it."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "oh. i will check it and update you. do you hear that the climate have been changed while. on few days before. i heard a news that \"Up to half of the world\u2019s glaciers could disappear even if ambitious climate targets are hit, new study find\""
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I too concern about the climatic change and I'm glad that you too have concern! What do think about the \"Serpent\" serial killer Charles Sobhraj return to France after 19 years in prison?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Its seems like to get fear, but our current organization will prevent from dangerous. What's about your opinion against Afghanistan after Taliban ban on female workers"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I Feel bad for the woman at Afghanistan! And what do you think about our employers could sue unions under planned anti-strike laws!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "whatever happens i wish to get good beneficiaries for a people. what's about your future plan dude.."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm planning to save up for a big trip or vacation in the coming 6 months. What about plans?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "My plan is towards a preparing a excavation plan  for my pool area. And i want to plan a dinner party for friends and family. my wishes that you want to join with my parties"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Sure! Also I'm planning to meet my team on Monday to discuss the progress of my project and to set goals for the week and to review course syllabus, objectives and prerequisites!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "wow, interesting. Next month I'm planning  to start up a new big project to stay busy for a month milestones to stay on track. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What do you think about the news of, Sam Bankman-Fried found \"chilling\" in JFK airport lounge on $250M bail bond?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I dont know exactly about that, but its sounds me to get fear"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Nowadays the news are bit terror and violent! "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I too agree with your statement"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "They must improve their choices of news coverage!"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hey, its been quite a while, how are you?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hi, I'm happy to say that, I've reviewed my course syllabus, objectives and prerequisites!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hey, glad to hear that. Congratulations. I'm little busy with my work dude by installing the plumbing and electrical activities in my pool"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Good! Recently I've wrote and recorded a new album and have completed a home organization! What about you?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm planning a large party  and i need to write and record a album. If you are free will you able to help me?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Sure dude! Additionally, I've attended a multi-day workshop dude!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey embarrassing. i uploaded a new video about a food in YouTube. while you are free try to watch that video dude"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Of course peer! What do you think about Tesla owner said that he had to cancel Christmas plans because car would not charge in freezing water!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I will support elon musk. nowadays the federal trade Commission proposes ban on noncompete clauses. What about you idea boss?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Whatever it may, hope our people get benefited from this! I'm happy that Argentina won the championship of World Cup which could be Messi's final World Cup!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": " It sounds to hear happy. hey dude. i saw in a twitter that every one commenting to these events do you know about that. \"Nintendo Slashes Prices Of Switch eShop Games In New Year Sale (North America)\nPrince Harry reveals whether he\u2019s circumcised in bombshell \u2018Spare\u2019 memoir\""
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Oh, Also I heard that Pope calls for end to \"senseless\" war in Ukraine during Christmas message! What is your opinion!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "oh i too hear it. it should be overed soon. What about your next plan dude?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "next plan is that is i should pour a pools concrete walls and floor and i have more work to finish the interior pool with plaster or other finish materials"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Happy that you too have organized plans! I'm planning to set aside time to review and reflect on my personal and professional goals for the year and make any necessary adjustments! Do you have any other plans?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "So I'm planning to make a carrier transition in upcoming months and i want to involve in a new big project through out the month"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Best wishes dude! Also I think about learning basic statistics and data exploration to upgrade my knowledge and to uplift my position in my career!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Take your time and do well in your progress. try to make a time to attend a party dude"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm happy for your concern and wish you the same dude! And when does the party will begin?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "the interior works are going in a swimming pool. After finishing the work i need to fix a date dude. After fixing the date i will inform you?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hope we engage soon in the party, Mate!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I have invited  entire friends and families to the parties. i need your family to engage on it"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Sure, I'll be there with my family! And thank you for your concern dude!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i hope i could also get a chance to meet your entire family soon"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Haha! And wishes for your work dude! See you at the party."
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 108,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started a road trip inside your country, which would take about 2 weeks."
+            },
+            "speaker_2": {
+                "progress": "You just started rehearsing a play with your friends and you will perform it at an event in about 3 weeks"
+            }
+        },
+        "gap": [
+            "1 week",
+            "1 week",
+            "7 months",
+            "7 months",
+            "20 hours",
+            "20 hours"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "Go on a backpacking trip in the wilderness of the park.",
+                        "Obtain a permit from the park ranger station and spend the next two days exploring the park's backcountry."
+                    ],
+                    "life_events": [
+                        "You complete a remodeling project.",
+                        "You rehearse a play with your friends.",
+                        "You write and submit a new grant proposal."
+                    ],
+                    "world_events": [
+                        "Samsung Unveils SmartThings Station at CES 2023, Making Smarter Homes Accessible for Everyone",
+                        "Jordan seizes huge amphetamine haul at Irap border.",
+                        "Maryland one of 13 states warned of rolling blackouts, asked to conserve."
+                    ],
+                    "plans": [
+                        "Participate in a ranger-led program, such as a nature walk or campfire program.",
+                        "In the evening, stargaze at the night sky.",
+                        "Enjoy leisure activities including camping, fishing, or wildlife viewing.",
+                        "Take a dip in the river and rent a canoe and explore the park's lakes.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track.",
+                        "You are planning to start a new workout routine at the beginning of the month and aim to stick to it throughout the month."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started renovating your old house, which would take about 3 months."
+                    ],
+                    "life_events": [
+                        "You go back to school and enroll in a degree program.",
+                        "You change a new job and start a new career.",
+                        "You but a new house."
+                    ],
+                    "world_events": [
+                        "Sam Bankman-Fried found \u2018chilling\u2019 in JFK airport lounge on $250M bail bond.",
+                        "Short-sellers make $15 billion betting against Tesla as shares in Elon Musk's company sink by 70% this year.",
+                        "KFC became Japan's go-to Christmas dinner."
+                    ],
+                    "plans": [
+                        "You are planning to set aside time to review and reflect on your personal and professional goals for the year and make any necessary adjustments.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You play guitar.",
+                        "You build a garden wall.",
+                        "You play a round of golf."
+                    ],
+                    "world_events": [
+                        "Sam Bankman-Fried found \u2018chilling\u2019 in JFK airport lounge on $250M bail bond.",
+                        "Up to half of the world\u2019s glaciers could disappear even if ambitious climate targets are hit, new study finds",
+                        "Breaking ranks, Macron\u2019s gift of tanks to Ukraine puts Western alliance under pressure to give Zelensky what he needs to end the war"
+                    ],
+                    "plans": [
+                        "Remove old fixtures and finishes",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track.",
+                        "You are planning to start a family or expand your existing family in the next 6 months."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "Begin blocking the scenes, working out the movement and positioning of the actors on stage.",
+                        "Start working on character development and working on the script with friends."
+                    ],
+                    "life_events": [
+                        "You participate in a marathon to improve your endurance.",
+                        "You complete a home renovation.",
+                        "You grow your garden."
+                    ],
+                    "world_events": [
+                        "Zelensky's sobering Christmas message to Ukraine describes 'Loss of Hope'.",
+                        "Ram previews new electric pickup to rival Ford, Rivian and others",
+                        "Target Recalls Over 200,000 Children\u2019s Weighted Blankets After 2 Girls Die."
+                    ],
+                    "plans": [
+                        "Continue blocking and rehearsing individual scenes.",
+                        "You are planning to go back to school to pursue a graduate degree or additional certification.",
+                        "You are planning to save up for a big trip or vacation in the coming 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started to prepare for a marathon context, which would take about one year."
+                    ],
+                    "life_events": [
+                        "You go back to school and enroll in a degree program.",
+                        "You change a new job and start a new career.",
+                        "You buy a new car."
+                    ],
+                    "world_events": [
+                        "Oil Passes Natural Gas as Main Fuel for Power Plants in New England.",
+                        "FTX paid $12M retainer to a New York law firm before bankruptcy filing.",
+                        "Some Ukrainians move up Christmas to part ways with Russia."
+                    ],
+                    "plans": [
+                        "You are planning to spend time volunteering at a local charity organization once a week throughout the month.",
+                        "You are planning to go to a yoga class on Monday, Wednesday and Friday morning and catch up on emails in the afternoon."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You install a new light fixture.",
+                        "You build a garden wall.",
+                        "You lay down a tile floor."
+                    ],
+                    "world_events": [
+                        "Google Chrome Is About to Be Problem on Your Parents\u2019 PC by Ending Support on Windows 7,8 and 8.1",
+                        "Aubrey Plaza and Michael B. Jordan set to host \u2018Saturday Night Live\u2019",
+                        "Short-sellers make $15 billion betting against Tesla as shares in Elon Musk's company sink by 70% this year."
+                    ],
+                    "plans": [
+                        "Choose the marathon and make a commitment to participate.",
+                        "Set realistic goals for yourself.",
+                        "Develop a plan to achieve your goals.",
+                        "You are planning to go to a yoga class on Monday, Wednesday and Friday morning and catch up on emails in the afternoon.",
+                        "You are planning to save up for a big trip or vacation in the coming 6 months."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "hi"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "hi"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "what about to you"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "i love travel trips"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "wow its too good and i like my friends"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "nice me also like friends go to trips "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "really nice "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "and i have good experience for college events and entertiment of the friends"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes we going to inside country trip in our place"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes we are going to more time spend on the tripwith my friends"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes because any search of the newly"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hm its really good"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "what about your friends event"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "my friends always encarge for me in all events o perform"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes most support gives to my friends "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "ok fine the next trip we are going to see the al places"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "you also win to your event in the friends team"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "thank you somuch for words"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "now start you are my friend list add now"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "you too start my trip team"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "ok i plan next trip in quickly ok"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "ye sure i m waiting"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "hi"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hi"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "next programe on stage"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "coming soon because waiting for the any good actors"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "good we are waiting for next trip in very big plan"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "its too good "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "we will plan in next two days"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "wow its too good and all the best"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "and i also most complete my script "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "and some idea is development the dialoge"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "i success my grand proposal is waiting for my carrier"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "how many butget"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "very expencive trip plan with my friends"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "ok some work is unfinished so complete my works then start my concept"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "ok fine more work is balance"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i target is 200000 laks children donations to the fund"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "its really good plan because helping is good mind"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Samsung Unveils SmartThings Station at CES 2023"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Making Smarter Homes Accessible for Everyone\nJordan seizes huge amphetamine haul at Irap border."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "good"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Zelensky's sobering Christmas message to Ukraine describes 'Loss of Hope'"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Ram previews new electric pickup to rival Ford, Rivian and others"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "ok thank you for your plan"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "hi"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "how to pass"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "its good"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "im very exsiting"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "why?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "because complete my degree"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey wow congrants"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "thank you"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "im waiting for my degree program because more celebration to him"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "school and enroll in a degree program."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "its good and next plan"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "new job and start a new career."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "good"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "what about you"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "started to prepare for a marathon context"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "wow superb.all the best"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "thanks dr"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "you doing more efforts right?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes, more efforts because this is my carrier"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Sam Bankman-Fried found \u2018chilling\u2019 in JFK airport lounge on $250M bail bond.\n"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "good"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "im going to england"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Short-sellers make $15 billion betting against Tesla as shares in Elon Musk's company sink by 70% this year."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "FTX paid $12M retainer to a New York law firm before bankruptcy filing."
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 109,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started preparing and executing a social media marketing campaign for your company, which would take about 3 months."
+            },
+            "speaker_2": {
+                "progress": "You are about to get married and currently planning your wedding, which will be in 5 months later."
+            }
+        },
+        "gap": [
+            "1 year",
+            "1 year",
+            "2 months",
+            "2 months",
+            "2 days",
+            "2 days"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started to prepare for the bar exam next year."
+                    ],
+                    "life_events": [
+                        "You get divorced.",
+                        "You adopt a child.",
+                        "You graduate from the graduate school of a university."
+                    ],
+                    "world_events": [
+                        "November Carbon Emissions In Europe Lowest In 30 Years.",
+                        "Qualcomm\u2019s going toe-to-toe with Apple\u2019s satellite messaging feature",
+                        "Tomahawk missiles: Japan to spend billions on procuring & deploying US navy missiles to deter China."
+                    ],
+                    "plans": [
+                        "You are planning to start a family or expand your existing family in the next 6 months.",
+                        "You are planning to take a course or certification in order to advance in your career."
+                    ]
+                },
+                {
+                    "progress": [
+                        "Familiarize yourself with the bar exam format and individual state requirements.",
+                        "Create a study schedule that accounts for all the bar topics you need to cover.",
+                        "Begin studying the first bar topics in your study schedule.",
+                        "Start researching bar exam preparation materials and programs."
+                    ],
+                    "life_events": [
+                        "You start a new business.",
+                        "You launch a buisness and start a new venture.",
+                        "You but a new house."
+                    ],
+                    "world_events": [
+                        "Ex-Maoist rebel leader Prachanda becomes Nepal PM for third time.",
+                        "Samsung Unveils SmartThings Station at CES 2023, Making Smarter Homes Accessible for Everyone",
+                        "British PM criticized over interaction with homeless man."
+                    ],
+                    "plans": [
+                        "Continue studying bar topics according to your study schedule.",
+                        "Enroll in a bar exam preparation course if desired.",
+                        "Find a bar exam mentor or study group to review material and discuss strategies.",
+                        "You are planning to take a short vacation next weekend to recharge and come back refreshed for the next month.",
+                        "You are planning to relax and catch up on any work that needs to be done before the start of the next week on Sunday."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You go to a coffee tasting tour.",
+                        "You go to bowling alley and play mini golf.",
+                        "You go to a farmer's market."
+                    ],
+                    "world_events": [
+                        "China's COVID-19 surge raises odds of new coronavirus mutant.",
+                        "'Serpent' serial killer Charles Sobhraj returns to France after 19 years in prison.",
+                        "Delta Air Lines is rolling out free Wi-Fi"
+                    ],
+                    "plans": [
+                        "Take additional practice exams to assess your progress.",
+                        "Continue researching bar exam preparation materials and programs.",
+                        "You are planning to take a short vacation next weekend to recharge and come back refreshed for the next month.",
+                        "You are planning to purchase a new home or renovate your current home in the coming year."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started to learn Spanish, which would take about 7 months"
+                    ],
+                    "life_events": [
+                        "You move to a new city for work.",
+                        "You adopt a child.",
+                        "You have a baby."
+                    ],
+                    "world_events": [
+                        "Employers could sue unions under planned anti-strike laws",
+                        "Major NGOs halt work in Afghanistan after Taliban ban on female workers.",
+                        "Sam Bankman-Fried found \u2018chilling\u2019 in JFK airport lounge on $250M bail bond."
+                    ],
+                    "plans": [
+                        "You are planning to start a new business or side hustle in the next 6 months.",
+                        "You are planning to start a new hobby or pick up an old one, like photography, painting or writing in the coming year."
+                    ]
+                },
+                {
+                    "progress": [
+                        "Purchase a language learning program.",
+                        "Familiarize yourself with the language\u2019s pronunciation and basic grammar.",
+                        "Establish a basic vocabulary.",
+                        "Begin building sentences."
+                    ],
+                    "life_events": [
+                        "You move to a new home near to your workplace.",
+                        "You buy a new car.",
+                        "You learn how to speak Spanish."
+                    ],
+                    "world_events": [
+                        "Alameda Executive Says She Is \u2018Truly Sorry\u2019 for Her Role in FTX Collapse.",
+                        "Employers could sue unions under planned anti-strike laws",
+                        "KFC became Japan's go-to Christmas dinner."
+                    ],
+                    "plans": [
+                        "Continue to practice and review the language basics.",
+                        "Start listening to native speakers and use language learning tools such as podcasts, videos, and music.",
+                        "Begin reading simple language books and articles.",
+                        "You are planning to make a significant investment in your business or career to take it to the next level.",
+                        "You are planning to save up for a big trip or vacation in the coming 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You go snowboarding.",
+                        "You go on a hike for a nature work.",
+                        "You go kayaking."
+                    ],
+                    "world_events": [
+                        "Breaking ranks, Macron\u2019s gift of tanks to Ukraine puts Western alliance under pressure to give Zelensky what he needs to end the war",
+                        "The PS5 Is Getting An Ultra Customizable Controller That Lets New Fans Play",
+                        "Police arrest man suspected of planting explosive in Brazil's capital ahead of presidential inauguration."
+                    ],
+                    "plans": [
+                        "Expand your vocabulary",
+                        "Start conversations with native speakers.",
+                        "Take online classes or in-person classes.",
+                        "Get comfortable discussing everyday topics.",
+                        "You are planning to start a new business or side hustle in the next 6 months.",
+                        "You are planning to start a new hobby or pick up an old one, like photography, painting or writing in the coming year."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hello friend. What\u2019s new?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi , How's your day been so far?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "It\u2019s been hectic "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I just started a social media marketing campaign for my company "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Its been a busy day then , I guess"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Campaign should take around 3 months"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "How has your day been"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Awesome. I been busy too. Planning on getting married in 5 months."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Wow that\u2019s awesome. Marriage is a great thing "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "How long have you been dating again?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Not bad actually. Had an easy day at work."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "That\u2019s nice to hear "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I been dating for almost four years."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I knew it had been awhile. Is your partner excited for the wedding?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yes . he is. Are you married ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019m not. Maybe one day "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Have to find the right person "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Sure. How's your campaign going ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Just starting for now. I hope it goes well though. I\u2019m going to put a lot of work in it "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Have you thought of a theme for your campaign ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "It\u2019ll probably be based around Unity. Working together, etc "
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hello friend. Long time no talk "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What\u2019s been new?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yes . Its been a while. I been busy because I adopted a child. How have you been ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What! I adopted a child too"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I also graduated from university "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "And finished the campaign "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Wow. what a coincidence. Is it a girl or a boy?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "It\u2019s a girl. 5 years old "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "How about yours?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nice. Its boy four years old. What did you major in university ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Adoption has changed my life though. I love taking care of her "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Business degree "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Great. I have the same feeling. Are you looking for a job now ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019m at the same job as before, but eventually I would like to be a manager "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Manager or a lawyer "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019m preparing to take a bar exam next year "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Ah. that's good. Being a manager also comes with responsibilities right ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "A lot of responsibilities, but I think I\u2019m ready for it "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019m ready for a lot of obstacles "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "That's super. The bar exam is tough right . Are you taking classes for it ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019m in the process of signing up for a class to help me prepare for it "
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hey, its been a while, how are you ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hey friend! It has been. Life has been pretty hectic "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019ve been deep in bar exam studies "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019ve also started a new business "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I\u2019ve bought a new house as well"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "How has everything been in your end? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Wow. You started a business. Thats nice. I been busy too. I' taking classes to learn Spanish."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Oh Spanish. That\u2019s nice"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Has it been coming along nicely?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yeah. Been putting a lot of hours to learn this language. How much did your house cost "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I took a few classes in high school, but I\u2019m still a novice at the language "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "House was middle of the line. Not too fancy "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "But it was nerve racking since it was my first real big purchase in my life "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Thats good. Do you have a pool in the backyard?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "No pool sadly. Maybe eventually I\u2019ll have one put in"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Do you have one at your house?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nope. I hope I had one. My focus was lot on learning a new language."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "That\u2019s understandable "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "One day it would be nice to relax in a pool after a long day "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Especially on a hot day "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yeah. I know. We all have dreams right. I want learn Spanish and work in Europe may be for few years."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Working in Europe would be amazing probably "
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 111,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started preparing for a presentation of the annual financial report of your company, which would take about 4 days."
+            },
+            "speaker_2": {
+                "progress": "You just started build a new house from scratch, which would take about one year."
+            }
+        },
+        "gap": [
+            "20 minutes",
+            "20 minutes",
+            "1 year",
+            "1 year",
+            "3 weeks",
+            "3 weeks"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You fold and put away clothes.",
+                        "You do laundry.",
+                        "You meditate."
+                    ],
+                    "world_events": [
+                        "Photos: Europe sees spell of record warm winter temps",
+                        "HTC Announces Its Standalone VR Headset",
+                        "Up to half of the world\u2019s glaciers could disappear even if ambitious climate targets are hit, new study finds"
+                    ],
+                    "plans": [
+                        "Gather all necessary financial documents, such as income statements, balance sheets, and cash flow statements.",
+                        "Begin reviewing and analyzing the data.",
+                        "You are planning to save up for a big trip or vacation in the coming 6 months.",
+                        "You are planning to relax and catch up on any work that needs to be done before the start of the next week on Sunday."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started writing a new sci-fi novel, which would take about one year."
+                    ],
+                    "life_events": [
+                        "You have a baby.",
+                        "You get the driver license.",
+                        "You graduate from the graduate school of a university."
+                    ],
+                    "world_events": [
+                        "Alphabet reshuffles to meet ChatGPT threat and Sundar's not having a happy holiday.",
+                        "Thousands lose power after three substations targeted in Washington state, sheriff says.",
+                        "Pope Francis leads funeral for predecessor Benedict XVI, a first in modern times"
+                    ],
+                    "plans": [
+                        "You are planning to take a course or certification in order to advance in your career.",
+                        "You are planning to make a significant investment in your business or career to take it to the next level."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You attend a multi-day workshop.",
+                        "You write and submit a research proposal.",
+                        "You complete a home energy audit and implement energy-saving measures."
+                    ],
+                    "world_events": [
+                        "15 people died in a tanker truck explosion in South Africa.",
+                        "Putin vows to destory U.S. Patriot Missle Defense System in Ukraine.",
+                        "'Serpent' serial killer Charles Sobhraj returns to France after 19 years in prison."
+                    ],
+                    "plans": [
+                        "Research and world-building, outlining the story and characters",
+                        "Research on the sci-fi genre and specific sub-genres that you want to focus on.",
+                        "Build the world, characters, culture, and technology of your story.",
+                        "Outline the plot, character arcs and the main conflicts of the story.",
+                        "You are planning to make a significant investment in your business or career to take it to the next level.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You take a quick shower.",
+                        "You prepare for lunch.",
+                        "You attend a webinar."
+                    ],
+                    "world_events": [
+                        "\u2018Stranger Things\u2019 Actor Noah Schnapp Comes Out as Gay: \u2018Never That Serious\u2019",
+                        "Germany's energy crisis is a cue to chop wood and stock up.",
+                        "Will \u2018Avatar 2\u2019 Hit $2 Billion? Breaking Down the Blockbuster Sequel\u2019s Path to Box Office Glory"
+                    ],
+                    "plans": [
+                        "Hire a qualified contractor and architect to develop a plan for building the house.",
+                        "Obtain building permits and approval from local planning and zoning board.",
+                        "Clear the land and prepare the site for construction.",
+                        "You are planning to take a course or certification in order to advance in your career.",
+                        "You are planning to attend a professional conference in the middle of the month to learn about the latest industry developments."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started a road trip inside your country, which would take about 2 weeks."
+                    ],
+                    "life_events": [
+                        "You adopt a child.",
+                        "You go back to school for better education.",
+                        "You have a baby."
+                    ],
+                    "world_events": [
+                        "Conservatives outraged Joe Biden didn't say 'Jesus' in Christmas message.",
+                        "Short-sellers make $15 billion betting against Tesla as shares in Elon Musk's company sink by 70% this year.",
+                        "KFC became Japan's go-to Christmas dinner."
+                    ],
+                    "plans": [
+                        "You are planning to purchase a new home or renovate your current home in the coming year.",
+                        "You are planning to start a new hobby or pick up an old one, like photography, painting or writing in the coming year."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started preparing and executing a social media marketing campaign for your company, which would take about 3 months."
+                    ],
+                    "life_events": [
+                        "You write and publish a blog.",
+                        "You write a research paper.",
+                        "You create and implement a social media marketing strategy."
+                    ],
+                    "world_events": [
+                        "Lisa Rinna Is 'Grateful' as She Announces Exit from 'The Real Housewives of Beverly Hills' After 8 Seasons",
+                        "Bethlehem rebounds from pandemic, lifting Christmas spirits.",
+                        "Target Recalls Over 200,000 Children\u2019s Weighted Blankets After 2 Girls Die."
+                    ],
+                    "plans": [
+                        "You are planning to spend Wednesday and Thursday working on a proposal that is due on Friday.",
+                        "You are planning to spend Monday and Tuesday working on a presentation that you have to give on Wednesday."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hi there"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hi how are you doing?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Good, so busy.I just started working on my annual financial report for my company that I worked for.   "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "That sounds stressful.  Ijust started building my house."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Here I am stressing about my work will take me 4 days to do. you are building a house! that will probably take a while to complete? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Its going to take me a year or so but at least it'll be done my way. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that's amazing!  are you building the house from scratch? or remodeling the house? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Your project probably more stressful since its your job  do you like the work?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes, but I dread doing annual financial reports. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Im building it from scratch but the codes and inspections drive me crazy "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Are you also doing the work yourself? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "it sounds challenging but if your good probably rewards to follow."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "banging on a bonus after this report is done"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yea i think the biggest trick is not to hurry and settle to finish the house and make sure its my way you ever do construction?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "never, not a hands on guy. I'm a money guy"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "funny im the opposite the more money the more headaches i feel"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "how many floors will your house be?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "One story spreadout cant stand the sound of someone waling above me like apartments you have a house or apartment?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Will your house be modern? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yeah but open ranch  "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Amazing! wish I had the skills, well gotta try to finish this report. "
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "How's the house going? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "what have you been up to?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i think im going to need help im thinking of talking to a contracter.  how are you?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "working on my annual report, just finished gathering all the papers I need to start "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes you should definitely do that "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "but in 5 minutes will need to stop and meditate as this will stress me out the report "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i hear you i showered hoping to relax"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that's relaxing now reading the news and just read HTC made a standalone VR headset. how cool is that?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i ordered lunch delivery do you power lunch to make number crunching funner?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "No, I don't eat, I just work through lunch. maybe that's my problem"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "id like a vr home builder.  "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I've never tried it, maybe I should get one after I'm done my report"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "4 days of writing is alot of work in my field of work"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i was thinking of taking a college course i need to improve my resume do you still take classes?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "But again after this I want to save up for a big trip or vacation in the next 6 months "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes, I do to keep up with the industry. what class you planning on taking? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "cool vacation i like hearing about peoples vacations especially when its going to be awhile with this house building where are you thinking?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I was thinking going to Cuba. but maybe Thailand. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Aww I just finished mediating, feels like I can this report started. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "international travel do you like the outdoor adventure or city culture?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I like nature. but don't mind the city once in a while "
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "How's the house? is it done? "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "My report was a success. got my big bonus\n instead of going on vacation, I started writing a sci-fi novel! \n"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "probably it's going to take me a year to do!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yea finished the house hows work?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "and how does it look? "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "did you end up hiring a contractor? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "we adopted a kid and it is awesome. do you have kids?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Also forgot to mentioned, I had a baby! "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "congrats! I just became a father. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "after having the baby, I also enrolled in extra courses so I can advance my career in the company I work for "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "no way we had a baby thats where we came across a kid we adopted it was a chance encounter he lost is family in an accident."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "thats great but isnt it challenging courses and family and work?\n"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "don't have much free time now though but just reading up on news, didn't know lots of people lost power in Washington state because 3 substations were targeted "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that's sweet of you to do that and adopt"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "definitely is challenging but it's for our future. sacrifices I guess"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "getting ready to go on a roadtrip time to get away.  "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "road trips are fun! where to? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i thought it was funny that kfc became chinas go to food kind of ironic?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that is ironic!  "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "KFC is as American as they come"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "going to see historic places and learn more about the struggles that made the country great?  You have a special place?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "how many stops are you doing? I love Canadian rocky mountains"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i think that sounds cool i think we are going to try and stop at open nature areas to take in the fresh air?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "enjoy your road trip! take lots of photos enjoy the natural beauty of the country "
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 112,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started writing a new sci-fi novel, which would take about one year."
+            },
+            "speaker_2": {
+                "progress": "You just started developing a finance management software for your client, which would take about 6 months"
+            }
+        },
+        "gap": [
+            "5 days",
+            "5 days",
+            "5 days",
+            "5 days",
+            "2 minutes",
+            "2 minutes"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You take a cooking class.",
+                        "You visit a beach and relax in the sun.",
+                        "You go to an art gallery."
+                    ],
+                    "world_events": [
+                        "Short-sellers make $15 billion betting against Tesla as shares in Elon Musk's company sink by 70% this year.",
+                        "Google Chrome Is About to Be Problem on Your Parents\u2019 PC by Ending Support on Windows 7,8 and 8.1",
+                        "Police arrest man suspected of planting explosive in Brazil's capital ahead of presidential inauguration."
+                    ],
+                    "plans": [
+                        "Research and world-building, outlining the story and characters",
+                        "Research on the sci-fi genre and specific sub-genres that you want to focus on.",
+                        "Build the world, characters, culture, and technology of your story.",
+                        "Outline the plot, character arcs and the main conflicts of the story.",
+                        "You are planning to take a course or certification in order to advance in your career.",
+                        "You are planning to focus on improving your physical and mental well-being in the next 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You take a self-defense class.",
+                        "You take a sailing.",
+                        "You take a dance music."
+                    ],
+                    "world_events": [
+                        "Ex-Maoist rebel leader Prachanda becomes Nepal PM for third time.",
+                        "Surging Electricity Prices Make Some Gas Vehicles Cheaper Than Electric Ones In Europe.",
+                        "Retirement: New Rules Are Coming For 401(k) and IRA Accounts."
+                    ],
+                    "plans": [
+                        "Research and world-building, outlining the story and characters",
+                        "Research on the sci-fi genre and specific sub-genres that you want to focus on.",
+                        "Build the world, characters, culture, and technology of your story.",
+                        "Outline the plot, character arcs and the main conflicts of the story.",
+                        "You are planning to meet with your team on Monday to discuss the progress of your project and set goals for the week.",
+                        "You are planning to take a course or certification in order to advance in your career."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You attend a webinar.",
+                        "You fold and put away clothes.",
+                        "You take a nap."
+                    ],
+                    "world_events": [
+                        "Target Recalls Over 200,000 Children\u2019s Weighted Blankets After 2 Girls Die.",
+                        "Thousands lose power after three substations targeted in Washington state, sheriff says.",
+                        "Pope calls for end to 'senseless' war in Ukraine during Christmas message."
+                    ],
+                    "plans": [
+                        "Research and world-building, outlining the story and characters",
+                        "Research on the sci-fi genre and specific sub-genres that you want to focus on.",
+                        "Build the world, characters, culture, and technology of your story.",
+                        "Outline the plot, character arcs and the main conflicts of the story.",
+                        "You are planning to take a course or certification in order to advance in your career.",
+                        "You are planning to take a short vacation next weekend to recharge and come back refreshed for the next month."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You go on a hike.",
+                        "You go to a museum.",
+                        "You visit a natural attraction in the west of the country."
+                    ],
+                    "world_events": [
+                        "Winter storm causes power outages, hits Americans with snow and freezing temperatures before Christmas.",
+                        "ChatGPT\u2019s AI Makes Puzzles that\u2019ll Make You Want to Throw Brickbats.",
+                        "Facebook parent Meta will pay $725M to settle user data case."
+                    ],
+                    "plans": [
+                        "Identify project goals and objectives",
+                        "Gather requirements from stakeholders",
+                        "Create project plan and documentation",
+                        "You are planning to focus on improving your physical and mental well-being in the next 6 months.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You take an art class.",
+                        "You visit a beach and relax in the sun.",
+                        "You go to a zoo."
+                    ],
+                    "world_events": [
+                        "Qualcomm\u2019s going toe-to-toe with Apple\u2019s satellite messaging feature",
+                        "Major NGOs halt work in Afghanistan after Taliban ban on female workers.",
+                        "Prince Harry reveals whether he\u2019s circumcised in bombshell \u2018Spare\u2019 memoir"
+                    ],
+                    "plans": [
+                        "Identify project goals and objectives",
+                        "Gather requirements from stakeholders",
+                        "Create project plan and documentation",
+                        "You are planning to make a career transition or switch to a new field in the next 6 months.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You watch a YouTube video.",
+                        "You meditate.",
+                        "You make a phone call with your friend."
+                    ],
+                    "world_events": [
+                        "Retirement: New Rules Are Coming For 401(k) and IRA Accounts.",
+                        "Protests in Paris after three killed in shooting.",
+                        "Pope calls for end to 'senseless' war in Ukraine during Christmas message."
+                    ],
+                    "plans": [
+                        "Identify project goals and objectives",
+                        "Gather requirements from stakeholders",
+                        "Create project plan and documentation",
+                        "You are planning to take a course or certification in order to advance in your career.",
+                        "You are planning to meet with your team on Monday to discuss the progress of your project and set goals for the week."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "Good evening!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi friend.  Nice to see you!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I can't wait to tell you about what I just started. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Feel free to keep talking.  I can listen and talk at the same time. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What did you start? I just began writing a sci-fi novel"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I just started some new software for my client. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It is for managing finances. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "If all goes smoothly, it should be done in about a half a year. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What kind of software?  maybe I can use to finish my book which will probably take a year "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Sci-fi novel sounds interesting. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "You could use the software to manage all the money you make with your new novel. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "you read any sci-fi novels? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Not currently, but I have in the past. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I wish, this is my first book that I'm writing "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "You will be so famous. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "well maybe you can read my book when it's done, hopefully done in a year "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It's so nice to get to know you before you become a famous author. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "If you spend a year on it, I'm sure it will be well done. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'll read your sci-fi novel."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "That's what I'm hoping for, new York Times best seller. what's your software for?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "the software is for the managing of finances. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It helps with dealing with money. "
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi again, long time no see. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I hope you would like to hear about what I've been up to. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "good still writing my book but I am taking a cooking class. taking up most of my time "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Either way, I'm still going to tell you. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "How's the software? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "There hasn't been any significant progress these past five days. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I went on a nice hike in the park though. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "why not?  I don't blame you "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "nice which park did you hike ? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I also went to a museum about natural history. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I forget the name of the park, but it was within 10 miles from here. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "how did you like that?  I'm doing some research on sub genres on sci-fi so I can include it in my book"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I also went to Yellowstone to the west of here, but I didn't hike. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I rode a bike at that natural attraction. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Never been there. but did you here short sellers made $15 billion betting against Tesla? "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Your an avid bike rider? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yes, I heard that.  Amazing. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I have rode on my bikes all my life. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It's a great way to stay in shape. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I don't ride bikes at all, I like to sit and writ, hence me writing a book "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Lots of people have lost power due to freezing temperatures before the holidays. "
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi there, still no progress on the software program :("
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "haven't talk to you in 5 days, how's the software?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "However, I did do a few life events. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I took an art class for painting. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I went to the zoo."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I saw a lot of big animals. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Also went to the beach."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It was so refreshing to relax in the Sun. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "great, how did that go? the beach?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I feel like I know what to say before you ask about it."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm planning to take a certification course soon to advance my career just in case this book does not pan out "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Kind of like a sci-fi novel. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Great idea!  Advancing your career is wise. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "thanks, back up plan! "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "In the future, I need to identify my project goals and objectives. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "That will help a lot. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "How do you plan on doing that? "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Do you have a title for your novel yet?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "One thing in order to do that is to gather requirements from the stakeholders. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "not yet!  haven't thought about that "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "got any ideas? "
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 115,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started an internship in a buisness company, which would take about 6 months."
+            },
+            "speaker_2": {
+                "progress": "You just started a MBA program in the university, which would take about one year to finish."
+            }
+        },
+        "gap": [
+            "1 week",
+            "1 week",
+            "23 hours",
+            "23 hours",
+            "32 minutes",
+            "32 minutes"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You plan and execute a corporate event of a conference.",
+                        "You complete a home energy audit and implement energy-saving measures.",
+                        "You write and publish a blog."
+                    ],
+                    "world_events": [
+                        "Facebook parent Meta will pay $725M to settle user data case.",
+                        "ChatGPT\u2019s AI Makes Puzzles that\u2019ll Make You Want to Throw Brickbats.",
+                        "Jordan seizes huge amphetamine haul at Irap border."
+                    ],
+                    "plans": [
+                        "Orientation: Learn company policies and procedures, meet coworkers, and familiarize yourself with the workplace.",
+                        "Shadow experienced coworkers to observe their specific roles and responsibilities.",
+                        "You are planning to make a career transition or switch to a new field in the next 6 months.",
+                        "You are planning to save up for a big trip or vacation in the coming 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You watch TV dramas.",
+                        "You watch baseball games on TV.",
+                        "You do some stretching."
+                    ],
+                    "world_events": [
+                        "Crypto Founders And Bitcoin Moguls Lost $116 Billion In 2022.",
+                        "Winter storm causes power outages, hits Americans with snow and freezing temperatures before Christmas.",
+                        "Spotify and Google team up to supercharge the Android 13 media player"
+                    ],
+                    "plans": [
+                        "Orientation: Learn company policies and procedures, meet coworkers, and familiarize yourself with the workplace.",
+                        "Shadow experienced coworkers to observe their specific roles and responsibilities.",
+                        "You are planning to focus on improving your physical and mental well-being by practicing mindfulness, yoga and meditation in the coming year.",
+                        "You are planning to attend a networking event on Tuesday evening and work on a report on Thursday."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You play with your pet.",
+                        "You make a phone call with your friend.",
+                        "You clean your bedroom."
+                    ],
+                    "world_events": [
+                        "Spotify and Google team up to supercharge the Android 13 media player",
+                        "Retirement: New Rules Are Coming For 401(k) and IRA Accounts.",
+                        "FTX paid $12M retainer to a New York law firm before bankruptcy filing."
+                    ],
+                    "plans": [
+                        "Orientation: Learn company policies and procedures, meet coworkers, and familiarize yourself with the workplace.",
+                        "Shadow experienced coworkers to observe their specific roles and responsibilities.",
+                        "You are planning to work on a personal project or pursue a passion in the next 6 months.",
+                        "You are planning to take Friday off and spend the day with your family and friends."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You complete a remodeling project.",
+                        "You rehearse a play with your friends.",
+                        "You write and submit a patent application."
+                    ],
+                    "world_events": [
+                        "'Serpent' serial killer Charles Sobhraj returns to France after 19 years in prison.",
+                        "Samsung recalls more than 660,000 washing machines after fire hazard reports.",
+                        "Google Chrome Is About to Be Problem on Your Parents\u2019 PC by Ending Support on Windows 7,8 and 8.1"
+                    ],
+                    "plans": [
+                        "Research different MBA programs and decide which one to join.",
+                        "Apply to the chosen MBA program.",
+                        "Wait for the acceptance letter.",
+                        "You are planning to focus on improving your physical and mental well-being in the next 6 months.",
+                        "You are planning to go to a yoga class on Monday, Wednesday and Friday morning and catch up on emails in the afternoon."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You have dinner in a restaurant.",
+                        "You read some books and magazines.",
+                        "You do a board game with your family."
+                    ],
+                    "world_events": [
+                        "Lisa Rinna Is 'Grateful' as She Announces Exit from 'The Real Housewives of Beverly Hills' After 8 Seasons",
+                        "Ram previews new electric pickup to rival Ford, Rivian and others",
+                        "Argentina won the championship of World Cup."
+                    ],
+                    "plans": [
+                        "Research different MBA programs and decide which one to join.",
+                        "Apply to the chosen MBA program.",
+                        "Wait for the acceptance letter.",
+                        "You are planning to meet with your team on Monday to discuss the progress of your project and set goals for the week.",
+                        "You are planning to start a family or expand your existing family in the next 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You take a quick shower.",
+                        "You make a phone call with your friend.",
+                        "You organize your digital files and folders."
+                    ],
+                    "world_events": [
+                        "Short-sellers make $15 billion betting against Tesla as shares in Elon Musk's company sink by 70% this year.",
+                        "King Charles' first Christmas speech reflects cost-of-living crisis.",
+                        "Qualcomm\u2019s going toe-to-toe with Apple\u2019s satellite messaging feature"
+                    ],
+                    "plans": [
+                        "Research different MBA programs and decide which one to join.",
+                        "Apply to the chosen MBA program.",
+                        "Wait for the acceptance letter.",
+                        "You are planning to meet with your team on Monday to discuss the progress of your project and set goals for the week.",
+                        "You are planning to relax and catch up on any work that needs to be done before the start of the next week on Sunday."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi Partner, How has your day been so far ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HI IT IS NICE DAY \n"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HOW IS YOUR DAY\n"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Great. I just started an MBA program. need to put a lot of effort into it."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It takes about a year to complete it. So, it is kind of tough you know."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "How about you ? do you work ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HELLO ARE YOU THERE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yes. What have you been up to these days?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "IAM SOFTWARE DEVELOPORE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nice. Do you work for a company or do you work freelance ? \n"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm also doing the MBA with the hope that I would get better paying jobs."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "YES I WORK FREELANCE"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "ARE YOU INDIAN\n"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Oh. Good. Do you also do website development kind of work as well ?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "No. I'm American."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "OKK "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "WHAT YOU THIN ON FEAUTURE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I think the world future is very uncertain with all the wars happening. Thats the reason I'm doing the MBA so that I would have more job security.  "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "THAT IS WELL "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "YOU ARE NICE PERSON"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "My MBA program cost me a lot of money, but I consider it an investment for the future. So what are your future plans ?"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "HI PARTNER "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi partner, Its been almost a week since we had a chat. How have you been ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I MISS YOUR CHAT "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HOW IS YOUR FAMILY"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yeah. I missing chatting as well. My family is doing good. we were busy with a kitchen remodeling work at home"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "DO YOU PLAN TOANY EVENT "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yes. I'm rehearsing a play with my friends to perform at an upcoming event. Super excited about it."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I CONDUCT THE CORPORATE VERNT DID YOU PARTICEPATE "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "No. Sorry I missed it. What type of corporate events do you do ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "IT IS ENTERNTAIMENT EVENT"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nice. Were there any VIP guest at the event ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "WELCOME WELCOME I AM SO HAPPY FOR "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm also an inventor. I recently submitted a patent application. Looking forward for it to come through."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Do you do any project work related to events ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "NO I PARTICEPARE ONLY THE PROJECT EVENT"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Ah.. that's good. Do you do any online events as well ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "SIR ARE YOU THERE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yes. I was reading about the washing machine recall by Samsung. That looks bad for the brand isn't it ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "WASHING MISSION ARE VERY USEFULL "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "SAMSUNG ARE GOOD BRAND"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "But with Samsung it looks like the fire hazard that comes with the washing machine is dangerous ."
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi Partner, its been almost a day since we had a chat . How are you?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "NO IT IS WELL CONDITION I USED FOR 2 YEAR WITHOUT COMPLAINT"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I went for dinner at a restaurant. Oh boy the food served was horrible."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Did you have dinner ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "YES "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I LIKE HOTDOG"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Ah. Good. I'm reading some self motivation books these days to stay motivated. How about you ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "WHAT YOU LIKE"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I READ SOME CRIME  NAVEL "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Pasta is my favorite. Did you follow the soccer world cup. Argentina won a great tournament?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yeah. Crime novels are cool too , but I'm more into reading self improvement books."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "OKK THAT WELL"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I also like playing board games with my family. They are fun you know ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "WHAT TYPE GAME DO YOU LIKE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Any board game that I can play with my family is ok with me. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I PLAY FRIENS ONLY"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "What car brand do you like ? I like the dodge Ram. They released a new electric pick truck . I think its a cool vehicle to have."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I LIKE RACE AND TRUCK GAME ALSO"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nice. Did you watch the world cup Argentina won ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "MESSI SHOT ARE VERY GOOD "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Yes. Thats true. Messi was brilliant in Argentina's win. But I felt bad for France as well ."
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 119,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started preparing for a presentation of the annual financial report of your company, which would take about 4 days."
+            },
+            "speaker_2": {
+                "progress": "You just started organizing the storage room, which would take about 2 days."
+            }
+        },
+        "gap": [
+            "7 months",
+            "7 months",
+            "7 months",
+            "7 months",
+            "16 hours",
+            "16 hours"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started building a swimming pool in your new house, which would take about 3 months."
+                    ],
+                    "life_events": [
+                        "You learn how to speak Spanish.",
+                        "You write several chapters of your thesis.",
+                        "You start a new business."
+                    ],
+                    "world_events": [
+                        "Prince Harry reveals whether he\u2019s circumcised in bombshell \u2018Spare\u2019 memoir",
+                        "Will \u2018Avatar 2\u2019 Hit $2 Billion? Breaking Down the Blockbuster Sequel\u2019s Path to Box Office Glory",
+                        "Retirement: New Rules Are Coming For 401(k) and IRA Accounts."
+                    ],
+                    "plans": [
+                        "You are planning to volunteer or do a social work in your community or abroad in the coming year.",
+                        "You are planning to take a short vacation next weekend to recharge and come back refreshed for the next month."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started preparing for a presentation of the annual financial report of your company, which would take about 4 days."
+                    ],
+                    "life_events": [
+                        "You get married.",
+                        "You but a new house.",
+                        "You take an online course."
+                    ],
+                    "world_events": [
+                        "British PM criticized over interaction with homeless man.",
+                        "Holiday storm causes mass power outages.",
+                        "No Santa Claus rally in sight as stocks round out grim 2022."
+                    ],
+                    "plans": [
+                        "You are planning to start a new workout routine at the beginning of the month and aim to stick to it throughout the month.",
+                        "You are planning to spend time volunteering at a local charity organization once a week throughout the month."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You have dinner in a restaurant.",
+                        "You do a board game with your family.",
+                        "You have lunch in a restaurant."
+                    ],
+                    "world_events": [
+                        "Fatal winter storm leaves millions without power in North America with -45C temperatures.",
+                        "Spotify and Google team up to supercharge the Android 13 media player",
+                        "\u2018Stranger Things\u2019 Actor Noah Schnapp Comes Out as Gay: \u2018Never That Serious\u2019"
+                    ],
+                    "plans": [
+                        "Gather all necessary financial documents, such as income statements, balance sheets, and cash flow statements.",
+                        "Begin reviewing and analyzing the data.",
+                        "You are planning to start a new workout routine at the beginning of the month and aim to stick to it throughout the month.",
+                        "You are planning to work on a big project at work throughout the month, setting weekly and monthly milestones to stay on track."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started planning to release a new music album, which would take about one year."
+                    ],
+                    "life_events": [
+                        "You but a new house.",
+                        "You move to a new apartment.",
+                        "You learn how to speak Spanish."
+                    ],
+                    "world_events": [
+                        "Zelensky's sobering Christmas message to Ukraine describes 'Loss of Hope'.",
+                        "LG's Latest OLED TV Lineup Goes Up to 70% Brighter in 2023",
+                        "Ex-Maoist rebel leader Prachanda becomes Nepal PM for third time."
+                    ],
+                    "plans": [
+                        "You are planning to move to a new house or apartment in the next 6 months.",
+                        "You are planning to start a new business or side hustle in the next 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "Finalize production of the tracks.",
+                        "Begin mixing and mastering."
+                    ],
+                    "life_events": [
+                        "You but a new house.",
+                        "You move to a new apartment.",
+                        "You have a wedding anniversary."
+                    ],
+                    "world_events": [
+                        "Jeremy Renner posts video update: \u2018ICU spa moment to lift my spirits\u2019",
+                        "Protests in Paris after three killed in shooting.",
+                        "Major NGOs halt work in Afghanistan after Taliban ban on female workers."
+                    ],
+                    "plans": [
+                        "Finalize mixing and mastering.",
+                        "Begin artwork for the album.",
+                        "Begin planning for the album release.",
+                        "You are planning to meet with your team on Monday to discuss the progress of your project and set goals for the week.",
+                        "You are planning to start a new hobby or pick up an old one, like photography, painting or writing in the coming year."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You meditate to calm down.",
+                        "You have lunch in a restaurant.",
+                        "You attend a meeting."
+                    ],
+                    "world_events": [
+                        "Thousands lose power after three substations targeted in Washington state, sheriff says.",
+                        "Argentina won the championship of World Cup.",
+                        "Target Recalls Over 200,000 Children\u2019s Weighted Blankets After 2 Girls Die."
+                    ],
+                    "plans": [
+                        "Finalize artwork.",
+                        "Begin promotions for the album.",
+                        "You are planning to work on a personal project or pursue a passion in the next 6 months.",
+                        "You are planning to focus on improving your physical and mental well-being in the next 6 months."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "HELLO"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HOW ARE YOU?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Fine . what about you ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "FINE "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "OUR COMPANY STARTED A PRESENTATION FOR THE ANNUAL FINANCIAL REPORT HAVE YOU WILLING FOR THAT? ITS VERY USEFUL FOR YOUR BUSINESS"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yeah  nice . how many days ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "IT TAKE ALMOST 4 DAYS"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I just started a organizing the storage room have you willing for that ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "OK, WE ALSO PRESENTING ANNUAL REPORT "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "ARE YOU WORKING?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes . "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "ATLEAST SAY SHORTLY ABOUT YOU JOB?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm not working I just start a organization "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "OK, HAVE YOU DO ANY PRESENTATION IN YOUR ORGANIZATION?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "have you done a presentation before ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "YES, I CAN DO MANY PRESENTATION IN OUR COMPANY. NOW WE PREPARING FOR FINANCIAL REPORT"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "that's good "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "WHATS YOUR ORGANIZATION PLAN?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "our organization plan about the storage room "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "NICE, WE TAKE ALMOST 4 DAYS FOR PREPARING A PRESENTAION"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "MY TEAM WILL SUPPORT AND ENCOURAGE TO DO ANY PRESENTAION IN OUR COMPANY"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "We take about 2 days for our organization "
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "HELLO, HOW ARE YOU?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "good , How are you ?\n"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "IT HAS BEEN WE TALK SINCE 7 MONTHS. HOW'S GOING YOUR ORGANIZATION PLAN NOW?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It's going good "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I just start the new event "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "NICE, MY COMPANY ALSO FINSIHED THE PRESENTAION SUCCESSFULLY."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "That's so good "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "IN MY NEW HOUSE I JUST STARTED PLANING FOR BUILDING A SWIMMING POOL"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nice , I Just planning to release a new music album "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "NICE, WHAT ARE THE LIST OF YOUR MUSIC ALBUM?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "It's take about one year "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "how long you building a swimming pool ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "IT TAKE ALMOST 3 MONTHS"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HAVE YOU SPEAK SPANISH LANGUAGE?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "NICE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "YES . I learn how  to speak a spanish "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "OK, I AM WRITING A SEVERAL CHAPTERS OF MY THESIS"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I buy a new house "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I move to a new apartment "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "THAT'S GOOD WE ALSO STARTING A NEW BUSINESS IN FUTURE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nice , we also plan to move to new apartment in next 6 months "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "NICE, IN FUTURE WE ARE PLANNING TO VOLUNTEER TO DO SOCIAL WORK IN OUR COMMUNITY"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "HELLO"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HOW ARE YOU?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "HELLO"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm good  "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "how are you ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HAVE YOU FINISHED ALL YOUR PREVIOUS PROGRESS?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes I done my all progress "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "what about you ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "YES, I ALSO FINSIHED ALL MY PROGRESS AND ALSO START FOLLOWING NEW EVENT"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "HAVE YOU GET MARRIED?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes . I have a wedding anniversary "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "THATS VERY NICE SURELY I WILL JOIN YOUR ANNIVERSARY"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I AM BUILDING A NEW HOUSE ALSO NOW"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Nice "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I finished my mixing and mastering recently "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "SUPER, I AM CONDUCTING AN ONLINE COURSE"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "In future I begin artwork for album "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "What's your future plan ?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "NOW I AM CONDUCTING A ONLINE COURSE FOR TEACHING A PRESENTION WORK"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "That's good "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "IN FUTURE WE ARE PLANNING TO START A NEWWORKOUT ROUTINE"
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 121,
+        "initial": {
+            "speaker_1": {
+                "progress": "You just started preparing and executing a social media marketing campaign for your company, which would take about 3 months."
+            },
+            "speaker_2": {
+                "progress": "You just started working on an assignment for a course, which would take about 2 weeks."
+            }
+        },
+        "gap": [
+            "12 hours",
+            "12 hours",
+            "5 hours",
+            "5 hours",
+            "3 days",
+            "3 days"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You attend a party.",
+                        "You assemble furniture.",
+                        "You play a round of golf."
+                    ],
+                    "world_events": [
+                        "Target Recalls Over 200,000 Children\u2019s Weighted Blankets After 2 Girls Die.",
+                        "Ukraine war: Kyiv rejects Putin's 'trivial' Christmas truce",
+                        "Thousands lose power after three substations targeted in Washington state, sheriff says."
+                    ],
+                    "plans": [
+                        "Research the target audience and their social media habits.",
+                        "Identify the platforms that the target audience uses most.",
+                        "Develop a marketing plan and campaign goals.",
+                        "Define KPIs for measurement.",
+                        "You are planning to start a family or expand your existing family in the next 6 months.",
+                        "You are planning to spend Wednesday and Thursday working on a proposal that is due on Friday."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You have dinner in a restaurant.",
+                        "You play a round of golf.",
+                        "You prepare for lunch."
+                    ],
+                    "world_events": [
+                        "Fatal winter storm leaves millions without power in North America with -45C temperatures.",
+                        "Jordan seizes huge amphetamine haul at Irap border.",
+                        "Major NGOs halt work in Afghanistan after Taliban ban on female workers."
+                    ],
+                    "plans": [
+                        "Research the target audience and their social media habits.",
+                        "Identify the platforms that the target audience uses most.",
+                        "Develop a marketing plan and campaign goals.",
+                        "Define KPIs for measurement.",
+                        "You are planning to spend Monday and Tuesday working on a presentation that you have to give on Wednesday.",
+                        "You are planning to focus on improving your physical and mental well-being by practicing mindfulness, yoga and meditation in the coming year."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You visit an amusement part.",
+                        "You take some yoga classes.",
+                        "You take an art class."
+                    ],
+                    "world_events": [
+                        "Holiday storm causes mass power outages.",
+                        "Up to half of the world\u2019s glaciers could disappear even if ambitious climate targets are hit, new study finds",
+                        "Will \u2018Avatar 2\u2019 Hit $2 Billion? Breaking Down the Blockbuster Sequel\u2019s Path to Box Office Glory"
+                    ],
+                    "plans": [
+                        "Research the target audience and their social media habits.",
+                        "Identify the platforms that the target audience uses most.",
+                        "Develop a marketing plan and campaign goals.",
+                        "Define KPIs for measurement.",
+                        "You are planning to focus on improving your physical and mental well-being by practicing mindfulness, yoga and meditation in the coming year.",
+                        "You are planning to focus on improving your physical and mental well-being in the next 6 months."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You do a board game with your family.",
+                        "You re-caulk a bathtub.",
+                        "You watch TV dramas."
+                    ],
+                    "world_events": [
+                        "US warns of possible attack in Islamabad amid security fears.",
+                        "Aubrey Plaza and Michael B. Jordan set to host \u2018Saturday Night Live\u2019",
+                        "Employers could sue unions under planned anti-strike laws"
+                    ],
+                    "plans": [
+                        "Review the assignment instructions and rubric to ensure you understand the requirements and expectations.",
+                        "You are planning to go back to school to pursue a graduate degree or additional certification.",
+                        "You are planning to spend time volunteering at a local charity organization once a week throughout the month."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You play with your pet.",
+                        "You attend a party.",
+                        "You go for a swim and spend time in the pool."
+                    ],
+                    "world_events": [
+                        "LG's Latest OLED TV Lineup Goes Up to 70% Brighter in 2023",
+                        "Spotify and Google team up to supercharge the Android 13 media player",
+                        "Tomahawk missiles: Japan to spend billions on procuring & deploying US navy missiles to deter China."
+                    ],
+                    "plans": [
+                        "Review the assignment instructions and rubric to ensure you understand the requirements and expectations.",
+                        "You are planning to take steps to achieve a better work-life balance and make time for loved ones in the coming year.",
+                        "You are planning to purchase a new home or renovate your current home in the coming year."
+                    ]
+                },
+                {
+                    "progress": [
+                        "Review the assignment instructions and rubric to ensure you understand the requirements and expectations."
+                    ],
+                    "life_events": [
+                        "You attend a music festival.",
+                        "You go to Las Vegas for casino.",
+                        "You take a self-defense class."
+                    ],
+                    "world_events": [
+                        "Short-sellers make $15 billion betting against Tesla as shares in Elon Musk's company sink by 70% this year.",
+                        "Thousands lose power after three substations targeted in Washington state, sheriff says.",
+                        "Qualcomm\u2019s going toe-to-toe with Apple\u2019s satellite messaging feature"
+                    ],
+                    "plans": [
+                        "Research the topic and gather relevant information, taking notes as you go.",
+                        "You are planning to purchase a new home or renovate your current home in the coming year.",
+                        "You are planning to meet with your team on Monday to discuss the progress of your project and set goals for the week."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi how are you?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Yes i am find and how are you doing today\n"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "doing good. what is the plan for to night"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "not yet planed for something i started preparing and executing a social media marketing campaign for my company"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "oh are you busy in that good \n"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes its take 3 months to finish the work "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "it looks very long process to finish "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "hmm yes. what are you doing do you have any plan?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes i just started working on an assignment for a course"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that was great  i to have assignment but i have time to finished "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "good but i have only 2 weeks to finish"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "so are you busy in that "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hmm yes slightly have to work more for that "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "do you have any idea to executing a social media marketing campaign"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "make a good plan for that before you start working on it"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes i already have plan for that in day to day what i have to do"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "that's sounds good keep monitoring about the plan"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes i have a person for that to monitoring my plan and work"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "how many days do you have?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "3 month plan for that"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "do you have enough time to finish "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes i have it was enough"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey hi"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "hi what's up?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "doing the same process that i working on an assignment for a course"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "oh good i just came from party"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "sounds good i came from watch TV dramas"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "oh good do you like tv dramas"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "not much but i do watch"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "good i am interested in golf"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "that was good i do play board game with my family."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "its good i to do some marketing plan and campaign goals.\n"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "right now? "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes i have to submit by tomorrow "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i to planning to go back to school to pursue a graduate degree "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that was good idea make it possible "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes i have to do definitely "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "i have to planning to start a family "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "wow that was amazing "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes i have to plan for my self right"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes definitely we have to things for our self to"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "do you have any future plans?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes planning to spend time volunteering at a local charity organization once a week"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that was so good "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "do you interested in volunteering "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes i do too i just love to help them"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey hi how are you doing "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "have a dinner at restaurant what about you?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i came from party now "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "good do you have any plan?\n"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes i have to go for swim and spend time in the pool"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "that was a great idea i have to play a round golf right now"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "sounds good "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "with whom you where going?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "alone it self only no one is here to take me thats why"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "here it self to so i play with my pet "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "thats nice what is the name of your pet"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "tinny and she is a dog"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "oh nice how old she is?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "she is 5. do you have any pet in your home?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "no i don't have "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "but i like to have"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "tinny is more playful and loveable too"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "do you never get bore right?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes when ever i feel alone she will be there for me to change my mood"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "i feel jealous about it in future i am also plan for that "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "that was an amazing idea do it as soon as posible"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes for sure i will do "
+                }
+            ],
+            []
+        ]
+    },
+    {
+        "conversation_id": 126,
+        "initial": {
+            "speaker_1": {
+                "progress": "You are about to attend a music festival in another city, which will take about 4 days."
+            },
+            "speaker_2": {
+                "progress": "You just started organizing the storage room, which would take about 2 days."
+            }
+        },
+        "gap": [
+            "3 months",
+            "3 months",
+            "5 days",
+            "5 days",
+            "10 months",
+            "10 months"
+        ],
+        "subsequent": {
+            "speaker_1": [
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started building a swimming pool in your new house, which would take about 3 months."
+                    ],
+                    "life_events": [
+                        "You but a new house.",
+                        "You learn how to speak Spanish.",
+                        "You have a baby."
+                    ],
+                    "world_events": [
+                        "Maryland one of 13 states warned of rolling blackouts, asked to conserve.",
+                        "Google Chrome Is About to Be Problem on Your Parents\u2019 PC by Ending Support on Windows 7,8 and 8.1",
+                        "Germany's energy crisis is a cue to chop wood and stock up."
+                    ],
+                    "plans": [
+                        "You are planning to spend Monday and Tuesday working on a presentation that you have to give on Wednesday.",
+                        "You are planning to take a sabbatical or extended time off to travel and explore new places in the coming year."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You visit a beach and relax in the sun.",
+                        "You go skiing.",
+                        "You take a short course on your new project."
+                    ],
+                    "world_events": [
+                        "British PM criticized over interaction with homeless man.",
+                        "Sam Bankman-Fried found \u2018chilling\u2019 in JFK airport lounge on $250M bail bond.",
+                        "Retirement: New Rules Are Coming For 401(k) and IRA Accounts."
+                    ],
+                    "plans": [
+                        "Site preparation and excavation of the pool area.",
+                        "You are planning to take a short vacation next weekend to recharge and come back refreshed for the next month.",
+                        "You are planning to make a career transition or switch to a new field in the next 6 months."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started planning to get a driver license, which would take about 2 months."
+                    ],
+                    "life_events": [
+                        "You launch a buisness and start a new venture.",
+                        "You gain weight.",
+                        "You take a long vacation."
+                    ],
+                    "world_events": [
+                        "Bethlehem rebounds from pandemic, lifting Christmas spirits.",
+                        "Snowden to Musk: 'I Take Payment in Bitcoin'; Big Short Investor Says Audits of Exchanges like Binance and FTX Are 'Meaningless,' and More.",
+                        "Sam Bankman-Fried found \u2018chilling\u2019 in JFK airport lounge on $250M bail bond."
+                    ],
+                    "plans": [
+                        "You are planning to take a course or certification in order to advance in your career.",
+                        "You are planning to volunteer or do a social work in your community or abroad in the coming year."
+                    ]
+                }
+            ],
+            "speaker_2": [
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started building a swimming pool in your new house, which would take about 3 months."
+                    ],
+                    "life_events": [
+                        "You get married.",
+                        "You take an online course.",
+                        "You gain weight."
+                    ],
+                    "world_events": [
+                        "Photos: Europe sees spell of record warm winter temps",
+                        "Surging Electricity Prices Make Some Gas Vehicles Cheaper Than Electric Ones In Europe.",
+                        "India set to spend $2 bn on green hydrogen projects"
+                    ],
+                    "plans": [
+                        "You are planning to focus on improving your physical and mental well-being by practicing mindfulness, yoga and meditation in the coming year.",
+                        "You are planning to spend Wednesday and Thursday working on a proposal that is due on Friday."
+                    ]
+                },
+                {
+                    "progress": [
+                        "No significant progress."
+                    ],
+                    "life_events": [
+                        "You go to a spa.",
+                        "You read a classic novel.",
+                        "You take a hot air balloon ride."
+                    ],
+                    "world_events": [
+                        "Zelensky's sobering Christmas message to Ukraine describes 'Loss of Hope'.",
+                        "HTC Announces Its Standalone VR Headset",
+                        "Lisa Rinna Is 'Grateful' as She Announces Exit from 'The Real Housewives of Beverly Hills' After 8 Seasons"
+                    ],
+                    "plans": [
+                        "Site preparation and excavation of the pool area.",
+                        "You are planning to take steps to achieve a better work-life balance and make time for loved ones in the coming year.",
+                        "You are planning to dedicate time to learning a new skill or hobby, such as a language or instrument, during the month."
+                    ]
+                },
+                {
+                    "progress": [
+                        "You finished the previous progress and started the following new event.",
+                        "You just started to write a new business plan, which would take about 2 weeks."
+                    ],
+                    "life_events": [
+                        "You go back to school and enroll in a degree program.",
+                        "You buy a new car.",
+                        "You move to a new apartment."
+                    ],
+                    "world_events": [
+                        "Prince Harry reveals whether he\u2019s circumcised in bombshell \u2018Spare\u2019 memoir",
+                        "Police arrest man suspected of planting explosive in Brazil's capital ahead of presidential inauguration.",
+                        "Ex-Maoist rebel leader Prachanda becomes Nepal PM for third time."
+                    ],
+                    "plans": [
+                        "You are planning to spend time volunteering at a local charity organization once a week throughout the month.",
+                        "You are planning to focus on improving your physical and mental well-being by practicing mindfulness, yoga and meditation in the coming year."
+                    ]
+                }
+            ]
+        },
+        "sessions": [
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hi there friend.  Nice to catch up with you. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "What is new with you lately?\n"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I have some exciting news!"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Do you want to hear my news?  Speak up!  "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi dude, hope you are fine"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm fine.. just can't wait to tell you about it. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "seriously.  I'm interested what's the special news dude"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm going to a music festival about 50 miles away in another city."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "It will take about 4 days before I get back. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Did you want to go?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm driving.  "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I know you are more interested in music, your wishes have come true, happy journey dude"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Just bring a sleeping bag. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Is there anything that you're up to?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "sorry i have little work in organizing my room dude"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i will catch you with in 2 days .no worry"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "what type of music going to held there?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Okay then.  Well, hope you get your room organized very quickly. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "There will be mostly rock, and classic rock. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "soon dude, when you are going to plan? how many days you are going to spent there"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'll be gone for about 4 days."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I too love rock music, if i had a chance i too join with you"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Talk to you soon!"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_1",
+                    "text": "Long time no see, Dude!"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey dude , how are you?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i'm doing great what about you"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Great, so many things have taken place in my life. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I got a bomb surprise to you"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Let's tell each other about what's new. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I got married and gained little weight"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Holy moly!  wow, that is a surprise!"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I finally finished the swimming pool in my new house."
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I started a  building a swimming pool in our new house"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "It took about 3 months. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "haha, same dude what a surprise"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I started right after I got back from the music festival. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "You want a surprise.  Not sure how this happened. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Since I've seen you last, I now have a baby..."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Plus I've learned to speak Spanish. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hey congrats, became family man, sounds great. I'm planning to focus on improving my physical and mental well-being by practicing mindfulness, yoga and meditation in the coming year."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "That is a great idea.  Where did you come up with that?"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm planning to spend Wednesday and Thursday working on a proposal that is due on Friday. will you able to join with me?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Yo dude, you gotta get your parents to update their computers. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Google chrome is about to end support on Windows 7, 8 and 8.1. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Yes, I can join you for your proposal on Friday. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "sure, I'm taking an online cookery course. If any one interested means please help to join with me"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes we will meet soon"
+                }
+            ],
+            [
+                {
+                    "speaker": "speaker_2",
+                    "text": "Hi dude, yesterday i went to spa and readed some novels which is more exciting"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Hey there Dude.  Wow, a lot has happened since we talked. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "spa sounds relaxing. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "yes buddy, whats up?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I visited the beach and got to relax in the Sun. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Then I went skiiing. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Do you heard these news Zelensky's sobering Christmas message to Ukraine describes 'Loss of Hope'."
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "Skiing was so fun.  "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes, I did hear of that sobering news. "
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I had to drink a few shots of vodka to keep from being so sobered up from that news. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "hope the government will take good decision regarding that war"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I'm  planning to take steps to achieve a better work-life balance and make time for loved ones in the coming year. what's up?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "yes, hopefully it doesn't turn into WWIII"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "I planned to learn spanish language"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "That's cool. As for me, I'm planning to prepare and excavate my pool area. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "Do you know what means 'Hola!'"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I think it means hello"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "its the word hi, its more interesting to learn new one,"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "are you joining with me to learn new language"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I suppose if you want me to"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "but the grammar mistakes is more, i cant bare it"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I'm taking a short vacation next weekend first. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "i need to put lot of hard work to learn more"
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "wow, where you are going?"
+                },
+                {
+                    "speaker": "speaker_1",
+                    "text": "I need to recharge and come back nice and refreshed for next month. "
+                },
+                {
+                    "speaker": "speaker_2",
+                    "text": "lets plan together, see you dude"
+                }
+            ],
+            []
+        ]
+    }
+]
