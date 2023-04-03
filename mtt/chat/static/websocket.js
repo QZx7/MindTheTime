@@ -9,9 +9,9 @@ if (host == "localhost:8888") {
 // the minimum utterance number in each session.
 var MINIMUM_UTTERANCE_EACH_SESSION = 20;
 // the minimum session to finish this work and get fully paid.
-var MINIMUM_SESSION_NUMBER = 3;
+var MINIMUM_SESSION_NUMBER = 4;
 // the minimum session to get part of the payment due to the issues on the partner's side.
-var MINIMUM_VALID_WORK_SESSION_NUMBER = 3;
+var MINIMUM_VALID_WORK_SESSION_NUMBER = 4;
 
 $("#min_utterance").html(`${MINIMUM_UTTERANCE_EACH_SESSION}`)
 $("#min_session").html(`${MINIMUM_SESSION_NUMBER}`)
