@@ -18,7 +18,7 @@ from typing import Text, Dict, List, Any, Optional, Union, Tuple
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=True, help="run in debug mode")
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), "data")
+DATA_PATH = os.path.join(os.path.dirname(__file__), "data/events")
 LOG_PATH = os.path.join(os.path.dirname(__file__), "log")
 CURRENT_TIME = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 
